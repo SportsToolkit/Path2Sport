@@ -1,0 +1,4033 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudySport in Scotland</title>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-dlNz6LEdldlMIZgKdW/Z3yvD13NqClxUw8NYoq80U3f6LG9gpp2IXh3ICf3Yf74e1lOe6LUwZdW+lBFZdciyUw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+    <link href="https://fonts.googleapis.com/css2?family=Lekton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <style>
+    /* GENERAL STYLES */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: 'Space Grotesk', sans-serif;
+        color: #1D1D1F;
+        background-color: #FFFFFF;
+        line-height: 1.5;
+        scroll-behavior: smooth;
+    }
+    a {
+        color: #0070C9;
+        text-decoration: none;
+        transition: color 0.1s ease;
+    }
+    a:hover {
+        color: #005CAB;
+        text-decoration: underline;
+    }
+    :root {
+        --theme-blue: #0070C9; 
+        --modal-blur: 5px; 
+    }
+
+    h1, h2, h3 {
+        font-family: 'Bebas Neue', sans-serif;
+  
+    
+}
+
+    /* HEADER SECTION */
+    header {
+        background-color: #FFFFFF;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1004;
+    }
+    header h1 {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #1D1D1F;
+        margin: 0;
+    }
+    header .menu-button {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #0070C9;
+        cursor: pointer;
+        transition: color 0.1s ease;
+        position: relative;
+        z-index: 1005;
+    }
+    header .menu-button:hover {
+        color: #005CAB;
+    }
+    .logo-link {
+        text-decoration: none;
+    }
+    .logo-link h1 {
+        color: #0070C9;
+        transition: color 0.1s ease;
+    }
+    .logo-link:hover h1 {
+        color: #005CAB;
+    }
+    .logo-link:hover {
+        text-decoration: none;
+    }
+
+    /* CONTAINER */
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 100px auto 0 auto; 
+    }
+
+    /* HERO SECTION */
+.hero {
+    /* Updated for bottom-left positioning */
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Pushes content to bottom */
+    align-items: flex-start;   /* Aligns content to left */
+    text-align: left;         /* Left-aligned text */
+    background-color: #ffc966;
+    color: #1D1D1F;
+    
+    background-size: 400% 400%;
+    animation: heroGradient 10s ease infinite;
+    scroll-margin-top: 120px;
+    padding: 2rem;
+    padding-top: 16rem;      /* Extra bottom padding to move text further down */
+}
+    @keyframes heroGradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    .hero.hidden {
+        display: none;
+    }
+    
+.hero-line {
+    width: 90vw;
+    height: 1px;
+    background-color: #000;
+    margin: 
+    margin-left: 2rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+    
+.hero-content {
+    /* Adjusted to avoid centring and remove extra top padding */
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 2rem; /* Adds spacing from the bottom */
+    padding-top: 0;
+}
+    .hero h1 {
+        font-size: 10rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.5px;
+        color: #000; 
+        line-height: 1.2; 
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    #animated-heading {
+        position: relative;
+    }
+    .cursor {
+        display: inline-block;
+        width: 2px;
+        background-color: #000;
+        margin-left: 5px;
+        animation: blink 0.8s infinite;
+        height: 3rem;
+    }
+    @keyframes blink {
+        0%, 50%, 100% { opacity: 1; }
+        25%, 75% { opacity: 0; }
+    }
+    .hero h2 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #1D1D1F;
+    }
+    .hero-paragraph {
+        font-size: 1.15rem;
+        line-height: 1.7;
+        color: #000000;
+        max-width: 700px;
+        margin-bottom: 0.15rem;
+        color: 
+        justify-content: flex-end; /* Pushes content to bottom */
+    align-items: flex-start;   /* Aligns content to left */
+    text-align: left;         /* Left-aligned text */
+        letter-spacing: 0.06rem; 
+        margin-top: 1rem; 
+    }
+    .learn-more-btn {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: #fff;
+        background-color: #0070C9;
+        border: 2px solid #000; 
+        border-radius: 8px;
+        padding: 0.75rem 2rem;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out; 
+        box-shadow: none; 
+        margin-top: 1rem; 
+        margin-bottom: 1rem; 
+    }
+    .learn-more-btn:hover {
+        background-color: #005CAB;
+        box-shadow: 5px 5px 0px #000; 
+        transform: translate(-5px, -5px); 
+    }
+    .hero-emojis {
+        margin-top: 0.5rem; 
+        margin-bottom: 1rem; 
+        font-size: 2rem; 
+        text-align: center; 
+    }
+    .hero-emojis span {
+        margin: 0 0.3rem; 
+        transition: transform 0.2s ease, color 0.2s ease; 
+    }
+    .hero-emojis span:hover {
+        transform: scale(1.2);
+        color: #005CAB; 
+    }
+
+    /* FEATURED SECTION */
+    .featured {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+    .intro-heading {
+        font-size: 2.5rem; 
+        font-weight: 700; 
+        margin-bottom: 1rem; 
+        color: var(--theme-blue);
+    }
+    .intro-text {
+        font-size: 1.6rem; 
+        line-height: 1.6;
+        color: #555555; 
+        max-width: 800px; 
+        margin: 0 auto 1rem;
+        font-weight: 250;
+        letter-spacing: 0.1rem; 
+        
+    }
+    .featured-intro {
+        text-align: center; 
+        margin-top: 8rem; 
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+    .featured-item {
+        flex: 1 1 calc(33.333% - 1rem); 
+        min-width: 220px;
+        background-color: #F3347D; 
+        border: 2px solid #000; 
+        border-radius: 8px;
+        text-align: left; 
+        padding: 2rem 2rem; 
+        transition: all 0.2s ease-in-out;
+        color: #FFFFFF; 
+        cursor: pointer; 
+        position: relative; 
+    }
+    .featured-item:hover {
+        background-color: #F3347D; /* Maintain background color */
+        box-shadow: 5px 5px 0px #000; /* Same shadow as button */
+        transform: translate(-5px, -5px); /* Same transform as button */
+    }
+    .featured-item h3 {
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #000; /* Ensure heading is black */
+    }
+    .featured-item p {
+        margin-bottom: 1rem;
+        color: #000; /* Set paragraph text to black */
+        line-height: 1.5;
+    }
+    .featured-tag {
+        display: inline-block;
+        background-color: #FFFFFF; /* White background */
+        color: #0070C9; /* Blue text */
+        border-radius: 8px; /* Match the featured-item corners */
+        padding: 0.25rem 0.75rem; /* Padding for spacing */
+        font-size: 0.9rem; /* Smaller font size */
+        font-weight: 600; /* Semi-bold text */
+        margin-bottom: 1rem; /* Space between tag and description */
+        letter-spacing: 0.07rem; /* Adds space between characters */
+    }
+    .featured-description {
+        font-size: 1.15rem; /* Larger font size for prominence */
+        line-height: 1.7; /* Improved readability */
+        color: #FFFFFF; /* White text (inherited, but specified for clarity) */
+        margin-top: 0.5rem; /* Added space above the description */
+        margin-bottom: 1rem; /* Space below the description */
+        font-weight: bold; /* Added property to make text bold */
+        letter-spacing: 0.03rem; /* Adds space between characters */
+    }
+    .color1 {
+    background-color: #ff8a9a; /* Lightened red */
+}
+.color2 {
+    background-color: #a491e0; /* Lightened purple */
+}
+.color3 {
+    background-color: #6fe7b3; /* Lightened green */
+}
+.color4 {
+    background-color: #8abaff; /* Lightened blue */
+}
+.color5 {
+    background-color: #ffc966; /* Lightened orange */
+}
+    .color6 {
+        background-color: #cbd5e1; 
+    }
+    .color1 h3,
+    .color2 h3,
+    .color3 h3,
+    .color4 h3,
+    .color5 h3,
+    .color6 h3 {
+        color: #FFFFFF;
+    }
+    .color1:hover,
+    .color2:hover,
+    .color3:hover,
+    .color4:hover,
+    .color5:hover,
+    .color6:hover {
+        background-color: #0070C9; 
+    }
+    .color1 .featured-tag,
+    .color2 .featured-tag,
+    .color3 .featured-tag,
+    .color4 .featured-tag,
+    .color5 .featured-tag,
+    .color6 .featured-tag {
+        color: #0070C9; 
+    }
+    .featured-item p.featured-description {
+        color: #22263e;
+        transition: color 0.2s ease; 
+    }
+    .featured-item:hover p.featured-description {
+        color: #FFFFFF;
+    }
+    .featured-item {
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    /* RESPONSIVE STYLES */
+    @media (max-width: 768px) {
+        .featured-item {
+            flex: 1 1 100%;
+        }
+        .featured-tag {
+            font-size: 0.85rem;
+            padding: 0.2rem 0.6rem;
+        }
+        .featured-description {
+            font-size: 1rem; 
+        }
+    }
+    @media (max-width: 480px) {
+        .featured-item {
+            flex: 1 1 100%;
+        }
+        .featured-tag {
+            font-size: 0.8rem;
+            padding: 0.15rem 0.5rem;
+        }
+        .featured-description {
+            font-size: 0.95rem; 
+        }
+    }
+    @media (max-width: 768px) {
+        .hero {
+          height: 100vh; 
+          flex-direction: column; 
+          padding: 10px; 
+        }
+        .hero h1 {
+          font-size: 5rem;
+          margin-bottom: 1rem;
+        }
+        .hero h2 {
+          font-size: 1.3rem;
+        }
+        .hero p {
+          font-size: 0.95rem;
+        }
+        .cursor {
+            height: 2.5rem;
+        }
+        header {
+            padding: 1.2rem 1.5rem; 
+            height: auto; 
+        }
+        .container {
+            margin: 120px auto 0 auto;
+        }
+        #menu-section {
+            padding: 2rem;
+            padding-top: 100px;
+        }
+        #menu-section h2 {
+            font-size: 2.5rem;
+        }
+        #menu-options a {
+            font-size: 0.95rem;
+        }
+    }
+
+    /* ABOUT SECTION */
+    .about {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        padding: 3rem 1rem;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100%);
+        transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+        z-index: 1002;
+        overflow-y: auto;
+    }
+    .about.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    .about .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 3rem 1rem;
+    }
+    .about h2 {
+        font-size: 2.2rem;
+        margin-bottom: 0.1rem;
+        font-weight: 700;
+        color: #0070C9;
+    }
+    .about h3 {
+        margin: 0;
+        font-size: 1.3rem;
+        color: #1D1D1F;
+        font-weight: 600;
+    }
+    .about p {
+        font-size: 1.125rem;
+        color: #555;
+        font-weight: 300;
+        line-height: 1.8;
+        letter-spacing: 0.4px;
+        white-space: pre-line;
+    }
+
+    /* UNIVERSITIES SECTION */
+    .universities {
+        padding: 4rem 1rem;
+        background-color: #f9f9f9;
+        transform: translateY(100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        z-index: 1002;
+        padding-top: 80px;
+    }
+    .universities.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    .universities h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+        text-align: center;
+        color: #0070C9;
+    }
+    .uni-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 2rem;
+    }
+    .uni-card {
+        background-color: #6fe7b3;
+        border: 2px solid #000; 
+        border-radius: 8px;
+        padding: 2rem;
+        box-shadow: none;
+        cursor: pointer;
+        height: 220px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+    }
+    .uni-card:hover {
+        
+        box-shadow: 5px 5px 0px #000; 
+        transform: translate(-5px, -5px); 
+    }
+    
+    .card-icon {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1rem;
+        color: #0070C9;
+    }
+    .uni-card h3 {
+        font-family: 'Space Grotesk', sans-serif;
+        margin: 0;
+        font-size: 1.3rem;
+        color: #1D1D1F;
+        font-weight: 600;
+        padding: 0 0.5rem;
+    }
+
+    /* DASHBOARD SECTION */
+    .dashboard {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.15); 
+        display: flex;
+        flex-direction: row;
+        transform: scale(0.95) translateY(30px);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+        z-index: 1007;
+    }
+    .dashboard.active {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    .dashboard-content, .dashboard-sidebar {
+        background-color: #fff;
+        border-radius: 16px;
+        border: 2px solid var(--theme-blue);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+    .dashboard-sidebar {
+        width: 320px;
+        padding: 2rem;
+        overflow-y: auto;
+        margin: auto 0; 
+        margin-left: 2rem;
+        margin-right: 0.5rem;
+        max-height: calc(100% - 4rem);
+    }
+    .dashboard-sidebar h3 {
+        text-transform: uppercase;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 1rem;
+        text-align: center;
+        font-weight: 700;
+        color: #555555; 
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .dashboard-sidebar ul {
+        list-style: none;
+        padding: 0;
+    }
+    .dashboard-sidebar ul li {
+        background-color: transparent;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #1D1D1F;
+        text-align: center;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .dashboard-sidebar ul li:hover {
+        background-color: rgba(240,240,240,0.7);
+        transform: scale(1.02);
+    }
+    .dashboard-content {
+        flex: 1;
+        padding: 2rem;
+        overflow-y: auto;
+        margin: auto 2rem;
+        max-height: calc(100% - 4rem);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .dashboard-header {
+        background-color: #fff;
+        font-size: 2rem;
+        color: #0070C9;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.1rem 0.1rem;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        padding-bottom: 0.8rem;
+    }
+    .dashboard-header h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 0;
+    }
+    .close-btn {
+        background: none;
+        border: none;
+        color: #0070C9;
+        font-size: 1.25rem;
+        cursor: pointer;
+        transition: color 0.1s ease;
+    }
+    .close-btn:hover {
+        color: #005CAB;
+    }
+    .dashboard-content-details {
+        margin-top: 1rem; 
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    .dashboard-content-details h3 {
+        font-size: 1.2rem;
+        color: #0070C9;
+        margin-top: 2rem;
+        margin-bottom: 0.8rem;
+    }
+    .dashboard-content p {
+        margin-bottom: 1rem;
+        color: #555;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+    .dashboard-content ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 1.5rem;
+    }
+    .dashboard-content ul li {
+        background-color: #f9f9f9;
+        padding: 0.75rem 1rem;
+        margin-bottom: 1rem;
+        border-radius: 6px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        font-size: 1rem;
+    }
+    .rankings {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .ranking-circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #0070C9;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.875rem;
+        font-weight: bold;
+        position: relative;
+        transition: transform 0.2s;
+    }
+    .ranking-circle:hover {
+        transform: scale(1.05);
+    }
+    .ranking-circle .tooltip {
+        visibility: hidden;
+        width: 120px;
+        background-color: rgba(0,0,0,0.75);
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 0.5rem;
+        position: absolute;
+        bottom: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.2s;
+        font-size: 0.8rem;
+    }
+    .ranking-circle:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+    .dashboard-banner {
+        background-color: #f0f0f0;
+        padding: 1rem;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    .dashboard-item {
+        background-color: #0070C9;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 12px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto
+        text-align: center;
+    }
+    .dashboard-item a {
+        color: #fff;
+        text-decoration: none;
+        width: 100%;
+    }
+    .dashboard-item a:hover {
+        text-decoration: underline;
+    }
+
+    /* FOOTER SECTION */
+    footer {
+        background-color: #fff;
+        color: #555;
+        padding: 2rem 1rem;
+        text-align: center;
+        border-top: 1px solid rgba(0,0,0,0.1);
+    }
+    footer p {
+        font-size: 0.875rem;
+    }
+
+    /* MENU SECTION */
+    #menu-section {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: 0 0 10px rgba(0,0,0,0.15);
+        z-index: 1006;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+        padding-top: 80px;
+    }
+    #menu-section.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    #menu-section h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        color: #0070C9;
+        margin-top: 0;
+        text-align: center;
+    }
+    #menu-options {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        align-items: center;
+        padding-top: 2rem;
+    }
+    #menu-options a {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #0070C9;
+        background: #fff;
+        border: 1px solid rgba(0,0,0,0.1);
+        border-radius: 8px;
+        padding: 0.5rem 1rem;
+        max-width: 320px;
+        width: 100%;
+        transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-options a:hover {
+        background-color: #0070C9;
+        color: #fff;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        transform: scale(1.02);
+    }
+    #close-menu {
+        position: absolute;
+        top: 3rem;
+        right: 3rem;
+        background: none;
+        border: none;
+        font-size: 3rem;
+        cursor: pointer;
+        color: #0070C9;
+        transition: color 0.1s ease;
+    }
+    #close-menu:hover {
+        color: #005CAB;
+    }
+
+    /* INSERT SECTION */
+    .insert-section {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 80px);
+        background-color: #fff;
+        padding: 3rem 1rem;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100%);
+        transition: transform 0.4s, opacity 0.4s;
+        z-index: 1003;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .insert-section.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    .insert-section .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 3rem 1rem;
+    }
+    .insert-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #0070C9;
+        font-weight: 700;
+    }
+    .insert-section p {
+        font-size: 1.125rem;
+        color: #555;
+        font-weight: 300;
+        line-height: 1.8;
+        letter-spacing: 0.4px;
+        white-space: pre-line;
+        margin-bottom: 1rem;
+    }
+    .button-group {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    .button-group button {
+        margin: 1rem 0;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #fff;
+        background-color: #0070C9;
+        border: none; /* General buttons have no border */
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.1s ease;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .button-group button:hover {
+        background-color: #005CAB;
+    }
+    .close-insert-section {
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: #0070C9;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity 0.1s ease;
+    }
+    .close-insert-section:hover {
+        opacity: 1;
+    }
+
+    /* NO WRONG PATH SECTION */
+    .no-right-path-section {
+        position: fixed; 
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 4rem 1rem;
+        background-color: #f5f5f5;
+        /* Hide the section initially */
+        transform: translateY(100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+        z-index: 1002; 
+        overflow-y: auto; 
+    }
+    .no-right-path-section.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    .no-right-path-section .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    .no-right-path-section h2 {
+        font-size: 2.5rem;
+        text-align: left;
+        color: var(--theme-blue);
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+    }
+
+    /* SUBHEADINGS */
+    .subheading {
+        font-size: 1.5rem; 
+        font-weight: 600;   
+        color: var(--theme-blue);
+        margin-bottom: 0.7rem; 
+    }
+
+    /* BLOG CONTENT */
+    .blog-content {
+        line-height: 1.8;
+        margin-bottom: 3rem;
+        text-align: left;
+        font-size: 1.125rem;
+        color: #555;
+        letter-spacing: 0.3px;
+        font-weight: 300;
+    }
+    .blog-content p {
+        margin-bottom: 1.5rem;
+    }
+
+    /* MODAL BUTTONS */
+    .modal-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+    .modal-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #fff;
+        background-color: var(--theme-blue);
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .modal-btn:hover {
+        background-color: #005CAB;
+        transform: translateY(-3px);
+    }
+
+    /* TIMELINE SECTION */
+    .timeline {
+        position: relative;
+        padding: 2rem 0;
+    }
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        width: 5px;
+        background: var(--theme-blue);
+        top: 0;
+        bottom: 0;
+        transform: translateX(-50%);
+    }
+    .timeline-item {
+        position: relative;
+        width: 45%;
+        padding: 1rem 1.5rem;
+        box-sizing: border-box;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .timeline-item.left {
+        left: 0;
+        text-align: left;
+    }
+    .timeline-item.right {
+        left: 55%;
+        text-align: left;
+    }
+    .timeline-content {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        position: relative;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        border: 2px solid #000; /* Added 2px solid black border */
+        background: #ffe280; 
+    }
+    .timeline-icon {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: var(--theme-blue);
+        width: 20px; 
+        height: 20px;
+        border-radius: 50%;
+    }
+    .timeline-item.left .timeline-icon {
+        right: -10px; 
+    }
+    .timeline-item.right .timeline-icon {
+        left: -10px;
+    }
+    .timeline-content-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+    .timeline-content-header h3 {
+        margin-left: 0rem;
+        font-size: 1.4rem;
+        color: var(--theme-blue);
+    }
+    .timeline-content p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+    }
+    .timeline-item.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    @media (max-width: 768px) {
+        .timeline::before {
+            left: 20px;
+        }
+        .timeline-item {
+            width: 100%;
+            padding-left: 50px;
+            padding-right: 25px;
+            text-align: left !important;
+        }
+        .timeline-item.left,
+        .timeline-item.right {
+            left: 0;
+        }
+        .timeline-item.left .timeline-icon,
+        .timeline-item.right .timeline-icon {
+            left: 0;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    /* MODAL SECTION */
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5); 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 1008; 
+    }
+    .hover-link {
+            color: #0070C9;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    .hover-link:hover {
+            color: darkblue;
+        }
+    .modal[aria-hidden="false"] {
+            display: block;
+        }
+    .modal.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .modal-content {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 12px;
+        max-width: 800px;
+        width: 90%;
+        position: relative;
+        max-height: 80vh;
+        overflow-y: auto;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        animation: fadeInScale 0.3s ease;
+    }
+    @keyframes fadeInScale {
+        from {
+            transform: scale(0.95);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    .close-modal {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--theme-blue);
+        transition: color 0.2s ease;
+    }
+    .close-modal:hover {
+        color: #005CAB;
+    }
+    .modal-content h3 {
+        margin-top: 0;
+        color: var(--theme-blue);
+    }
+    .modal-content ul {
+        list-style: disc inside;
+        padding-left: 1rem;
+    }
+    .modal-content ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    /* EMPLOYABILITY SECTION */
+    .employability {
+        background-color: #fff;
+        text-align: left;
+        transform: translateY(100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        z-index: 1002;
+        padding: 3rem 1rem;
+    }
+    .employability.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    .employability h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+        color: #0070C9;
+    }
+    .employability p {
+        font-size: 1.125rem;
+        color: #555;
+        line-height: 1.8;
+        letter-spacing: 0.4px;
+        font-weight: 300;
+        margin-bottom: 1rem;
+    }
+    .career-paths .container,
+    .employability .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 3rem 1rem;
+    }
+    .employability-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    .employability-card {
+        width: 100%;
+        height: 320px; 
+        perspective: 1000px; 
+    }
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+    .employability-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+    .flip-card-front,
+    .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden; 
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        padding: 1.2rem;
+        background-color: #F5F5F7;
+        border: 1px solid rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .flip-card-front {
+        transform: rotateY(0deg);
+    }
+    .flip-card-back {
+        transform: rotateY(180deg);
+        background-color: #FFFFFF; 
+    }
+    .flip-card-front h3,
+    .flip-card-back h3 {
+        margin-bottom: 0.75rem;
+        color: #0070C9;
+        font-weight: 700;
+    }
+    .flip-card-front p,
+    .flip-card-back p,
+    .flip-card-back ul {
+        color: #555;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        letter-spacing: 0.3px;
+        font-weight: 300;
+        margin: 0;
+    }
+    .flip-card-back ul {
+        list-style: disc inside;
+        padding: 0;
+        margin-top: 0.25rem;
+    }
+    .flip-card-back ul li {
+        margin-bottom: 0.5rem;
+    }
+    .card-icon {
+        font-size: 2rem;
+        color: #0070C9;
+        margin-bottom: 0.75rem;
+    }
+    .employability-card:hover .flip-card-front {
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    }
+    .employability-card:hover .flip-card-back {
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    }
+    @media (max-width: 768px) {
+        .employability-cards {
+            grid-template-columns: 1fr 1fr;
+        }
+        .employability-card {
+            height: 280px;
+        }
+    }
+    @media (max-width: 480px) {
+        .employability-cards {
+            grid-template-columns: 1fr;
+        }
+        .employability-card {
+            height: 250px;
+        }
+        .flip-card-front p,
+        .flip-card-back p,
+        .flip-card-back ul {
+            font-size: 0.9rem;
+        }
+    }
+
+    /* COLLEGE COURSES SECTION */
+    .college-courses {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 80px);
+        background-color: #fff;
+        padding: 3rem 1rem;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100%);
+        transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+        z-index: 1003;
+        overflow-y: auto;
+    
+        -webkit-overflow-scrolling: touch;
+    }
+    .college-courses.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    .college-courses .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 3rem 1rem;
+        padding-top: 2rem;
+    }
+    .college-courses h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+        color: #0070C9;
+    }
+    .college-courses p {
+        font-size: 1.125rem;
+        color: #555;
+        font-weight: 300;
+        line-height: 1.8;
+        letter-spacing: 0.4px;
+        margin-bottom: 2.5rem;
+    }
+    .college-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+        font-family: 'Space Grotesk', sans-serif;
+    }
+    .college-table thead {
+        background-color: #0070C9;
+        color: #fff;
+    }
+    .college-table th, .college-table td {
+        padding: 0.75rem;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    .college-table tbody tr:nth-child(even) {
+        background-color: #f8f8f8;
+    }
+    .college-table tbody tr:hover {
+        background-color: #e6f7ff;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+    .college-table a {
+        color: #0070C9;
+        text-decoration: none;
+        transition: color 0.1s ease;
+    }
+    .college-table a:hover {
+        color: #005CAB;
+        text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+        .college-table thead {
+            display: none;
+        }
+        .college-table,
+        .college-table tbody,
+        .college-table tr,
+        .college-table td {
+            display: block;
+            width: 100%;
+        }
+        .college-table tr {
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            padding: 0.5rem;
+        }
+        .college-table td {
+            text-align: right;
+            padding-left: 40%;
+            position: relative;
+        }
+        .college-table td::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 1rem;
+            width: 40%;
+            white-space: nowrap;
+            font-weight: 600;
+        }
+    }
+
+    /* CAREER PATHS SECTION */
+    .career-paths {
+        background-color: #fff;
+        text-align: left;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        z-index: 1002;
+        padding: 3rem 1rem;
+        transform: translateY(100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+    }
+    .career-paths.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    .career-paths h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+        color: #0070C9;
+    }
+    .career-paths p {
+        font-size: 1.125rem;
+        color: #555;
+        line-height: 1.8;
+        letter-spacing: 0.4px;
+        font-weight: 300;
+        margin-bottom: 1rem;
+    }
+    .career-paths .careers-intro {
+      font-size: 1.125rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+    .career-sectors {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .sector-card {
+      background-color: #f4f4f4;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .sector-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .career-areas {
+      margin-bottom: 2rem;
+    }
+    .areas-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    .areas-list li {
+      background-color: #fff;
+      border-left: 4px solid #0070C9;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    .career-search {
+      margin-bottom: 2rem;
+    }
+    .search-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+    .search-list li {
+      margin-bottom: 0.5rem;
+    }
+    .search-list a {
+      color: #0070C9;
+      text-decoration: underline;
+    }
+    .career-jobs-board .jobs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+.jobs-container {
+    margin-top: 3rem;
+}
+
+.job-entry {
+    background-color: #fff;
+    border: 2px solid #000; /* Updated to have a 2px black border */
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column; /* Ensures proper layout for content and button */
+    justify-content: space-between; /* Spreads content to keep button at bottom */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.job-entry:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job-entry h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.job-entry a {
+    align-self: flex-end; /* Ensures the button aligns properly at the bottom */
+    margin-top: auto; /* Pushes the button to the bottom of the card */
+    padding: 0.5rem 0.75rem;
+    background-color: #0070C9;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.job-entry a:hover {
+    background-color: #005CAB;
+}
+
+    /* GENERAL STYLES */
+/* Tabs Container */
+.tabs {
+  margin: 2rem 0;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Tabs List */
+.tabs ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between; /* Evenly distributes tabs */
+  align-items: center; /* Vertically centers the tabs */
+  gap: 1rem; /* Optional: Adds space between tabs */
+  padding: 0;
+  margin: 0;
+}
+
+/* Tab Button */
+.tab-button {
+    font-family: 'Space Grotesk', sans-serif;
+  background: none;
+  border: none;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+  flex: 1; /* Ensures all tabs take equal width */
+  text-align: center; /* Centers the text and icons */
+}
+
+.tabs ul li {
+  flex: 1; /* Ensures each list item takes equal width */
+}
+
+.tab-button {
+  width: 100%; /* Ensures the button takes full width of its parent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon within Tab */
+.tab-button i {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+/* Hover and Focus States */
+.tab-button:hover,
+.tab-button:focus {
+  color: var(--theme-blue);
+  transform: translateY(-2px); /* Slight upward movement on hover */
+  outline: none;
+}
+
+/* Active Tab Styling */
+.tab-button.active {
+  color: var(--theme-blue);
+  background-color: rgba(0, 112, 201, 0.1);
+  border-radius: 4px 4px 0 0;
+}
+
+.tab-button.active i {
+  color: var(--theme-blue);
+}
+
+/* Active Indicator */
+.tab-button::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.tab-button.active::after {
+  background-color: var(--theme-blue);
+}
+
+
+/* Large Screens: 4 Columns for Search Cards */
+@media (min-width: 1200px) {
+  .search-cards {
+      grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  }
+}
+
+/* Medium Screens: 3 Columns for Search Cards */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .search-cards {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+}
+
+/* Small to Medium Screens: 2 Columns for Search Cards */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .search-cards {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+
+/* Extra Small Screens: Flexible Grid */
+@media (max-width: 768px) {
+  .tabs ul {
+    flex-direction: column; /* Stacks tabs vertically on small screens */
+  }
+
+  .tab-button {
+    width: 100%; /* Full width for each tab */
+    text-align: left; /* Aligns text to the left */
+    padding: 1rem 1.5rem;
+  }
+
+  .tab-button::after {
+    height: 2px;
+  }
+
+  .search-cards {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+/* Mobile Screens: 1 Column for Search Cards */
+@media (max-width: 600px) {
+  .search-cards {
+      grid-template-columns: 1fr; /* 1 column */
+  }
+}
+    /* TABS CONTENT */
+    .tabs-content {
+      margin-top: 1rem;
+    }
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+    .tab-content.active {
+      display: block;
+    }
+
+    /* ACCORDION STYLES */
+    .accordion-container {
+      margin-top: 1rem;
+    }
+    .accordion-item {
+      border-bottom: 1px solid #ddd;
+    }
+    .accordion-header {
+      background-color: #f9f9f9;
+      cursor: pointer;
+      padding: 1rem;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: background-color 0.3s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.2rem;
+      font-family: 'Space Grotesk', sans-serif; /* Apply Space Grotesk font */
+      font-weight: 600;
+    }
+    .accordion-header:hover {
+      background-color: #eaeaea;
+    }
+    .accordion-header .fa-chevron-down {
+      transition: transform 0.3s ease;
+    }
+    .accordion-header[aria-expanded="true"] .fa-chevron-down {
+      transform: rotate(180deg);
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 1rem;
+    }
+    .accordion-content p,
+    .accordion-content ul {
+      padding: 1rem 0;
+    }
+    .accordion-item.active .accordion-content {
+      max-height: 500px; /* Adjust as needed */
+    }
+
+    /* SEARCH BAR STYLES */
+    .search-bar {
+      margin-bottom: 1rem;
+    }
+    #areaSearch {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    /* ANIMATION FOR TABS */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* SEARCH CARDS */
+.search-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.search-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a491e0; 
+    color: #041e42; 
+    text-decoration: none;
+    border: 2px solid #000; 
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 0.9rem; 
+    font-weight: 600;
+    transition: all 0.2s ease-in-out; 
+    box-shadow: none;
+    height: 120px; 
+    width: 100%; 
+    overflow: hidden; 
+    position: relative; 
+    cursor: pointer; 
+}
+
+.search-card:hover {
+    background-color: #a491e0; 
+    box-shadow: 5px 5px 0px #000;
+    transform: translate(-5px, -5px); 
+}
+
+.search-card h4 {
+    margin: 0;
+    text-align: center;
+    font-size: 0.9rem; 
+    transition: color 0.2s ease; 
+}
+
+.search-cards.tailored .search-card {
+    background-color: #ffc966; 
+    color: #041e42; 
+}
+
+.search-cards.tailored .search-card:hover {
+    background-color: #ffc966; 
+    box-shadow: 5px 5px 0px #000; 
+    transform: translate(-5px, -5px); 
+}
+
+.search-cards.tailored .search-card:hover h4 {
+    color: #041e42; 
+}
+
+/* Media Queries */
+
+/* Large Screens: 4 Columns */
+@media (min-width: 1200px) {
+    .search-cards {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    }
+}
+
+/* Medium Screens: 3 Columns */
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .search-cards {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+}
+
+/* Small to Medium Screens: 2 Columns */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .search-cards {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+}
+
+/* Extra Small Screens: 1 Column */
+@media (max-width: 768px) {
+    .search-cards {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .search-cards {
+        grid-template-columns: 1fr; /* 1 column */
+    }
+}
+
+/* Styling for the Job Platforms Table */
+.job-platforms-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-family: 
+    color: #1D1D1F;
+}
+
+.job-platforms-table thead {
+    background-color: #0070C9; /* Theme Blue */
+    color: #ffffff;
+}
+
+.job-platforms-table th,
+.job-platforms-table td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #dddddd;
+}
+
+.job-platforms-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.job-platforms-table tbody tr:hover {
+    background-color: #e6f7ff;
+}
+
+.job-platforms-table th {
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .job-platforms-table thead {
+        display: none;
+    }
+
+    .job-platforms-table, 
+    .job-platforms-table tbody, 
+    .job-platforms-table tr, 
+    .job-platforms-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .job-platforms-table tr {
+        margin-bottom: 1rem;
+    }
+
+    .job-platforms-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .job-platforms-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        width: 45%;
+        padding-right: 1rem;
+        white-space: nowrap;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+    /* MODAL OVERLAY */
+    #modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.3); 
+        backdrop-filter: blur(var(--modal-blur));
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
+        z-index: 1005; 
+    }
+    #modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+    .blur-small {
+        --modal-blur: 2px;
+    }
+    .blur-medium {
+        --modal-blur: 5px;
+    }
+    .blur-large {
+        --modal-blur: 8px;
+    }
+
+
+</style>
+</head>
+<body>
+    <div id="modal-overlay"></div>
+    <header>
+        <a href="#" id="logo-link" class="logo-link"><h1>Path2Sport /</h1></a>
+        <div class="menu-button" id="open-menu">MENU</div>
+    </header>
+    <section class="hero" id="hero">
+    <div class="hero-content">
+        <h1 id="animated-heading">
+            <span id="animated-text">hello</span>
+            <span class="cursor"></span>
+        </h1>
+        <!-- This line sits right under the H1, before the H2 -->
+        <div class="hero-line"></div>
+        <h2>Find your path towards a fulfilling career in sport.</h2>
+        <p class="hero-paragraph">
+            Helping young people discover higher education options in <span style="font-weight: bold; color: #0070C9;">Scotland</span> and career opportunities in the sport, health, and exercise industries.
+        </p>
+        <button class="learn-more-btn" id="learn-more-btn">Learn More</button>
+    </div>
+</section>
+
+<section class="featured" id="discover">
+    
+  <div class="featured-intro">
+    <h1 class="intro-heading">Ready to take the next step?</h1>
+    <p class="intro-text">
+      Everything you need to explore sports courses in Scotland, career options, and how to get ahead.
+    </p>
+  </div>
+  
+<div class="featured-item color1" data-target="uni-courses">
+    <span class="featured-tag">UNIVERSITY COURSES</span>
+    <p class="featured-description">Discover a range of sport-related degrees in Scotland.</p>
+</div>
+
+<div class="featured-item color2" data-target="college-courses">
+    <span class="featured-tag">COLLEGES</span>
+    <p class="featured-description">Explore Scotland's colleges and vocational pathways into sport.</p>
+</div>
+
+<div class="featured-item color3" data-target="career-paths">
+    <span class="featured-tag">CAREERS</span>
+    <p class="featured-description">Learn about the diverse career opportunities in sport.</p>
+</div>
+
+<div class="featured-item color4" data-target="employability">
+    <span class="featured-tag">EMPLOYABILITY</span>
+    <p class="featured-description">Understand how to stand out and become career-ready.</p>
+</div>
+
+<div class="featured-item color5" data-target="no-right-path">
+    <span class="featured-tag">NO WRONG PATH</span>
+    <p class="featured-description">Navigate your route, wherever you're starting from.</p>
+</div>
+
+<div class="featured-item color6" data-target="about">
+    <span class="featured-tag">ABOUT</span>
+    <p class="featured-description">Learn more about Path2Sport and why we exist.</p>
+</div>
+</section>
+
+    <section class="insert-section">
+        <button
+          class="close-insert-section"
+          id="close-insert-section"
+          aria-label="Close"
+        >
+          &times;
+        </button>
+        <div class="container">
+            <h2>Ready to take the next step?</h2>
+            <p>
+                Figuring out your future can feel like a lot, but that's why we're here.
+                Path2Sport pulls together everything you need to explore sports courses
+                in Scotland, career options, and how to get ahead ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ all in one place.
+            </p>
+            <p>
+                Sport is more than just playing a game ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ it's a global industry full of
+                opportunities. From events and coaching to sports science and management,
+                there's a path for everyone. Whether you're passionate about performance,
+                planning, or helping others, Path2Sport can help you figure out where to start.
+            </p>
+            <p>
+                ItÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s not just about the big decisions. WeÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ve added simple, practical tips
+                that others have used to get their foot in the doorÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Âthings like gaining
+                experience, building a network, and sharpening key skills. ThereÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s no cheat
+                sheet, but these small steps can make a big difference as you work towards
+                your first role. Wherever youÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢re headed, it all starts with that first move.
+            </p>
+            <p>Where do you want to start?</p>
+            <p>
+                <strong>University courses in Scotland:</strong> Find out what sport
+                courses are available at universities in Scotland and see what fits you best.
+            </p>
+            <p>
+                <strong>College courses in Scotland:</strong> Explore college-level
+                options to gain practical skills and experience in sport-related fields.
+            </p>
+            <p>
+                <strong>Explore Careers:</strong> Get the lowdown on the different jobs
+                in sport and what it takes to get there.
+            </p>
+            <p>
+                <strong>Employability:</strong> Learn how to stand out and be career
+                ready for your first job.
+            </p>
+            <p><strong>No Wrong Path:</strong> Navigating your route.</p>
+
+            <div class="button-group">
+                <button id="btn-uni-courses">Uni Courses</button>
+                <button id="btn-career-paths">Explore Careers</button>
+                <button id="btn-employability">Employability</button>
+                <button id="btn-no-right-path">No Wrong Path</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About Path2Sport</h2>
+            <p>
+                Path2Sport was launched in January 2025 as a free resource to help the next
+                generation of sports professionals. We bring together information on
+                higher education courses across Scotland and ideas for careers in sport,
+                health, and exercise.
+</p>
+<p>
+                Why? Because we've been there too - unsure of where to start or what
+                options were out there. That's why we review education and career
+                opportunities each year to ensure you have up-to-date, practical
+                information to guide your decisions.
+</p>
+<p>
+                We're not the only resource out there, and we encourage you to do your
+                research. But if you're looking for clear, accessible context to help
+                plan your next steps, we're here to help. Whatever your starting point,
+                we hope to make things a little easier as you begin your journey in sport.
+            </p>
+            <p>
+    <em>Path2Sport is an independent, free resource provided by Sports Toolkit Ltd. We share links to external sites, including universities and organisations, for informational purposes only. Users should conduct their own due diligence and verify details directly with the providers. Read our Terms & Conditions for more information.</em>
+</p>
+        </div>
+    </section>
+    
+<section class="no-right-path-section" id="no-right-path">
+    <div class="container">
+        <h2>No Wrong Path: Finding Your Way</h2>
+        <div class="blog-content">
+            <h3 class="subheading">Career paths are rarely straightforward</h3>
+            <p>
+                Ask any teenager about their career ambitions, and you might hear the same familiar answers: doctor, lawyer, engineer, or perhaps something in the world of sport. But life rarely unfolds in straight lines. The truth is, there's no single path to a fulfilling career. Whether your journey includes academic studies, hands-on experience, or something entirely unexpected, what matters most is finding the path that works for you.
+            </p>
+            <p>
+                For those dreaming of a career in sport, the good news is that the industry is as broad as it is exciting. Not everyone will stand in the spotlight as a player or a coach, but sport relies on a network of skilled professionals - analysts, administrators, event managers, marketers - who make the magic happen. The routes into these roles are just as varied. Some come through universities, others through apprenticeships, and many carve out opportunities through hard work and curiosity. Academic results may open doors, but they aren't the only key.
+            </p>
+            <h3 class="subheading">Transferable skills</h3>
+            <p>
+                However, it's also important to have awareness that not every path leads to a career in sport, and that's okay. The lessons sport teaches and <span class="hover-link" data-modal="skills-modal">skills it develops</span> - discipline, teamwork, resilience - are deeply transferable. They stand out in <span class="hover-link" data-modal="industries-modal">other industries</span> that might not seem immediately connected, such as technology sales, or the arts. Former athletes, for example, often find thriving careers in business, where their ability to perform under pressure translate naturally into the world of deals and strategy.
+            </p>
+            <p>
+                For young people worried they might not have found their calling, remember, no decision is final. If university doesn't feel right, practical experience can teach you just as much. If one career path doesn't suit you, another may. The key is to remain open to learning and growth. Every step, whether planned or unexpected, adds to your story.
+            </p>
+            <h3 class="subheading">Success on your own terms</h3>
+            <p>
+                The idea of a right path often pressures young people into thinking there's only one way to succeed. This couldn't be further from the truth. People find fulfilment in all sorts of ways - some through academic achievement, others by rolling up their sleeves and learning on the job. What works for one person might not suit another, and that's the beauty of it. There's no one-size-fits-all formula for building a meaningful career.
+            </p>
+            <p>
+                So, if sport remains your passion, pursue it. Seek opportunities, keep learning, and stay adaptable. And if you discover along the way that your interests take you elsewhere, embrace that too. There's no wrong path - only the one that's right for you.
+            </p>
+ 
+
+       <h3 class="subheading">The Puzzle</h3>
+<p>
+  Every career path is shaped personal experiences, skills, and learning moments that fit together over time. Thereâ€™s no set way to arrange them, but each piece adds value. 
+</p>
+
+        <div class="timeline">
+
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <div class="timeline-content-header">
+                        
+                        <h3>School Foundations</h3>
+                    </div>
+                    <p>The foundation for many people, school introduces key skills and builds your interests. It's not just about grades; it's where teamwork, communication, and curiosity often begin. </p>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <div class="timeline-content-header">
+                        
+                        <h3>Skills Through Sport </h3>
+                    </div>
+                    <p>Sport teaches discipline, resilience, and teamwork - skills that go far beyond the field. Whether recreational or competitive, the lessons you learn from playing sport can shape both your career and character.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <div class="timeline-content-header">
+                        
+                        <h3>Lifelong Learning </h3>
+                    </div>
+                    <p>From workshops to mentoring, learning comes in many forms. These experiences build knowledge, spark ideas, and open doors to opportunities you might not have considered.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <div class="timeline-content-header">
+                        
+                        <h3>Practical Experience</h3>
+                    </div>
+                    <p>Taking on roles like a club committee member or completing a modern apprenticeship gives you hands-on skills and a deeper understanding of how things work behind the scenes.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <div class="timeline-content-header">
+                        
+                        <h3>Evolving Careers </h3>
+                    </div>
+                    <p>Careers rarely follow a fixed route. Whether you pivot into sport or use your transferable skills elsewhere, every step is part of your unique story.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin-bottom: 20px;"></div>
+
+        <div class="modal-buttons">
+            <button class="modal-btn" data-modal="skills-modal">Key Skills</button>
+            <button class="modal-btn" data-modal="industries-modal">Other Industries</button>
+        </div>
+</section>
+
+<div class="modal" id="skills-modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="skills-modal-title">
+        <button class="close-modal" data-modal="skills-modal" aria-label="Close Modal">&times;</button>
+        
+        <div style="margin-bottom: 1rem;"></div>
+        <ul>
+            <strong>Discipline:</strong> Sport teaches the importance of consistent effort and staying focused on goals.<br><div style="margin-bottom: 1rem;"></div><em>When have you shown discipline in your life, and how could it help you succeed in other areas?</em></li>
+            <div style="margin-bottom: 1rem;"></div>
+            <strong>Teamwork:</strong> Working with others to achieve a common goal is a skill that applies in any workplace.<br><div style="margin-bottom: 1rem;"></div><em>Can you think of a time when teamwork helped you achieve something?</em></li>
+            <div style="margin-bottom: 1rem;"></div>
+            <strong>Resilience:</strong> Sport builds the ability to handle setbacks and find ways to move forward.<br><div style="margin-bottom: 1rem;"></div><em>How have you dealt with challenges in the past, and what did you learn from them?</em></li>
+            <div style="margin-bottom: 1rem;"></div>
+            <strong>Leadership:</strong> Leading a team in sport develops confidence and the ability to motivate others. <br><div style="margin-bottom: 1rem;"></div><em>Have you ever stepped up to lead a group, and what did it teach you?</em></li>
+            <div style="margin-bottom: 1rem;"></div>
+            <strong>Time Management:</strong> Managing training, competitions, and other responsibilities builds strong organisational skills.<br><div style="margin-bottom: 1rem;"></div><em>How do you balance your commitments, and could this skill support you in the future?</em></li>
+            <div style="margin-bottom: 1rem;"></div>
+            <strong>Communication:</strong> Sport requires clear communication, whether giving instructions or resolving misunderstandings.<br><div style="margin-bottom: 1rem;"></div><em>When have you communicated effectively, and how could this skill help in a job or project?</em></li>
+        </ul>
+    </div>
+</div>
+
+<div class="modal" id="industries-modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="industries-modal-title">
+        <button class="close-modal" data-modal="industries-modal" aria-label="Close Modal">&times;</button>
+        
+        <div style="margin-bottom: 1rem;"></div>
+        <ul>
+            <strong>Technology:</strong> Discipline and problem-solving from sport fit well in fast-paced, innovative environments.<br><div style="margin-bottom: 1rem;"></div><em>How might your ability to stay focused and solve problems help in tech?</em></li>
+            <div style="margin-bottom: 1rem;"></div>
+            <strong>Sales and Marketing:</strong> Teamwork and communication skills translate directly to building relationships and influencing others.<br><div style="margin-bottom: 1rem;"></div><em>Could your ability to connect with people be valuable in sales or marketing?</em></li>
+            <div style="margin-bottom: 1rem;"></div>
+            <strong>Arts and Entertainment:</strong> Resilience helps in industries where persistence and adaptability are essential.<br><div style="margin-bottom: 1rem;"></div><em>How might your experience of bouncing back from setbacks help in creative fields?</em></li>
+            <div style="margin-bottom: 1rem;"></div>
+            <strong>Healthcare:</strong> Leadership and the ability to work under pressure are valuable in medical and care settings.<br><div style="margin-bottom: 1rem;"></div><em>Could your ability to stay calm under pressure be an asset in healthcare?</em></li>
+            <div style="margin-bottom: 1rem;"></div>
+            <strong>Business Management:</strong> Strategic thinking and teamwork developed in sport are key to managing and leading teams.<br><div style="margin-bottom: 1rem;"></div><em>How could your understanding of strategy and collaboration apply in business?</em></li>
+            <div style="margin-bottom: 1rem;"></div>
+            <strong>Education:</strong> Communication and mentoring skills gained from sport are ideal for teaching and supporting others.<br><div style="margin-bottom: 1rem;"></div><em>Have you ever supported or guided someone, and how could this shape a career in education?</em></li>
+        </ul>
+    </div>
+</div>
+    <section class="universities" id="uni-courses">
+        <div class="container">
+            <h2>Explore Universities</h2>
+            <div class="uni-list" id="uniList">
+            </div>
+        </div>
+    </section>
+    <section class="college-courses" id="college-courses">
+        <div class="container">
+            <h2>College Courses</h2>
+            <p>
+                Scotland's 24 colleges, spread across 13 regions, are a great place to start exploring vocational pathways into sport, through qualifications like HNDs and HNCs. The table below links to their websites, so take a look and see what opportunities they offer. Please note, the institutions listed on are not affiliated with or endorsed by Path2Sport. All links are provided for informational purposes only.
+            </p>
+            <table class="college-table">
+                <thead>
+                    <tr>
+                        <th>College</th>
+                        <th>Region</th>
+                        <th>Website</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="College">Ayrshire College</td>
+                        <td data-label="Region">Ayrshire</td>
+                        <td data-label="Website">
+                            <a
+                              href="https://www.ayrshire.ac.uk"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              ayrshire.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">Borders College</td>
+                        <td data-label="Region">Borders</td>
+                        <td data-label="Website">
+                            <a
+                              href="https://www.borderscollege.ac.uk"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              borderscollege.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">City of Glasgow College</td>
+                        <td data-label="Region">Glasgow</td>
+                        <td data-label="Website">
+                            <a
+                              href="https://www.cityofglasgowcollege.ac.uk"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              cityofglasgowcollege.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">Dundee and Angus College</td>
+                        <td data-label="Region">Dundee and Angus</td>
+                        <td data-label="Website">
+                            <a
+                              href="https://www.dundeeangus.ac.uk"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              dundeeangus.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">Dumfries &amp; Galloway College</td>
+                        <td data-label="Region">Dumfries &amp; Galloway</td>
+                        <td data-label="Website">
+                            <a
+                              href="https://www.dgc.ac.uk"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              dgc.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">Edinburgh College</td>
+                        <td data-label="Region">Edinburgh</td>
+                        <td data-label="Website">
+                            <a
+                              href="https://www.edinburghcollege.ac.uk"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              edinburghcollege.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">Fife College</td>
+                        <td data-label="Region">Fife</td>
+                        <td data-label="Website">
+                            <a
+                              href="https://www.fife.ac.uk"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              fife.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">Forth Valley College</td>
+                        <td data-label="Region">Forth Valley</td>
+                        <td data-label="Website">
+                            <a
+                              href="https://www.forthvalley.ac.uk"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              forthvalley.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">Glasgow Clyde College</td>
+                        <td data-label="Region">Glasgow</td>
+                        <td data-label="Website">
+                            <a
+                              href="https://www.glasgowclyde.ac.uk"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              glasgowclyde.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">Glasgow Kelvin College</td>
+                        <td data-label="Region">Glasgow</td>
+                        <td data-label="Website">
+                            <a
+                              href="https://www.glasgowkelvin.ac.uk"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              glasgowkelvin.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">New College Lanarkshire</td>
+                        <td data-label="Region">Lanarkshire</td>
+                        <td data-label="Website">
+                            <a
+                              href="https://www.newcollege.ac.uk"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              www.nclanarkshire.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">Newbattle Abbey College</td>
+                        <td data-label="Region">Midlothian</td>
+                        <td data-label="Website">
+                            <a
+                              href="https://www.newbattleabbey.ac.uk"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              newbattleabbey.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">North East Scotland College</td>
+                        <td data-label="Region">North East Scotland</td>
+                        <td data-label="Website">
+                            <a
+                              href="https://www.nescol.ac.uk"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              nescol.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">Sabhal MÃ²r Ostaig</td>
+                        <td data-label="Region">Isle of Skye</td>
+                        <td data-label="Website">
+                            <a
+                              href="https://www.smo.uhi.ac.uk/?lang=en"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              smo.uhi.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">Scotland's Rural College</td>
+                        <td data-label="Region">Various Rural Areas</td>
+                        <td>
+                            <a
+                              href="https://www.sruc.ac.uk"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              sruc.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">South Lanarkshire College</td>
+                        <td data-label="Region">South Lanarkshire</td>
+                        <td>
+                            <a
+                              href="https://www.southlanarkshire.ac.uk"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              southlanarkshire.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">UHI Argyll</td>
+                        <td data-label="Region">Argyll</td>
+                        <td>
+                            <a
+                              href="https://www.argyll.uhi.ac.uk/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              argyll.uhi.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">UHI Inverness</td>
+                        <td data-label="Region">Inverness</td>
+                        <td>
+                            <a
+                              href="https://www.inverness.uhi.ac.uk/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              inverness.uhi.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">UHI Moray</td>
+                        <td data-label="Region">Moray</td>
+                        <td>
+                            <a
+                              href="https://www.moray.uhi.ac.uk/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              moray.uhi.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">
+                            UHI North, West and Hebrides
+                        </td>
+                        <td data-label="Region">North, West and Hebrides</td>
+                        <td>
+                            <a
+                              href="https://www.uhi.ac.uk/en/nwh/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              uhi.ac.uk/en/nwh
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">UHI Orkney</td>
+                        <td data-label="Region">Orkney</td>
+                        <td>
+                            <a
+                              href="https://www.orkney.uhi.ac.uk/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              orkney.uhi.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">UHI Perth</td>
+                        <td data-label="Region">Perth</td>
+                        <td>
+                            <a
+                              href="https://www.perth.uhi.ac.uk/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              perth.uhi.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">UHI Shetland</td>
+                        <td data-label="Region">Shetland</td>
+                        <td>
+                            <a
+                              href="https://www.shetland.uhi.ac.uk/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              shetland.uhi.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">West College Scotland</td>
+                        <td data-label="Region">West of Scotland</td>
+                        <td>
+                            <a
+                              href="https://www.westcollegescotland.ac.uk"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              westcollegescotland.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="College">West Lothian College</td>
+                        <td data-label="Region">West Lothian</td>
+                        <td>
+                            <a
+                              href="https://www.west-lothian.ac.uk"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              west-lothian.ac.uk
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+<section class="career-paths" id="career-paths">
+  <div class="container">
+    <h2>Careers in Sport</h2>
+    <p class="careers-intro">
+      We want to share what we have learned about job hunting in the sports industry. Learn about the key sectors in sport, different job areas and links to recruitment sites to simplify your search.
+    </p>
+
+    <!-- Tabs Navigation -->
+<nav class="tabs" aria-label="Career Sections">
+  <ul>
+    <li>
+      <button class="tab-button active" data-tab="sectors" role="tab" aria-selected="true" aria-controls="sectors">Sectors</button>
+    </li>
+    <li>
+      <button class="tab-button" data-tab="areas" role="tab" aria-selected="false" aria-controls="areas">Areas of Work</button>
+    </li>
+    <li>
+      <button class="tab-button" data-tab="job-search" role="tab" aria-selected="false" aria-controls="job-search">Job Websites</button>
+    </li>
+    <li>
+      <button class="tab-button" data-tab="example-jobs" role="tab" aria-selected="false" aria-controls="example-jobs">Partner Jobs</button>
+    </li>
+  </ul>
+</nav>
+
+    <!-- Tabs Content -->
+    <div class="tabs-content">
+        
+      <!-- Tab Content: Sectors with Accordions -->
+      <div class="tab-content active" id="sectors">
+          <h3 class="subheading">Different sectors in the sports industry</h3>
+        <p>
+    The sports industry can broadly be divided into three main sectors: public, non-profit, and commercial. While there is some flexibility about the exact boundaries of these categories, they generally encompass the diverse range of organisations within the industry. These sectors are fundamental in shaping the sports job market, offering varied opportunities across different areas of work.
+
+</p>
+        <div class="accordion-container">
+          <!-- Public Sector -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="sect-public">
+              <span>Public Sector</span>
+              <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="accordion-content" id="sect-public" role="region" aria-labelledby="public-sector">
+              <p>
+                Government agencies and departments make up the public sector, covering areas of work like sports facilities and policy making. Public sector organisations - such as your local council - manage services and amenities, including public parks and sports centres, ensuring accessible opportunities to engage in sport and physical activities.
+              </p>
+            </div>
+          </div>
+
+          <!-- Non-Profit Sector -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="sect-nonprofit">
+              <span>Non-Profit Sector</span>
+              <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="accordion-content" id="sect-nonprofit" role="region" aria-labelledby="non-profit-sector">
+              <p>
+                Non-profit organisations, including charities and national governing bodies of sport, promote themes like sports particicpation, funding, sports clubs, coaching, and performance sport. They often rely on volunteers and community networks to deliver programmes for people.
+              </p>
+            </div>
+          </div>
+
+          <!-- Commercial Sector -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="sect-commercial">
+              <span>Commercial Sector</span>
+              <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="accordion-content" id="sect-commercial" role="region" aria-labelledby="commercial-sector">
+              <p>
+                The commercial sector consists of businesses seeking to profit from sports-related activities. This includes professional sports teams, sporting goods manufacturers, fitness clubs, and media outlets. These entities contribute significantly to the economy by providing products, services, and entertainment to consumers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Content: Areas of Work with Search and Accordions -->
+      <div class="tab-content" id="areas">
+        <!-- Search Bar -->
+        <div class="search-bar">
+          <input type="text" id="areaSearch" placeholder="Search Areas of Work..." />
+        </div>
+
+        <!-- Areas List -->
+        <ul class="areas-list" id="areasList">
+          <li><strong>Disability Sport:</strong> Focuses on organising and promoting sports for individuals with disabilities.</li>
+          <li><strong>Events:</strong> Involves planning and delivering sports and entertainment events such as tournaments, competitions, and cultural programmes.</li>
+          <li><strong>Exercise &amp; Fitness:</strong> Centres on designing and leading fitness programmes to improve health and enhance physical wellbeing.</li>
+          <li><strong>Health Promotion:</strong> Aims to encourage active lifestyles and healthy behaviors within communities through various initiatives.</li>
+          <li><strong>Leisure Operations:</strong> Manages recreational facilities and services, such as sports centres and swimming pools.</li>
+          <li><strong>Major Events:</strong> Involves the organisation and logistics of large-scale sports events such as the Olympics or World Cups.</li>
+          <li><strong>Media Rights:</strong> Deals with the sale and distribution of broadcasting rights for sports events.</li>
+          <li><strong>Outdoor Education:</strong> Focuses on sports and activities conducted outdoors, such as hiking, cycling, and water sports.</li>
+          <li><strong>Performance Sport:</strong> Dedicated to training elite athletes to achieve top competitive results and peak performance.</li>
+          <li><strong>Physical Activity:</strong> Promotes the provision of physical activities and services to engage people with a focus on health, well-being, participation, and social outcomes.</li>
+          <li><strong>Physical Education:</strong> Involves teaching sports, fitness, and cognitive skills to students in educational settings.</li>
+          <li><strong>Physiotherapy:</strong> Is a treatment method that uses movement science to help people restore, maintain, and improve their physical function, strength, and wellbeing.</li>
+          <li><strong>Sports Analytics:</strong> Uses data to analyse and enhance team performance and decision-making.</li>
+          <li><strong>Sports Broadcasting:</strong> Involves presenting and covering sports events on television, radio, or online platforms.</li>
+          <li><strong>Sports Coaching:</strong> Guides athletes in training and competition to enhance their performance and achieve their sporting goals.</li>
+          <li><strong>Sports Development:</strong> Works on growing sports participation and improving pathways from grassroots to elite sport.</li>
+          <li><strong>Sports Diplomacy:</strong> Uses sport as a soft power tool to foster international relationships and promote cultural exchange between countries.</li>
+          <li><strong>Sports Engineering:</strong> Designs and develops innovative sports equipment, facilities, and technologies.</li>
+          <li><strong>Sports Governance:</strong> Oversees the exercise of power and authority in sport organisations, including policy making, within local, national or international scope.</li>
+          <li><strong>Sports Journalism:</strong> Reports and writes about sports events, athletes, and industry trends for various media outlets.</li>
+          <li><strong>Sports Law:</strong> Handles legal issues related to sports, including contracts, disputes, and governance matters.</li>
+          <li><strong>Sports Marketing:</strong> Promotes sports teams, events, and products to engage fans and increase revenue.</li>
+          <li><strong>Sports Media:</strong> Creates and distributes content related to sports through television, radio, and online platforms.</li>
+          <li><strong>Sports Medicine:</strong> Provides medical care and treatment that focuses on the prevention, diagnosis, treatment, and rehabilitation of injuries related to sport and physical activity.</li>
+          <li><strong>Sports Psychology:</strong> Focuses on the mental aspects of athletic performance and overall wellbeing of athletes.</li>
+          <li><strong>Sports Retail &amp; Merchandising:</strong> Sells sports equipment, apparel, and memorabilia to fans and athletes.</li>
+          <li><strong>Sports Science:</strong> Studies the scientific principles behind athletic performance and training to optimise results.</li>
+          <li><strong>Sports Technology:</strong> Develops and implements technological solutions to enhance sports experiences and performance.</li>
+          <li><strong>Sports Therapy:</strong> Provides therapeutic treatments that focus on preventing injuries and helping patients regain their fitness levels for sports, work, and everyday life.</li>
+          <li><strong>Sports Tourism:</strong> Organises travel experiences centered around attending or participating in sports events.</li>
+          <li><strong>Strength &amp; Conditioning:</strong> Focuses on improving athletes' strength, endurance, and overall physical performance.</li>
+          <li><strong>Sustainability in Sport:</strong> Implements environmentally friendly practices within the sports industry to reduce its environmental impact.</li>
+          <li><strong>Volunteer Management:</strong> Coordinates volunteers who support sports events and organisations.</li>
+        </ul>
+      </div>
+
+      <!-- Tab Content: Job Search -->
+      <div class="tab-content" id="job-search">
+        <h3 class="subheading">Where can I find a job?</h3>
+        <p>
+    Many hiring managers advertise vacancies on job search platforms. If you're on the job hunt or want to get a flavour of what the market is like, we recommend researching the following platform types:
+</p>
+<!-- Job Search Platforms Table -->
+<table class="job-platforms-table">
+    
+    <tbody>
+        <tr>
+            <td><strong>Search engine</strong></td>
+            <td>Where companies advertise jobs to a centralised or specialist website for visibility within the jobs market.</td>
+        </tr>
+        <tr>
+            <td><strong>Employer job board</strong></td>
+            <td>Company-specific websites, where vacancies are often found in the careers section.</td>
+        </tr>
+        <tr>
+            <td><strong>LinkedIn</strong></td>
+            <td>Increasingly used for job advertisements, LinkedIn offers a job search platform and is popular with recruiters for finding candidates.</td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    Not all hiring managers use job search engines to advertise their roles, so regularly researching direct employer websites and LinkedIn will give you a good idea of the market. From our experience, relying solely on search engines will provide limited insight.
+</p>
+<p>
+    Below, we've listed some examples of job search options; the list isn't exhaustive, so we encourage you to do your own research too.
+</p>
+        <h3 class="subheading">Job search engines</h3>
+        <p>
+    Please note these buttons link to external websites. While we review website links regularly, we cannot guarantee their accuracy. The organisations listed on this website are not affiliated with or endorsed by Path2Sport. All links are provided for informational purposes only.
+</p>
+        <div class="search-cards">
+          <a href="https://sportscotland.org.uk/jobs" target="_blank" rel="noopener" class="search-card" aria-label="Visit sportscotland job page">
+            <h4>sportscotland</h4>
+          </a>
+          <a href="https://www.uksport.gov.uk/jobs" target="_blank" rel="noopener" class="search-card" aria-label="Visit UK Sport job page">
+            <h4>UK Sport</h4>
+          </a>
+          <a href="https://www.bucs.org.uk/jobs-listing.html" target="_blank" rel="noopener" class="search-card" aria-label="Visit British Universities & Colleges Sport job page">
+            <h4>British Universities & Colleges Sport</h4>
+          </a>
+          <a href="https://sportandrecreation.org.uk/about/careers" target="_blank" rel="noopener" class="search-card" aria-label="Visit Sport & Recreation Alliance job page">
+            <h4>Sport & Recreation Alliance</h4>
+          </a>
+          <a href="https://www.globalsportsjobs.com/" target="_blank" rel="noopener" class="search-card" aria-label="Visit Global Sports Jobs page">
+            <h4>Global Sports Jobs</h4>
+          </a>
+          <a href="https://www.leisurejobs.com/jobs/sports-jobs/" target="_blank" rel="noopener" class="search-card" aria-label="Visit Leisure Jobs page">
+            <h4>Leisure Jobs</h4>
+          </a>
+          <a href="https://uk.indeed.com" target="_blank" rel="noopener" class="search-card" aria-label="Visit Indeed">
+            <h4>Indeed</h4>
+          </a>
+          <a href="https://sportswork.co/" target="_blank" rel="noopener" class="search-card" aria-label="Visit SportsWork jobs page">
+            <h4>SportsWork</h4>
+          </a>
+        </div>
+
+        <!-- Introduction to Tailored Job Platforms -->
+        <h3 class="subheading">Employer job boards</h3>
+        <p>
+          You can also check local council websites, club pages, or specific governing bodies
+          for more tailored roles. Check out some of our hand picked employer job boards from public, non-profit, and commercial sectors. Again, the organisations listed are not affiliated with or endorsed by Path2Sport. All links are provided for informational purposes only.
+        </p>
+
+        <!-- Tailored Job Platforms Cards -->
+<div class="search-cards tailored">
+  <a href="https://www.britishswimming.org/members-resources/jobs-board/" target="_blank" rel="noopener" class="search-card" aria-label="Visit Aquatics GB job page">
+    <h4>Aquatics GB</h4>
+</a>
+<a href="https://careers.bbc.co.uk/" target="_blank" rel="noopener" class="search-card" aria-label="Visit BBC job page">
+    <h4>BBC</h4>
+</a>
+<a href="https://www.britishcycling.org.uk/vacancies" target="_blank" rel="noopener" class="search-card" aria-label="Visit British Cycling job page">
+    <h4>British Cycling</h4>
+</a>
+<a href="https://www.teamgb.com/jobs/14CLYo1Auwq0T54La3XLJ2" target="_blank" rel="noopener" class="search-card" aria-label="Visit British Olympic Association job page">
+    <h4>British Olympic Association</h4>
+</a>
+<a href="https://paralympics.org.uk/footer-pages/about-the-bpa" target="_blank" rel="noopener" class="search-card" aria-label="Visit British Paralympic Association job page">
+    <h4>British Paralympic Association</h4>
+</a>
+<a href="https://www.campamerica.co.uk/about-us/work-for-us" target="_blank" rel="noopener" class="search-card" aria-label="Visit Camp America job page">
+    <h4>Camp America</h4>
+</a>
+<a href="https://careers.davidlloyd.co.uk/" target="_blank" rel="noopener" class="search-card" aria-label="Visit David Lloyd Clubs job page">
+    <h4>David Lloyd Clubs</h4>
+</a>
+<a href="https://jobs.decathlon.co.uk/" target="_blank" rel="noopener" class="search-card" aria-label="Visit Decathlon job page">
+    <h4>Decathlon</h4>
+</a>
+<a href="https://www.edinburghleisure.co.uk/careers" target="_blank" rel="noopener" class="search-card" aria-label="Visit Edinburgh Leisure job page">
+    <h4>Edinburgh Leisure</h4>
+</a>
+<a href="https://www.endeavorco.com/careers" target="_blank" rel="noopener" class="search-card" aria-label="Visit Endeavor job page">
+    <h4>Endeavor</h4>
+</a>
+<a href="https://www.europeantour.com/about-us/" target="_blank" rel="noopener" class="search-card" aria-label="Visit European Tour Golf job page">
+    <h4>European Tour Golf</h4>
+</a>
+<a href="https://www.fanaticsinc.com/careers" target="_blank" rel="noopener" class="search-card" aria-label="Visit Fanatics job page">
+    <h4>Fanatics</h4>
+</a>
+<a href="https://www.glasgowlife.org.uk/about-us/colleague-information/colleague-updates/current-glasgow-life-vacancies" target="_blank" rel="noopener" class="search-card" aria-label="Visit Glasgow Life job page">
+    <h4>Glasgow Life</h4>
+</a>
+<a href="https://careers.ukathletics.org.uk/" target="_blank" rel="noopener" class="search-card" aria-label="Visit UK Athletics job page">
+    <h4>GB Athletics</h4>
+</a>
+<a href="https://careers.gymshark.com/" target="_blank" rel="noopener" class="search-card" aria-label="Visit Gymshark job page">
+    <h4>Gymshark</h4>
+</a>
+<a href="https://careers.hawkeyeinnovations.com/" target="_blank" rel="noopener" class="search-card" aria-label="Visit Hawk Eye job page">
+    <h4>Hawk-Eye Innovations</h4>
+</a>
+<a href="https://www.hudl.com/en_gb/jobs" target="_blank" rel="noopener" class="search-card" aria-label="Visit Hudle job page">
+    <h4>Hudl</h4>
+</a>
+<a href="https://www.img.com/careers" target="_blank" rel="noopener" class="search-card" aria-label="Visit IMG job page">
+    <h4>IMG</h4>
+</a>
+<a href="https://www.itftennis.com/en/about-us/organisation/jobs/join-us/" target="_blank" rel="noopener" class="search-card" aria-label="Visit International Tennis Federation job page">
+    <h4>International Tennis Federation</h4>
+</a>
+<a href="https://www.lta.org.uk/about-us/careers/" target="_blank" rel="noopener" class="search-card" aria-label="Visit Lawn Tennis Association job page">
+    <h4>Lawn Tennis Association</h4>
+</a>
+<a href="https://londonsport.org/about-us/careers/" target="_blank" rel="noopener" class="search-card" aria-label="Visit London Sport job page">
+    <h4>London Sport</h4>
+</a>
+<a href="https://racingcareers.mclaren.com/" target="_blank" rel="noopener" class="search-card" aria-label="Visit McLaren Racing job page">
+    <h4>McLaren Racing</h4>
+</a>
+<a href="https://careers.nba.com/" target="_blank" rel="noopener" class="search-card" aria-label="Visit NBA job page">
+    <h4>NBA</h4>
+</a>
+<a href="https://jobs.nike.com/" target="_blank" rel="noopener" class="search-card" aria-label="Visit Nike job page">
+    <h4>Nike</h4>
+</a>
+<a href="https://www.premierleague.com/about/careers" target="_blank" rel="noopener" class="search-card" aria-label="Visit Premier League job page">
+    <h4>Premier League</h4>
+</a>
+<a href="https://jobs.redbull.com/gb-en" target="_blank" rel="noopener" class="search-card" aria-label="Visit Red Bull job page">
+    <h4>Red Bull</h4>
+</a>
+<a href="https://www.redbullracing.com/int-en/jobs" target="_blank" rel="noopener" class="search-card" aria-label="Visit Red Bull Racing job page">
+    <h4>Red Bull Racing</h4>
+</a>
+<a href="https://www.schoolofhardknocks.org.uk/pages/category/jobs-at-sohk" target="_blank" rel="noopener" class="search-card" aria-label="Visit School of Hard Knocks job page">
+    <h4>School of Hard Knocks</h4>
+</a>
+<a href="https://scottishfa.pinpointhq.com/" target="_blank" rel="noopener" class="search-card" aria-label="Visit Scottish Football Association job page">
+    <h4>Scottish Football Association</h4>
+</a>
+<a href="https://ssf.org.uk/vacancies/" target="_blank" rel="noopener" class="search-card" aria-label="Visit SSF job page">
+    <h4>Scottish Sports Futures</h4>
+</a>
+<a href="https://www.cloudonlinerecruitment.co.uk/SRU/" target="_blank" rel="noopener" class="search-card" aria-label="Visit Scottish Rugby job page">
+    <h4>Scottish Rugby</h4>
+</a>
+<a href="https://careers.sky.com/" target="_blank" rel="noopener" class="search-card" aria-label="Visit Sky Sports job page">
+    <h4>Sky Sports</h4>
+</a>
+<a href="https://www.sportaberdeen.co.uk/work-with-us/current-vacancies" target="_blank" rel="noopener" class="search-card" aria-label="Visit Sport Aberdeen job page">
+    <h4>Sport Aberdeen</h4>
+</a>
+<a href="https://sported.org.uk/careers/" target="_blank" rel="noopener" class="search-card" aria-label="Visit Sported job page">
+    <h4>Sported</h4>
+</a>
+<a href="https://www.sportinginsights.com/" target="_blank" rel="noopener" class="search-card" aria-label="Visit Sporting Insights job page">
+    <h4>Sporting Insights</h4>
+</a>
+<a href="https://www.statsperform.com/careers/" target="_blank" rel="noopener" class="search-card" aria-label="Visit Stats Perform job page">
+    <h4>Stats Perform</h4>
+</a>
+<a href="https://www.sportradar.com/careers/" target="_blank" rel="noopener" class="search-card" aria-label="Visit Sportradar job page">
+    <h4>Sportradar</h4>
+</a>
+<a href="https://topgolf.com/uk/company/careers/" target="_blank" rel="noopener" class="search-card" aria-label="Visit Top Golf job page">
+    <h4>Top Golf</h4>
+</a>
+<a href="https://www.nytimes.com/athletic/careers/" target="_blank" rel="noopener" class="search-card" aria-label="Visit The Athletic job page">
+    <h4>The Athletic</h4>
+</a>
+<a href="https://thejockeyclub.elementsuite.net/portal.php?site=applicantPortal&page=vacancies" target="_blank" rel="noopener" class="search-card" aria-label="Visit The Jockey Club job page">
+    <h4>The Jockey Club</h4>
+</a>
+<a href="https://randa.org/en/recruitment" target="_blank" rel="noopener" class="search-card" aria-label="Visit The R&A job page">
+    <h4>The R&A</h4>
+</a>
+<a href="https://twocircles.com/gb/careers/" target="_blank" rel="noopener" class="search-card" aria-label="Visit Two Circles job page">
+    <h4>Two Circles</h4>
+</a>
+<a href="https://www.ukactive.com/ukactive-careers/" target="_blank" rel="noopener" class="search-card" aria-label="Visit UK Active job page">
+    <h4>UK Active</h4>
+</a>
+<a href="https://careers.ukad.org.uk/" target="_blank" rel="noopener" class="search-card" aria-label="Visit UK Anti-Doping job page">
+    <h4>UK Anti-Doping</h4>
+</a>
+<a href="https://www.teamwass.com/about/careers/" target="_blank" rel="noopener" class="search-card" aria-label="Visit Wasserman job page">
+    <h4>Wasserman</h4>
+</a>
+<a href="https://www.world.rugby/organisation/about-us/careers" target="_blank" rel="noopener" class="search-card" aria-label="Visit World Rugby job page">
+    <h4>World Rugby</h4>
+</a>
+<a href="https://jobs.unicef.org/en-us/listing/" target="_blank" rel="noopener" class="search-card" aria-label="Visit UNICEF job page">
+    <h4>UNICEF</h4>
+</a>
+<a href="https://jobs.wimbledon.com/" target="_blank" rel="noopener" class="search-card" aria-label="Visit Wimbledon Championships job page">
+    <h4>Wimbledon Championships</h4>
+</a>
+</div>
+      </div>
+    </div>
+
+    <!-- New Tab Content: Example Jobs -->
+  <div class="tab-content" id="example-jobs">
+    <div class="career-jobs-board">
+      <h3 class="subheading">Jobs from our partners</h3>
+      <p>
+        From time to time, we may advertise jobs shared by our partners. These roles link to external websites, so please ensure you verify all details before applying. 
+      </p>
+      <div class="jobs-container">
+        <div class="job-entry">
+          <h4>Your Job Here</h4>
+          <p>Company</p>
+          <a href="https://example-link.com/sport-event-coordinator" target="_blank" rel="noopener">
+            View &amp; Apply
+          </a>
+        </div>
+        <div class="job-entry">
+          <h4>Your Job Here</h4>
+          <p>Company</p>
+          <a href="https://example-link.com/development-officer" target="_blank" rel="noopener">
+            View &amp; Apply
+          </a>
+        </div>
+        <div class="job-entry">
+          <h4>Your Job Here</h4>
+          <p>Company</p>
+          <a href="https://example-link.com/marketing-assistant" target="_blank" rel="noopener">
+            View &amp; Apply
+          </a>
+        </div>
+        <!-- Add more job entries as needed -->
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+    
+    <section class="employability" id="employability">
+    <div class="container">
+        <h2>Employability</h2>
+        <p>
+            Making yourself employable in the sports industry goes beyond qualifications; 
+            it's about highlighting the experiences and qualities that demonstrate 
+            readiness for the workplace. 
+        </p>
+
+        <div class="employability-cards">
+            <div class="employability-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <i class="fa-solid fa-file-lines card-icon" aria-hidden="true"></i>
+                        <h3>Building Your CV</h3>
+                        <p>Give employers a strong first impression by tailoring your CV to highlight your sports-related skills and achievements.</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Quick Tips</h3>
+                        <ul>
+                            <li>Focus on leadership & teamwork</li>
+                            <li>Use action words (e.g. Ã¢â‚¬Å“organisedÃ¢â‚¬Â, Ã¢â‚¬Å“managedÃ¢â‚¬Â)</li>
+                            <li>Quantify achievements when possible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="employability-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <i class="fa-solid fa-handshake-angle card-icon" aria-hidden="true"></i>
+                        <h3>Volunteering &amp; Networking</h3>
+                        <p>Demonstrate your proactivity by gaining practical experience and forming valuable contacts in the sports industry.</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Top Advice</h3>
+                        <ul>
+                            <li>Attend local clubs & events</li>
+                            <li>Use LinkedIn to connect with industry pros</li>
+                            <li>Seek mentors who can guide you</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="employability-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <i class="fa-solid fa-arrow-trend-up card-icon" aria-hidden="true"></i>
+                        <h3>Transferable Skills</h3>
+                        <p>Turn your sporting activities into evidence of resilience, leadership, and problem-solving for future employers.</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Remember</h3>
+                        <ul>
+                            <li>Link sport experiences to real workplace tasks</li>
+                            <li>Show flexibility and adaptability</li>
+                            <li>Highlight how you handle pressure</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="employability-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <i class="fa-solid fa-certificate card-icon" aria-hidden="true"></i>
+                        <h3>Qualifications &amp; Courses</h3>
+                        <p>Short courses and specialised certifications can strengthen your credentials alongside formal degrees or diplomas.</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Key Points</h3>
+                        <ul>
+                            <li>Look for first aid, coaching badges</li>
+                            <li>Stay up-to-date on safety/safeguarding</li>
+                            <li>Explore local councils & sports bodies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="employability-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <i class="fa-solid fa-comments card-icon" aria-hidden="true"></i>
+                        <h3>Interview Prep</h3>
+                        <p>Prepare real-world examples of success, setbacks, and teamwork to illustrate how youÃ¢â‚¬â„¢ll excel in a sports-related role.</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>How To Shine</h3>
+                        <ul>
+                            <li>Use specific stories & outcomes</li>
+                            <li>Dress neatly, arrive early, follow up</li>
+                            <li>Show genuine enthusiasm & honesty</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Dashboard Section -->
+    <div class="dashboard" id="dashboard">
+        <div class="dashboard-sidebar">
+            <h3>Select University</h3>
+            <ul id="sidebarList">
+            </ul>
+        </div>
+
+        <div class="dashboard-content">
+            <div class="dashboard-header">
+                <h2 id="dashboardTitle">University Name</h2>
+                <button class="close-btn" id="closeBtn" aria-label="Close Dashboard">
+                    &times;
+                </button>
+            </div>
+            <div class="dashboard-content-details">
+                <div class="dashboard-banner">
+                    <div class="dashboard-item" id="dashboardLocation"></div>
+                    <div class="dashboard-item" id="dashboardYear"></div>
+                    <div class="dashboard-item">
+                        <a href="#" target="_blank" id="dashboardWebsite"></a>
+                    </div>
+                </div>
+                <h3>About:</h3>
+                <p id="dashboardDescription"></p>
+                <h3>Courses:</h3>
+                <ul id="dashboardCourses">
+                </ul>
+                <h3>Sports Clubs:</h3>
+                <ul id="dashboardClubs">
+                </ul>
+                <h3>Rankings:</h3>
+                <div class="rankings" id="dashboardRankings">
+                    <!-- Ranking circles will be injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="menu-section">
+        <button id="close-menu" aria-label="Close Menu">&times;</button>
+        <h2>MENU</h2>
+        <div id="menu-options">
+            <a href="#" id="menu-home" aria-label="Return to Home">Home</a>
+            <a href="#" id="menu-about">About</a>
+            <a href="#" id="menu-uni-courses">Uni Courses</a>
+            <a href="#" id="menu-college-courses">College Courses</a>
+            <a href="#" id="menu-career-paths">Explore Careers</a>
+            <a href="#" id="menu-employability">Employability</a>
+            <a href="#" id="menu-no-right-path">No Wrong Path</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 StudySport. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const universities = [
+            {
+                name: "University of Aberdeen",
+                location: "Aberdeen, North East Scotland",
+                yearFounded: 1495,
+                website: "https://www.abdn.ac.uk",
+                description:
+                    "The University of Aberdeen is one of the oldest universities in the UK, offering a range of sports-related courses with a focus on sports science and management. Located in the vibrant city of Aberdeen, it provides excellent facilities and a supportive student community.",
+                courses: ["BSc Sport and Exercise Science", "MSc Sports Management", "BSc Physical Education"],
+                sportsClubs: ["Football Club", "Rugby Club", "Swimming Club"],
+                rankings: {
+                    "Complete Uni Guide": 4,
+                    "QS World University Rankings": 120,
+                    "Times Higher Education": 150
+                }
+            },
+            {
+                name: "Abertay University",
+                location: "Dundee, East Scotland",
+                yearFounded: 1881,
+                website: "https://www.abertay.ac.uk",
+                description:
+                    "Abertay University is renowned for its innovative courses and strong emphasis on practical skills in the sports industry. Situated in Dundee, it offers cutting-edge facilities and a dynamic environment for aspiring sports professionals.",
+                courses: ["BSc Sports Technology", "MSc Sports Coaching", "BSc Sports Management"],
+                sportsClubs: ["Basketball Club", "Tennis Club", "Athletics Club"],
+                rankings: {
+                    "Complete Uni Guide": 5,
+                    "QS World University Rankings": 130,
+                    "Times Higher Education": 160
+                }
+            },
+            {
+                name: "University of Dundee",
+                location: "Dundee, East Scotland",
+                yearFounded: 1881,
+                website: "https://www.dundee.ac.uk",
+                description:
+                    "The University of Dundee offers comprehensive sports courses with a balance of theoretical knowledge and practical application. Its central location in Dundee allows students to engage with local sports organizations and clubs.",
+                courses: ["BSc Sport and Health Science", "MSc Sports Analytics", "BSc Physical Education"],
+                sportsClubs: ["Golf Club", "Rowing Club", "Hockey Club"],
+                rankings: {
+                    "Complete Uni Guide": 6,
+                    "QS World University Rankings": 140,
+                    "Times Higher Education": 170
+                }
+            },
+            {
+                name: "Edinburgh Napier University",
+                location: "Edinburgh, East Central Scotland",
+                yearFounded: 1964,
+                website: "https://www.napier.ac.uk",
+                description:
+                    "Edinburgh Napier University provides a variety of sports courses aimed at developing both the academic and practical skills needed in the sports industry. The university's location in Edinburgh offers rich cultural and sporting opportunities.",
+                courses: ["BSc Sports Management", "MSc Sports Coaching", "BSc Sport and Exercise Science"],
+                sportsClubs: ["Football Club", "Rugby Club", "Swimming Club"],
+                rankings: {
+                    "Complete Uni Guide": 7,
+                    "QS World University Rankings": 150,
+                    "Times Higher Education": 180
+                }
+            },
+            {
+                name: "University of Edinburgh",
+                location: "Edinburgh, East Central Scotland",
+                yearFounded: 1583,
+                website: "https://www.ed.ac.uk",
+                description:
+                    "The University of Edinburgh is a prestigious institution known for its research and comprehensive range of sports-related courses. Located in Scotland's capital, it offers excellent facilities and a vibrant student life.",
+                courses: ["BSc Sport and Exercise Science", "MSc Sports Coaching", "BSc Sports Management"],
+                sportsClubs: ["Football Club", "Rugby Club", "Swimming Club"],
+                rankings: {
+                    "Complete Uni Guide": 1,
+                    "QS World University Rankings": 20,
+                    "Times Higher Education": 30
+                }
+            },
+            {
+                name: "Glasgow Caledonian University",
+                location: "Glasgow, West Central Scotland",
+                yearFounded: 1993,
+                website: "https://www.gcu.ac.uk",
+                description:
+                    "Glasgow Caledonian University specializes in sports-related courses with a focus on practical skills and industry connections. Situated in Glasgow, it offers modern facilities and numerous opportunities for student involvement in sports.",
+                courses: ["BSc Sports Science", "MSc Sports Management", "BSc Physical Education"],
+                sportsClubs: ["Basketball Club", "Tennis Club", "Athletics Club"],
+                rankings: {
+                    "Complete Uni Guide": 8,
+                    "QS World University Rankings": 160,
+                    "Times Higher Education": 190
+                }
+            },
+            {
+                name: "University of Glasgow",
+                location: "Glasgow, West Central Scotland",
+                yearFounded: 1451,
+                website: "https://www.gla.ac.uk",
+                description:
+                    "The University of Glasgow boasts a strong sports department with a variety of courses aimed at developing both theoretical and practical skills in the sports industry. Its location in Glasgow provides ample opportunities for engagement with professional sports teams.",
+                courses: ["BSc Sports Science", "MSc Sports Analytics", "BSc Physical Education"],
+                sportsClubs: ["Basketball Club", "Tennis Club", "Athletics Club"],
+                rankings: {
+                    "Complete Uni Guide": 2,
+                    "QS World University Rankings": 50,
+                    "Times Higher Education": 60
+                }
+            },
+            {
+                name: "Heriot-Watt University",
+                location: "Edinburgh, East Central Scotland",
+                yearFounded: 1821,
+                website: "https://www.hw.ac.uk",
+                description:
+                    "Heriot-Watt University offers specialized sports courses with a focus on sports technology and management. Located in Edinburgh, it provides excellent facilities and a strong connection to the sports industry.",
+                courses: ["BSc Sports Technology", "MSc Sports Management", "BSc Sport and Exercise Science"],
+                sportsClubs: ["Football Club", "Rugby Club", "Swimming Club"],
+                rankings: {
+                    "Complete Uni Guide": 9,
+                    "QS World University Rankings": 170,
+                    "Times Higher Education": 200
+                }
+            },
+            {
+                name: "University of the Highlands & Islands",
+                location: "Locations across Highlands & Islands",
+                yearFounded: 2011,
+                website: "https://www.uhi.ac.uk",
+                description:
+                    "The University of the Highlands & Islands provides a unique range of sports courses tailored to the diverse regions of Scotland. It emphasizes community engagement and practical experience in the sports industry.",
+                courses: ["BSc Sports Management", "MSc Sports Coaching", "BSc Sport and Exercise Science"],
+                sportsClubs: ["Football Club", "Rugby Club", "Swimming Club"],
+                rankings: {
+                    "Complete Uni Guide": 10,
+                    "QS World University Rankings": 180,
+                    "Times Higher Education": 210
+                }
+            },
+            {
+                name: "Queen Margaret University",
+                location: "Edinburgh, East Central Scotland",
+                yearFounded: 1875,
+                website: "https://www.qmu.ac.uk",
+                description:
+                    "Queen Margaret University offers a range of sports-related courses with a strong focus on health and exercise science. Located in Edinburgh, it provides excellent facilities and opportunities for practical experience.",
+                courses: ["BSc Health and Sports Science", "MSc Sports Coaching", "BSc Sport and Exercise Science"],
+                sportsClubs: ["Football Club", "Rugby Club", "Swimming Club"],
+                rankings: {
+                    "Complete Uni Guide": 11,
+                    "QS World University Rankings": 190,
+                    "Times Higher Education": 220
+                }
+            },
+            {
+                name: "Robert Gordon University",
+                location: "Aberdeen, North East Scotland",
+                yearFounded: 1992,
+                website: "https://www.rgu.ac.uk",
+                description:
+                    "Robert Gordon University offers diverse sports courses with a focus on practical skills and industry partnerships. Situated in Aberdeen, it provides modern facilities and strong career support for students.",
+                courses: ["BSc Sports Management", "MSc Sports Coaching", "BSc Sport and Exercise Science"],
+                sportsClubs: ["Football Club", "Rugby Club", "Swimming Club"],
+                rankings: {
+                    "Complete Uni Guide": 12,
+                    "QS World University Rankings": 200,
+                    "Times Higher Education": 230
+                }
+            },
+            {
+                name: "University of St Andrews",
+                location: "St Andrews, East Scotland",
+                yearFounded: 1413,
+                website: "https://www.st-andrews.ac.uk",
+                description:
+                    "Renowned for its academic excellence, the University of St Andrews offers specialized courses in sports studies. The university's rich history and scenic location provide a unique environment for students pursuing sports careers.",
+                courses: ["BA Sport and Exercise Psychology", "MSc International Sport Management", "BA Physical Education"],
+                sportsClubs: ["Golf Club", "Rowing Club", "Hockey Club"],
+                rankings: {
+                    "Complete Uni Guide": 3,
+                    "QS World University Rankings": 35,
+                    "Times Higher Education": 45
+                }
+            },
+            {
+                name: "University of Stirling",
+                location: "Stirling, Central Scotland",
+                yearFounded: 1967,
+                website: "https://www.stir.ac.uk",
+                description:
+                    "The University of Stirling is known for its strong sports programs and excellent facilities. Located in Stirling, it offers a vibrant student community and numerous opportunities for practical experience in the sports industry.",
+                courses: ["BSc Sports Science", "MSc Sports Coaching", "BSc Sports Management"],
+                sportsClubs: ["Football Club", "Rugby Club", "Swimming Club"],
+                rankings: {
+                    "Complete Uni Guide": 13,
+                    "QS World University Rankings": 210,
+                    "Times Higher Education": 240
+                }
+            },
+            {
+                name: "University of Strathclyde",
+                location: "Glasgow, West Central Scotland",
+                yearFounded: 1796,
+                website: "https://www.strath.ac.uk",
+                description:
+                    "The University of Strathclyde offers a range of sports-related courses with a focus on sports technology and management. Situated in Glasgow, it provides excellent facilities and strong industry connections.",
+                courses: ["BSc Sports Technology", "MSc Sports Management", "BSc Sport and Exercise Science"],
+                sportsClubs: ["Football Club", "Rugby Club", "Swimming Club"],
+                rankings: {
+                    "Complete Uni Guide": 14,
+                    "QS World University Rankings": 220,
+                    "Times Higher Education": 250
+                }
+            },
+            {
+                name: "University of the West of Scotland",
+                location: "Paisley, West Central Scotland",
+                yearFounded: 1896,
+                website: "https://www.uws.ac.uk",
+                description:
+                    "The University of the West of Scotland offers comprehensive sports courses with a focus on practical skills and industry engagement. Located in Paisley, it provides modern facilities and strong career support for students.",
+                courses: ["BSc Sports Management", "MSc Sports Coaching", "BSc Sport and Exercise Science"],
+                sportsClubs: ["Football Club", "Rugby Club", "Swimming Club"],
+                rankings: {
+                    "Complete Uni Guide": 15,
+                    "QS World University Rankings": 230,
+                    "Times Higher Education": 260
+                }
+            }
+        ];
+        // DOM Elements
+const uniList = document.getElementById('uniList');
+const dashboard = document.getElementById('dashboard');
+const sidebarList = document.getElementById('sidebarList');
+const dashboardTitle = document.getElementById('dashboardTitle');
+const dashboardLocation = document.getElementById('dashboardLocation');
+const dashboardYear = document.getElementById('dashboardYear');
+const dashboardWebsite = document.getElementById('dashboardWebsite');
+const dashboardDescription = document.getElementById('dashboardDescription');
+const dashboardCourses = document.getElementById('dashboardCourses');
+const dashboardClubs = document.getElementById('dashboardClubs');
+const dashboardRankings = document.getElementById('dashboardRankings');
+const closeBtn = document.getElementById('closeBtn');
+const dashboardContentDetails = document.querySelector('.dashboard-content-details');
+const learnMoreBtn = document.getElementById('learn-more-btn');
+const insertSection = document.querySelector('.insert-section');
+const closeInsertSectionBtn = document.getElementById('close-insert-section');
+const logoLink = document.getElementById('logo-link');
+// Menu Elements
+const openMenuBtn = document.getElementById('open-menu');
+const closeMenuBtn = document.getElementById('close-menu');
+const menuSection = document.getElementById('menu-section');
+const heroSection = document.getElementById('hero');
+// Sections
+const aboutSection = document.getElementById('about');
+const uniCoursesSection = document.getElementById('uni-courses');
+const collegeCoursesSection = document.getElementById('college-courses');
+const careerPathsSection = document.getElementById('career-paths');
+const timelineSection = document.getElementById('no-right-path');
+const employabilitySection = document.getElementById('employability');
+// Menu Options
+const menuHome = document.getElementById('menu-home');
+const menuAbout = document.getElementById('menu-about');
+const menuUniCourses = document.getElementById('menu-uni-courses');
+const menuCareerPaths = document.getElementById('menu-career-paths');
+const menuEmployability = document.getElementById('menu-employability');
+const menuNoRightPath = document.getElementById('menu-no-right-path');
+const menuCollegeCourses = document.getElementById('menu-college-courses');
+
+const overlay = document.getElementById('modal-overlay');
+
+const blurClasses = {
+    small: 'blur-small',
+    medium: 'blur-medium',
+    large: 'blur-large'
+};
+
+let previousActiveSection = null; 
+
+// Create university cards
+function displayUniversities() {
+    universities.forEach((uni, index) => {
+        const card = document.createElement('div');
+        card.classList.add('uni-card');
+        card.setAttribute('data-index', index);
+
+        card.innerHTML = `
+            <h3>${uni.name}</h3>
+            <div class="card-icon"></div>
+        `;
+
+        card.addEventListener('click', () => showDashboard(index));
+        uniList.appendChild(card);
+    });
+}
+
+// Learn More Button
+learnMoreBtn.addEventListener('click', () => {
+    const discoverSection = document.getElementById('discover');
+    if (discoverSection) {
+        discoverSection.scrollIntoView({ behavior: 'smooth' });
+    }
+});
+
+document.getElementById('btn-uni-courses').addEventListener('click', (e) => {
+    e.preventDefault();
+    insertSection.classList.remove('active');
+    showUniCoursesSection();
+});
+
+document.getElementById('btn-career-paths').addEventListener('click', (e) => {
+    e.preventDefault();
+    insertSection.classList.remove('active');
+    showCareerPathsSection();
+});
+
+document.getElementById('btn-no-right-path').addEventListener('click', (e) => {
+    e.preventDefault();
+    insertSection.classList.remove('active');
+    showTimelineSection();
+});
+
+let isClosingInsertSection = false;
+insertSection.addEventListener('transitionend', (e) => {
+    if (e.propertyName === 'transform' && isClosingInsertSection) {
+        insertSection.style.visibility = 'hidden';
+        isClosingInsertSection = false;
+    }
+});
+closeInsertSectionBtn.addEventListener('click', () => {
+    isClosingInsertSection = true;
+    insertSection.classList.remove('active');
+    insertSection.style.visibility = 'visible';
+    if (!isAnyModalActive()) {
+        hideOverlay();
+    }
+});
+
+logoLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    showHome();
+});
+
+function populateSidebar() {
+    universities.forEach((uni, index) => {
+        const li = document.createElement('li');
+        li.textContent = uni.name;
+        li.setAttribute('data-index', index);
+        li.addEventListener('click', () => showUniversity(index));
+        sidebarList.appendChild(li);
+    });
+}
+
+function showDashboard(index) {
+    showUniversity(index);
+    dashboard.classList.add('active');
+    showOverlay(); // Overlay should appear here
+    hideAllSectionsExcept('dashboard');
+}
+
+function showAboutSection() {
+    hideAllSections();
+    aboutSection.classList.add('active');
+    closeMenu();
+}
+
+function showTimelineSection() {
+    previousActiveSection = getCurrentActiveSection();
+    hideAllSections();
+    timelineSection.classList.add('active');
+    
+    closeMenu();
+}
+
+function showUniversity(index) {
+    const uni = universities[index];
+    dashboardContentDetails.style.opacity = 0;
+
+    setTimeout(() => {
+        dashboardTitle.textContent = uni.name;
+        dashboardLocation.textContent = uni.location;
+        dashboardYear.textContent = "Founded " + uni.yearFounded;
+        dashboardWebsite.href = uni.website;
+        const displayText = uni.website.replace(/^https?:\/\/(www\.)?/, '');
+        dashboardWebsite.textContent = displayText;
+
+        dashboardDescription.textContent = uni.description;
+
+        dashboardCourses.innerHTML = '';
+        uni.courses.forEach(course => {
+            const li = document.createElement('li');
+            li.textContent = course;
+            dashboardCourses.appendChild(li);
+        });
+
+        dashboardClubs.innerHTML = '';
+        uni.sportsClubs.forEach(club => {
+            const li = document.createElement('li');
+            li.textContent = club;
+            dashboardClubs.appendChild(li);
+        });
+
+        dashboardRankings.innerHTML = '';
+        for (const [key, value] of Object.entries(uni.rankings)) {
+            const rankingDiv = document.createElement('div');
+            rankingDiv.classList.add('ranking-circle');
+            rankingDiv.innerHTML = `
+                ${value}
+                <span class="tooltip">${key}</span>
+            `;
+            dashboardRankings.appendChild(rankingDiv);
+        }
+
+        dashboardContentDetails.style.opacity = 1;
+    }, 300);
+}
+
+function showCollegeCoursesSection() {
+    hideAllSections();
+    collegeCoursesSection.classList.add('active');
+    
+    closeMenu();
+}
+menuCollegeCourses.addEventListener('click', (e) => {
+    e.preventDefault();
+    showCollegeCoursesSection();
+});
+
+const menuCollegeCoursesFeatured = document.getElementById('menu-college-courses-featured');
+if(menuCollegeCoursesFeatured) {
+    menuCollegeCoursesFeatured.addEventListener('click', (e) => {
+        e.preventDefault();
+        showCollegeCoursesSection();
+    });
+}
+
+function closeDashboard(returnToCourses = true) {
+    dashboard.classList.remove('active');
+    if (returnToCourses) {
+        showUniCoursesSection();
+    }
+    if (!isAnyModalActive()) {
+        hideOverlay();
+    }
+}
+
+function openMenu() {
+    menuSection.classList.add('active');
+    
+}
+function closeMenu() {
+    menuSection.classList.remove('active');
+    if (!isAnyModalActive()) {
+       
+    }
+}
+
+openMenuBtn.addEventListener('click', () => {
+    openMenu();
+  
+});
+
+closeMenuBtn.addEventListener('click', () => {
+    closeMenu();
+});
+
+menuHome.addEventListener('click', (e) => {
+    e.preventDefault();
+    showHome();
+    closeMenu();
+});
+
+menuAbout.addEventListener('click', (e) => {
+    e.preventDefault();
+    showAboutSection();
+    closeMenu();
+});
+
+menuNoRightPath.addEventListener('click', (e) => {
+                e.preventDefault();
+                showNoRightPathSection();
+            });
+            
+            menuCareerPaths.addEventListener('click', (e) => {
+                e.preventDefault();
+                showCareerPathsSection();
+            });
+            
+            menuUniCourses.addEventListener('click', (e) => {
+                e.preventDefault();
+                showUniCoursesSection();
+            });
+            
+
+function showUniCoursesSection() {
+    hideAllSections();
+    uniCoursesSection.classList.add('active');
+    
+    closeMenu();
+}
+
+const menuUniCoursesFeatured = document.getElementById('menu-uni-courses-featured');
+if(menuUniCoursesFeatured) {
+    menuUniCoursesFeatured.addEventListener('click', (e) => {
+        e.preventDefault();
+        showUniCoursesSection();
+    });
+}
+
+function showCareerPathsSection() {
+    hideAllSections();
+    careerPathsSection.classList.add('active');
+    
+    closeMenu();
+}
+
+const menuCareerPathsFeatured = document.getElementById('menu-career-paths-featured');
+if(menuCareerPathsFeatured) {
+    menuCareerPathsFeatured.addEventListener('click', (e) => {
+        e.preventDefault();
+        showCareerPathsSection();
+    });
+}
+
+function showEmployabilitySection() {
+    hideAllSections();
+    employabilitySection.classList.add('active');
+    
+    closeMenu();
+}
+document.getElementById('btn-employability').addEventListener('click', (e) => {
+    e.preventDefault();
+    insertSection.classList.remove('active');
+    showEmployabilitySection();
+});
+menuEmployability.addEventListener('click', (e) => {
+    e.preventDefault();
+    showEmployabilitySection();
+});
+
+const menuEmployabilityFeatured = document.getElementById('menu-employability-featured');
+if(menuEmployabilityFeatured) {
+    menuEmployabilityFeatured.addEventListener('click', (e) => {
+        e.preventDefault();
+        showEmployabilitySection();
+    });
+}
+
+function showNoRightPathSection() {
+    hideAllSections();
+    timelineSection.classList.add('active');
+   
+    closeMenu();
+}
+
+const menuNoRightPathFeatured = document.getElementById('menu-no-right-path-featured');
+if(menuNoRightPathFeatured) {
+    menuNoRightPathFeatured.addEventListener('click', (e) => {
+        e.preventDefault();
+        showNoRightPathSection();
+    });
+}
+
+function showHome() {
+    hideAllSections();
+    closeDashboard(false);
+    closeMenu();
+    heroSection.classList.remove('hidden');
+    heroSection.scrollIntoView({ behavior: 'smooth' });
+    hideOverlay(); // Hide overlay when returning home
+}
+
+function hideAllSections() {
+    aboutSection.classList.remove('active');
+    uniCoursesSection.classList.remove('active');
+    collegeCoursesSection.classList.remove('active');
+    careerPathsSection.classList.remove('active');
+    employabilitySection.classList.remove('active');
+    timelineSection.classList.remove('active');
+    insertSection.classList.remove('active');
+    heroSection.classList.add('hidden');
+    if (!isAnyModalActive()) {
+        hideOverlay();
+    }
+}
+
+function hideAllSectionsExcept(activeSectionId) {
+    const sections = document.querySelectorAll('.about, .uni-courses, .college-courses, .career-paths, .employability, .timeline-section, .insert-section, .dashboard, .menu-section');
+    sections.forEach(section => {
+        if (section.id !== activeSectionId) {
+            section.classList.remove('active');
+        }
+    });
+    heroSection.classList.add('hidden');
+}
+
+function getCurrentActiveSection() {
+    const sections = [
+        aboutSection,
+        uniCoursesSection,
+        careerPathsSection,
+        insertSection,
+        timelineSection,
+        collegeCoursesSection,
+        employabilitySection,
+        dashboard,
+        menuSection
+    ];
+    for (const section of sections) {
+        if (section.classList.contains('active')) {
+            return section;
+        }
+    }
+    return null;
+}
+
+function showOverlay(blurLevel = 'medium') {
+    Object.values(blurClasses).forEach(cls => overlay.classList.remove(cls));
+
+    if (blurClasses[blurLevel]) {
+        overlay.classList.add(blurClasses[blurLevel]);
+    }
+
+    overlay.classList.add('active');
+}
+
+function hideOverlay() {
+    overlay.classList.remove('active');
+}
+
+function isAnyModalActive() {
+    const activeModals = document.querySelectorAll('.modal.active');
+    return activeModals.length > 0;
+}
+closeBtn.addEventListener('click', () => {
+    closeDashboard();
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target === dashboard || event.target === menuSection || event.target === insertSection) {
+        if (dashboard.classList.contains('active')) {
+            closeDashboard();
+        }
+        if (menuSection.classList.contains('active')) {
+            closeMenu();
+        }
+        if (insertSection.classList.contains('active')) {
+            isClosingInsertSection = true;
+            insertSection.classList.remove('active');
+            insertSection.style.visibility = 'visible';
+            if (!isAnyModalActive()) {
+                hideOverlay();
+            }
+        }
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    displayUniversities();
+    populateSidebar();
+    addFeaturedItemListeners(); 
+    startTypingAnimation();
+    initTimelineAnimations();
+});
+
+const animatedText = document.getElementById('animated-text');
+const cursorElem = document.querySelector('.cursor');
+const words = ['welcome, sporto!'];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingSpeed = 150;
+let deletingSpeed = 100;
+let pauseTime = 2000;
+
+function startTypingAnimation() {
+    if (wordIndex >= words.length) {
+        return;
+    }
+    const currentWord = words[wordIndex];
+
+    if (isDeleting) {
+        animatedText.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
+            isDeleting = false;
+            wordIndex++;
+            if (wordIndex < words.length) {
+                setTimeout(startTypingAnimation, 500);
+            }
+            return;
+        }
+        setTimeout(startTypingAnimation, deletingSpeed);
+    } else {
+        animatedText.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === currentWord.length) {
+            if (wordIndex === words.length - 1) {
+                setTimeout(() => {
+                    cursorElem.remove(); 
+                }, 1000);
+                return;
+            }
+            isDeleting = true;
+            setTimeout(startTypingAnimation, pauseTime);
+            return;
+        }
+        setTimeout(startTypingAnimation, typingSpeed);
+    }
+}
+
+function showSection(sectionId) {
+    hideAllSections(); // Hide all sections first
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.classList.add('active');
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+        
+    }
+}
+
+function addFeaturedItemListeners() {
+    const featuredItems = document.querySelectorAll('.featured-item');
+    featuredItems.forEach(item => {
+        const target = item.getAttribute('data-target');
+        item.addEventListener('click', () => {
+            showSection(target);
+            closeMenu(); 
+        });
+    });
+}
+
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('active');
+        showOverlay();
+        modal.querySelector('.modal-content').focus(); // Shift focus
+    }
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove('active');
+        setTimeout(() => {
+            if (!isAnyModalActive()) {
+                hideOverlay();
+            }
+        }, 300);
+        // Optionally, return focus to the triggering element
+    }
+}
+
+
+
+document.querySelectorAll('.modal-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        openModal(modalId);
+    });
+});
+
+document.querySelectorAll('.hover-link[data-modal]').forEach(link => {
+    link.addEventListener('click', () => {
+        const modalId = link.getAttribute('data-modal');
+        openModal(modalId);
+    });
+});
+
+document.querySelectorAll('.close-modal').forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.modal');
+        if (modal) {
+            closeModal(modal.id);
+        }
+    });
+});
+
+window.addEventListener('click', (event) => {
+    document.querySelectorAll('.modal.active').forEach(modal => {
+        if (event.target === modal) {
+            closeModal(modal.id);
+        }
+    });
+});
+
+function initTimelineAnimations() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    timelineItems.forEach(item => {
+        observer.observe(item);
+    });
+}
+// Tabs Functionality
+const tabButtons = document.querySelectorAll('.tab-button');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const targetTab = button.getAttribute('data-tab');
+
+    // Remove active class from all buttons and contents
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+    tabContents.forEach(content => content.classList.remove('active'));
+
+    // Add active class to the clicked button and corresponding content
+    button.classList.add('active');
+    document.getElementById(targetTab).classList.add('active');
+  });
+});
+
+// Accordion Functionality with ARIA
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+accordionHeaders.forEach(header => {
+  header.addEventListener('click', () => {
+    const expanded = header.getAttribute('aria-expanded') === 'true';
+
+    // Close all accordions
+    accordionHeaders.forEach(item => {
+      item.setAttribute('aria-expanded', 'false');
+      item.parentElement.classList.remove('active');
+      const contentId = item.getAttribute('aria-controls');
+      if (contentId) {
+        document.getElementById(contentId).style.maxHeight = null;
+      }
+    });
+
+    // Toggle current accordion
+    if (!expanded) {
+      header.setAttribute('aria-expanded', 'true');
+      header.parentElement.classList.add('active');
+      const contentId = header.getAttribute('aria-controls');
+      if (contentId) {
+        const content = document.getElementById(contentId);
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    }
+  });
+});
+
+// Search Functionality for Areas of Work
+const areaSearch = document.getElementById('areaSearch');
+const areasList = document.getElementById('areasList');
+const areasItems = areasList.getElementsByTagName('li');
+
+if (areaSearch) {
+  areaSearch.addEventListener('keyup', function() {
+    const filter = areaSearch.value.toLowerCase();
+    for (let i = 0; i < areasItems.length; i++) {
+      const txtValue = areasItems[i].textContent || areasItems[i].innerText;
+      if (txtValue.toLowerCase().indexOf(filter) > -1) {
+        areasItems[i].style.display = "";
+      } else {
+        areasItems[i].style.display = "none";
+      }
+    }
+  });
+}
+    </script>
+</body>
+</html>
