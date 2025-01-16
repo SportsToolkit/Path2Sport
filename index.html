@@ -176,7 +176,7 @@
     }
     .hero {
         justify-content: center; /* Center content vertically */
-        padding-top: 4rem;       /* Adjust top padding as needed */
+        padding-top: 6rem;       /* Adjust top padding as needed */
     }
     .cursor {
         display: none; /* Hide cursor on mobile */
@@ -1300,6 +1300,10 @@
         transition: transform 0.6s;
         transform-style: preserve-3d;
     }
+    .flip-card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
     .employability-card:hover .flip-card-inner {
         transform: rotateY(180deg);
     }
@@ -1353,6 +1357,20 @@
     .flip-card-back ul li {
         margin-bottom: 0.5rem;
     }
+    
+    @media (max-width: 768px) {
+  .flip-card-front p,
+  .flip-card-back p,
+  .flip-card-back ul,
+  .flip-card-front h3,
+  .flip-card-back h3 {
+      font-size: 0.85rem;      /* Slightly smaller font */
+      line-height: 1.4;        /* Adjusted line-height for better fit */
+      padding: 0.5rem;         /* Add padding to prevent edge overflow */
+      overflow-wrap: break-word; /* Ensure long words break if necessary */
+  }
+}
+
     .card-icon {
         font-size: 2rem;
         color: #0070C9;
@@ -3065,7 +3083,7 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <i class="fa-solid fa-file-lines card-icon" aria-hidden="true"></i>
-                        <h3>Know Yourself</h3>
+                        <h3>Be Yourself</h3>
                         <p>Knowing your strengths, motivations, and values demonstrates confidence. Reflect on what drives you, the skills you excel at, and areas for growth. Being self-aware helps you find the right role and present yourself confidently to potential employers.</p>
                     </div>
                     <div class="flip-card-back">
@@ -4003,6 +4021,15 @@ document.querySelectorAll('.modal-btn').forEach(button => {
         openModal(modalId);
     });
 });
+
+document.querySelectorAll('.employability-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const inner = card.querySelector('.flip-card-inner');
+    // Toggle a class to apply the flip
+    inner.classList.toggle('flipped');
+  });
+});
+
 
 document.querySelectorAll('.hover-link[data-modal]').forEach(link => {
     link.addEventListener('click', () => {
