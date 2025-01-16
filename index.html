@@ -167,6 +167,15 @@
     white-space: nowrap;
     overflow: hidden;
 }
+@media (max-width: 768px) {
+    .hero h1 {
+        white-space: normal;
+        font-size: 5rem; /* adjust size for mobile if needed */
+    }
+    .cursor {
+        display: none; /* Hide cursor on mobile */
+    }
+}
     #animated-heading {
         position: relative;
     }
@@ -369,6 +378,24 @@
     .featured-item {
         transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
     }
+    
+    .close-section {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #0070C9;
+    transition: color 0.1s ease;
+    z-index: 1003; /* Added to ensure visibility on fixed sections */
+}
+
+.close-section:hover {
+    color: #005CAB;
+}
+
 
     /* RESPONSIVE STYLES */
     @media (max-width: 768px) {
@@ -2118,7 +2145,8 @@
     </section>
     
     <section class="about" id="about">
-        <div class="container">
+    <button class="close-section" aria-label="Close Section" onclick="showHome()">&times;</button>
+    <div class="container">
             <h2>About Path2Sport</h2>
             <p>
                 Path2Sport was launched in January 2025 as a free resource to help the next
@@ -2145,6 +2173,7 @@
     </section>
     
 <section class="no-right-path-section" id="no-right-path">
+    <button class="close-section" aria-label="Close Section" onclick="showHome()">&times;</button>
     <div class="container">
         <h2>No Wrong Path: Finding Your Way</h2>
         <div class="blog-content">
@@ -2278,15 +2307,19 @@
         </ul>
     </div>
 </div>
+
     <section class="universities" id="uni-courses">
-        <div class="container">
+    <button class="close-section" aria-label="Close Section" onclick="showHome()">&times;</button>
+    <div class="container">
             <h2>Explore Universities</h2>
             <div class="uni-list" id="uniList">
             </div>
         </div>
     </section>
+    
     <section class="college-courses" id="college-courses">
-        <div class="container">
+    <button class="close-section" aria-label="Close Section" onclick="showHome()">&times;</button>
+    <div class="container">
             <h2>College Courses</h2>
             <p>
                 Scotland's 24 colleges, spread across 13 regions, are a great place to start exploring vocational pathways into sport, through qualifications like HNDs and HNCs. The table below links to their websites, so take a look and see what opportunities they offer. Please note, the institutions listed on are not affiliated with or endorsed by Path2Sport. All links are provided for informational purposes only.
@@ -2631,7 +2664,9 @@
             </table>
         </div>
     </section>
+    
 <section class="career-paths" id="career-paths">
+  <button class="close-section" aria-label="Close Section" onclick="showHome()">&times;</button>
   <div class="container">
     <h2>Careers in Sport</h2>
     <p class="careers-intro">
@@ -3008,6 +3043,7 @@
 </section>
     
     <section class="employability" id="employability">
+    <button class="close-section" aria-label="Close Section" onclick="showHome()">&times;</button>
     <div class="container">
         <h2>Employability</h2>
         <p>
@@ -3869,6 +3905,11 @@ let deletingSpeed = 100;
 let pauseTime = 2000;
 
 function startTypingAnimation() {
+    if(window.innerWidth <= 768) {
+        animatedText.textContent = "welcome, sporto!";
+        cursorElem.style.display = "none";
+        return;
+    }
     if (wordIndex >= words.length) {
         return;
     }
