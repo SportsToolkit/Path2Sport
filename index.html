@@ -720,7 +720,7 @@
         background: none;
         border: none;
         color: #0070C9;
-        font-size: 1.25rem;
+        font-size: 3rem;
         cursor: pointer;
         transition: color 0.1s ease;
     }
@@ -3284,11 +3284,7 @@
                 <h3>Courses:</h3>
                 <ul id="dashboardCourses">
                 </ul>
-                <h3>Sports Clubs:</h3>
-                <ul id="dashboardClubs">
-                </ul>
-                <h3>Rankings:</h3>
-                <div class="rankings" id="dashboardRankings">
+                
                     <!-- Ranking circles will be injected here -->
                 </div>
             </div>
@@ -3322,7 +3318,11 @@
                 website: "https://www.abdn.ac.uk",
                 description:
                     "The University of Aberdeen is one of the oldest universities in the UK, offering a range of sports-related courses with a focus on sports science and management. Located in the vibrant city of Aberdeen, it provides excellent facilities and a supportive student community.",
-                courses: ["BSc Sport and Exercise Science", "MSc Sports Management", "BSc Physical Education"],
+                courses: [
+  { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
+  { name: "MSc Sports Management", url: "https://example.com/sports-management" },
+  { name: "BSc Physical Education", url: "https://example.com/physical-education" }
+],
                 sportsClubs: ["Football Club", "Rugby Club", "Swimming Club"],
                 rankings: {
                     "Complete Uni Guide": 4,
@@ -3337,7 +3337,11 @@
                 website: "https://www.abertay.ac.uk",
                 description:
                     "Abertay University is renowned for its innovative courses and strong emphasis on practical skills in the sports industry. Situated in Dundee, it offers cutting-edge facilities and a dynamic environment for aspiring sports professionals.",
-                courses: ["BSc Sports Technology", "MSc Sports Coaching", "BSc Sports Management"],
+                courses: [
+  { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
+  { name: "MSc Sports Management", url: "https://example.com/sports-management" },
+  { name: "BSc Physical Education", url: "https://example.com/physical-education" }
+],
                 sportsClubs: ["Basketball Club", "Tennis Club", "Athletics Club"],
                 rankings: {
                     "Complete Uni Guide": 5,
@@ -3352,7 +3356,11 @@
                 website: "https://www.dundee.ac.uk",
                 description:
                     "The University of Dundee offers comprehensive sports courses with a balance of theoretical knowledge and practical application. Its central location in Dundee allows students to engage with local sports organizations and clubs.",
-                courses: ["BSc Sport and Health Science", "MSc Sports Analytics", "BSc Physical Education"],
+                courses: [
+  { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
+  { name: "MSc Sports Management", url: "https://example.com/sports-management" },
+  { name: "BSc Physical Education", url: "https://example.com/physical-education" }
+],
                 sportsClubs: ["Golf Club", "Rowing Club", "Hockey Club"],
                 rankings: {
                     "Complete Uni Guide": 6,
@@ -3367,7 +3375,11 @@
                 website: "https://www.napier.ac.uk",
                 description:
                     "Edinburgh Napier University provides a variety of sports courses aimed at developing both the academic and practical skills needed in the sports industry. The university's location in Edinburgh offers rich cultural and sporting opportunities.",
-                courses: ["BSc Sports Management", "MSc Sports Coaching", "BSc Sport and Exercise Science"],
+                courses: [
+  { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
+  { name: "MSc Sports Management", url: "https://example.com/sports-management" },
+  { name: "BSc Physical Education", url: "https://example.com/physical-education" }
+],
                 sportsClubs: ["Football Club", "Rugby Club", "Swimming Club"],
                 rankings: {
                     "Complete Uni Guide": 7,
@@ -3382,7 +3394,11 @@
                 website: "https://www.ed.ac.uk",
                 description:
                     "The University of Edinburgh is a prestigious institution known for its research and comprehensive range of sports-related courses. Located in Scotland's capital, it offers excellent facilities and a vibrant student life.",
-                courses: ["BSc Sport and Exercise Science", "MSc Sports Coaching", "BSc Sports Management"],
+                courses: [
+  { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
+  { name: "MSc Sports Management", url: "https://example.com/sports-management" },
+  { name: "BSc Physical Education", url: "https://example.com/physical-education" }
+],
                 sportsClubs: ["Football Club", "Rugby Club", "Swimming Club"],
                 rankings: {
                     "Complete Uni Guide": 1,
@@ -3397,7 +3413,11 @@
                 website: "https://www.gcu.ac.uk",
                 description:
                     "Glasgow Caledonian University specializes in sports-related courses with a focus on practical skills and industry connections. Situated in Glasgow, it offers modern facilities and numerous opportunities for student involvement in sports.",
-                courses: ["BSc Sports Science", "MSc Sports Management", "BSc Physical Education"],
+                courses: [
+  { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
+  { name: "MSc Sports Management", url: "https://example.com/sports-management" },
+  { name: "BSc Physical Education", url: "https://example.com/physical-education" }
+],
                 sportsClubs: ["Basketball Club", "Tennis Club", "Athletics Club"],
                 rankings: {
                     "Complete Uni Guide": 8,
@@ -3412,7 +3432,11 @@
                 website: "https://www.gla.ac.uk",
                 description:
                     "The University of Glasgow boasts a strong sports department with a variety of courses aimed at developing both theoretical and practical skills in the sports industry. Its location in Glasgow provides ample opportunities for engagement with professional sports teams.",
-                courses: ["BSc Sports Science", "MSc Sports Analytics", "BSc Physical Education"],
+                courses: [
+  { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
+  { name: "MSc Sports Management", url: "https://example.com/sports-management" },
+  { name: "BSc Physical Education", url: "https://example.com/physical-education" }
+],
                 sportsClubs: ["Basketball Club", "Tennis Club", "Athletics Club"],
                 rankings: {
                     "Complete Uni Guide": 2,
@@ -3427,7 +3451,11 @@
                 website: "https://www.hw.ac.uk",
                 description:
                     "Heriot-Watt University offers specialized sports courses with a focus on sports technology and management. Located in Edinburgh, it provides excellent facilities and a strong connection to the sports industry.",
-                courses: ["BSc Sports Technology", "MSc Sports Management", "BSc Sport and Exercise Science"],
+                courses: [
+  { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
+  { name: "MSc Sports Management", url: "https://example.com/sports-management" },
+  { name: "BSc Physical Education", url: "https://example.com/physical-education" }
+],
                 sportsClubs: ["Football Club", "Rugby Club", "Swimming Club"],
                 rankings: {
                     "Complete Uni Guide": 9,
@@ -3442,7 +3470,11 @@
                 website: "https://www.uhi.ac.uk",
                 description:
                     "The University of the Highlands & Islands provides a unique range of sports courses tailored to the diverse regions of Scotland. It emphasizes community engagement and practical experience in the sports industry.",
-                courses: ["BSc Sports Management", "MSc Sports Coaching", "BSc Sport and Exercise Science"],
+                courses: [
+  { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
+  { name: "MSc Sports Management", url: "https://example.com/sports-management" },
+  { name: "BSc Physical Education", url: "https://example.com/physical-education" }
+],
                 sportsClubs: ["Football Club", "Rugby Club", "Swimming Club"],
                 rankings: {
                     "Complete Uni Guide": 10,
@@ -3457,7 +3489,11 @@
                 website: "https://www.qmu.ac.uk",
                 description:
                     "Queen Margaret University offers a range of sports-related courses with a strong focus on health and exercise science. Located in Edinburgh, it provides excellent facilities and opportunities for practical experience.",
-                courses: ["BSc Health and Sports Science", "MSc Sports Coaching", "BSc Sport and Exercise Science"],
+                courses: [
+  { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
+  { name: "MSc Sports Management", url: "https://example.com/sports-management" },
+  { name: "BSc Physical Education", url: "https://example.com/physical-education" }
+],
                 sportsClubs: ["Football Club", "Rugby Club", "Swimming Club"],
                 rankings: {
                     "Complete Uni Guide": 11,
@@ -3472,7 +3508,11 @@
                 website: "https://www.rgu.ac.uk",
                 description:
                     "Robert Gordon University offers diverse sports courses with a focus on practical skills and industry partnerships. Situated in Aberdeen, it provides modern facilities and strong career support for students.",
-                courses: ["BSc Sports Management", "MSc Sports Coaching", "BSc Sport and Exercise Science"],
+                courses: [
+  { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
+  { name: "MSc Sports Management", url: "https://example.com/sports-management" },
+  { name: "BSc Physical Education", url: "https://example.com/physical-education" }
+],
                 sportsClubs: ["Football Club", "Rugby Club", "Swimming Club"],
                 rankings: {
                     "Complete Uni Guide": 12,
@@ -3487,7 +3527,11 @@
                 website: "https://www.st-andrews.ac.uk",
                 description:
                     "Renowned for its academic excellence, the University of St Andrews offers specialized courses in sports studies. The university's rich history and scenic location provide a unique environment for students pursuing sports careers.",
-                courses: ["BA Sport and Exercise Psychology", "MSc International Sport Management", "BA Physical Education"],
+                courses: [
+  { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
+  { name: "MSc Sports Management", url: "https://example.com/sports-management" },
+  { name: "BSc Physical Education", url: "https://example.com/physical-education" }
+],
                 sportsClubs: ["Golf Club", "Rowing Club", "Hockey Club"],
                 rankings: {
                     "Complete Uni Guide": 3,
@@ -3502,7 +3546,11 @@
                 website: "https://www.stir.ac.uk",
                 description:
                     "The University of Stirling is known for its strong sports programs and excellent facilities. Located in Stirling, it offers a vibrant student community and numerous opportunities for practical experience in the sports industry.",
-                courses: ["BSc Sports Science", "MSc Sports Coaching", "BSc Sports Management"],
+                courses: [
+  { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
+  { name: "MSc Sports Management", url: "https://example.com/sports-management" },
+  { name: "BSc Physical Education", url: "https://example.com/physical-education" }
+],
                 sportsClubs: ["Football Club", "Rugby Club", "Swimming Club"],
                 rankings: {
                     "Complete Uni Guide": 13,
@@ -3517,7 +3565,11 @@
                 website: "https://www.strath.ac.uk",
                 description:
                     "The University of Strathclyde offers a range of sports-related courses with a focus on sports technology and management. Situated in Glasgow, it provides excellent facilities and strong industry connections.",
-                courses: ["BSc Sports Technology", "MSc Sports Management", "BSc Sport and Exercise Science"],
+                courses: [
+  { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
+  { name: "MSc Sports Management", url: "https://example.com/sports-management" },
+  { name: "BSc Physical Education", url: "https://example.com/physical-education" }
+],
                 sportsClubs: ["Football Club", "Rugby Club", "Swimming Club"],
                 rankings: {
                     "Complete Uni Guide": 14,
@@ -3532,7 +3584,11 @@
                 website: "https://www.uws.ac.uk",
                 description:
                     "The University of the West of Scotland offers comprehensive sports courses with a focus on practical skills and industry engagement. Located in Paisley, it provides modern facilities and strong career support for students.",
-                courses: ["BSc Sports Management", "MSc Sports Coaching", "BSc Sport and Exercise Science"],
+                courses: [
+  { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
+  { name: "MSc Sports Management", url: "https://example.com/sports-management" },
+  { name: "BSc Physical Education", url: "https://example.com/physical-education" }
+],
                 sportsClubs: ["Football Club", "Rugby Club", "Swimming Club"],
                 rankings: {
                     "Complete Uni Guide": 15,
@@ -3700,29 +3756,29 @@ function showUniversity(index) {
         dashboardDescription.textContent = uni.description;
 
         dashboardCourses.innerHTML = '';
-        uni.courses.forEach(course => {
-            const li = document.createElement('li');
-            li.textContent = course;
-            dashboardCourses.appendChild(li);
-        });
-
-        dashboardClubs.innerHTML = '';
-        uni.sportsClubs.forEach(club => {
-            const li = document.createElement('li');
-            li.textContent = club;
-            dashboardClubs.appendChild(li);
-        });
-
-        dashboardRankings.innerHTML = '';
-        for (const [key, value] of Object.entries(uni.rankings)) {
-            const rankingDiv = document.createElement('div');
-            rankingDiv.classList.add('ranking-circle');
-            rankingDiv.innerHTML = `
-                ${value}
-                <span class="tooltip">${key}</span>
-            `;
-            dashboardRankings.appendChild(rankingDiv);
+uni.courses.forEach(course => {
+    const li = document.createElement('li');
+    
+    // If course is an object with a name and URL
+    if (typeof course === 'object' && course.name) {
+        if(course.url) {
+            const link = document.createElement('a');
+            link.href = course.url;
+            link.textContent = course.name;
+            link.target = "_blank";
+            li.appendChild(link);
+        } else {
+            li.textContent = course.name;
         }
+    } else {
+        // If course is just a string
+        li.textContent = course;
+    }
+    
+    dashboardCourses.appendChild(li);
+});
+
+        
 
         dashboardContentDetails.style.opacity = 1;
     }, 300);
