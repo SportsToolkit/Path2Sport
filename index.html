@@ -110,8 +110,28 @@
   header h1 {
     font-size: 2rem; /* Larger text for 'Path2Sport /' */
   }
+  
+}
+
+/* On mobile (≤ 768px), hide the word MENU and show the hamburger icon */
+@media (max-width: 768px) {
   header .menu-button {
-    font-size: 1.2rem; /* Larger MENU font */
+    /* Prevent the original text from showing */
+    text-indent: -9999px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 1.2em;
+    height: 1.2em;
+    font-size: 1.4rem; 
+  }
+  header .menu-button::before {
+    content: "\f0c9"; /* Font Awesome 'fa-bars' icon code */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900; /* solid style */
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-indent: 0;
   }
 }
 
