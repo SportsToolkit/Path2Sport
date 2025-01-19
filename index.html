@@ -2,6 +2,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -110,28 +111,8 @@
   header h1 {
     font-size: 2rem; /* Larger text for 'Path2Sport /' */
   }
-  
-}
-
-/* On mobile (≤ 768px), hide the word MENU and show the hamburger icon */
-@media (max-width: 768px) {
   header .menu-button {
-    /* Prevent the original text from showing */
-    text-indent: -9999px;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 1.2em;
-    height: 1.2em;
-    font-size: 1.4rem; 
-  }
-  header .menu-button::before {
-    content: "\f0c9"; /* Font Awesome 'fa-bars' icon code */
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900; /* solid style */
-    position: absolute;
-    top: 0;
-    left: 0;
-    text-indent: 0;
+    font-size: 1.2rem; /* Larger MENU font */
   }
 }
 
@@ -653,14 +634,25 @@
         box-shadow: 0 4px 16px rgba(0,0,0,0.2);
     }
     .dashboard-sidebar {
-        width: 320px;
-        padding: 2rem;
-        overflow-y: auto;
-        margin: auto 0; 
-        margin-left: 2rem;
-        margin-right: 0.5rem;
-        max-height: calc(100% - 4rem);
-    }
+  width: 320px;
+  padding: 2rem;
+  overflow-y: auto;
+  margin: auto 0;
+  margin-left: 2rem;
+  margin-right: 0.5rem;
+  max-height: calc(100% - 4rem);
+}
+
+/* Hide sidebar on smaller screens */
+@media (max-width: 768px) {
+  .dashboard-sidebar {
+    display: none;
+  }
+  .dashboard-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
     .dashboard-sidebar h3 {
         text-transform: uppercase;
         font-family: 'Space Grotesk', sans-serif;
@@ -3962,6 +3954,13 @@ window.addEventListener('click', function(event) {
         if (dashboard.classList.contains('active')) {
             closeDashboard();
         }
+        // Existing checks for menuSection and insertSection remain as is:
+  if (event.target === menuSection && menuSection.classList.contains('active')) {
+    closeMenu();
+  }
+  if (event.target === insertSection && insertSection.classList.contains('active')) {
+    // your existing code to close insertSection...
+  }
         if (menuSection.classList.contains('active')) {
             closeMenu();
         }
