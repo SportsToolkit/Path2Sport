@@ -1,5 +1,7 @@
 
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1307,6 +1309,20 @@
 .employability-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
+
+@media (max-width: 768px) {
+  .flip-card-inner {
+    transform: none !important;
+    transition: none !important;
+  }
+  .flip-card-inner.flipped {
+    transform: none !important;
+  }
+  .flip-card-back {
+    display: none !important;
+  }
+}
+
 .flip-card-front,
 .flip-card-back {
     position: absolute;
@@ -1360,14 +1376,13 @@
 
 @media (max-width: 768px) {
     .employability-card {
-        height: auto;
+        height: 225px;
         perspective: 800px;
         margin-bottom: 1rem;
     }
     .flip-card-front,
     .flip-card-back {
-        position: relative;
-        height: auto;
+        
         padding: 1rem;
         font-size: 0.85rem;
         line-height: 1.4;
@@ -1410,9 +1425,7 @@
 }
 
 @media (max-width: 768px) {
-  .flip-card-back {
-    display: none;
-  }
+  
   .flip-card-front,
   .flip-card-back {
     white-space: normal;
