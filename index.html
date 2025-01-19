@@ -153,7 +153,7 @@
     }
     
 .hero-line {
-    width: 90vw;
+    width: 94vw;
     height: 1px;
     background-color: #000;
     margin: 
@@ -190,8 +190,8 @@
         
     }
     .hero {
-        justify-content: center; /* Center content vertically */
-        padding-top: 6rem;       /* Adjust top padding as needed */
+        
+        padding-top: 10rem;       /* Adjust top padding as needed */
     }
     .cursor {
         display: none; /* Hide cursor on mobile */
@@ -228,11 +228,12 @@
         margin-bottom: 0.15rem;
         color: 
         justify-content: flex-end; /* Pushes content to bottom */
-    align-items: flex-start;   /* Aligns content to left */
-    text-align: left;         /* Left-aligned text */
+        align-items: flex-start;   /* Aligns content to left */
+        text-align: left;         /* Left-aligned text */
         letter-spacing: 0.06rem; 
         margin-top: 1rem; 
     }
+    
     .learn-more-btn {
         font-family: 'Space Grotesk', sans-serif;
         font-size: 1.15rem;
@@ -456,10 +457,10 @@
           margin-bottom: 1rem;
         }
         .hero h2 {
-          font-size: 1.3rem;
+          font-size: 1.75rem;
         }
         .hero p {
-          font-size: 0.95rem;
+          font-size: 1.25rem;
         }
         .cursor {
             height: 2.5rem;
@@ -802,15 +803,25 @@
         opacity: 1;
     }
     .dashboard-banner {
-        background-color: #f0f0f0;
-        padding: 1rem;
-        border-radius: 12px;
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap; /* Allow items to wrap onto new lines */
+}
+
+/* Stack items vertically on smaller screens */
+@media (max-width: 768px) {
+    .dashboard-banner {
+        flex-direction: column;
         align-items: center;
-        margin-bottom: 1rem;
+        text-align: center;
     }
+}
     .dashboard-item {
         background-color: #0070C9;
         color: #fff;
@@ -823,6 +834,7 @@
         justify-content: center;
         width: auto
         text-align: center;
+        word-break: break-word; /* Break long words to prevent overflow */
     }
     .dashboard-item a {
         color: #fff;
@@ -1810,17 +1822,18 @@
   }
 }
 
-/* Extra Small Screens: Flexible Grid */
 @media (max-width: 768px) {
   .tabs ul {
-    flex-direction: column; /* Stacks tabs vertically on small screens */
+    flex-direction: column;
   }
 
   .tab-button {
-    width: 100%; /* Full width for each tab */
-    text-align: left; /* Aligns text to the left */
-    padding: 1rem 1.5rem;
+    width: 100% !important;  /* Ensure full width */
+    flex: none;              /* Remove flex-grow/shrink behavior */
+    padding: 1.2rem 1.5rem;  /* Increase padding if desired */
+    text-align: center;      /* Center text, adjust as needed */
   }
+}
 
   .tab-button::after {
     height: 2px;
@@ -2041,41 +2054,20 @@
     letter-spacing: 0.05rem;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .job-platforms-table thead {
-        display: none;
-    }
-
-    .job-platforms-table, 
-    .job-platforms-table tbody, 
-    .job-platforms-table tr, 
-    .job-platforms-table td {
-        display: block;
-        width: 100%;
-    }
-
-    .job-platforms-table tr {
-        margin-bottom: 1rem;
-    }
-
-    .job-platforms-table td {
-        text-align: right;
-        padding-left: 50%;
-        position: relative;
-    }
-
-    .job-platforms-table td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 1rem;
-        width: 45%;
-        padding-right: 1rem;
-        white-space: nowrap;
-        font-weight: bold;
-        text-align: left;
-    }
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  margin: 0 auto;
 }
+
+/* Optional: Ensure table headers and cells align left for readability */
+.table-responsive table th,
+.table-responsive table td {
+  text-align: left;
+}
+
+
 
     /* MODAL OVERLAY */
     #modal-overlay {
@@ -2111,7 +2103,7 @@
 <body>
     <div id="modal-overlay"></div>
     <header>
-        <a href="#" id="logo-link" class="logo-link"><h1>Path2Sport / Scotland</h1></a>
+        <a href="#" id="logo-link" class="logo-link"><h1>Path2Sport / Sco</h1></a>
         <div class="menu-button" id="open-menu">MENU</div>
     </header>
     <section class="hero" id="hero">
@@ -2124,7 +2116,7 @@
         <div class="hero-line"></div>
         <h2>Find your path towards a fulfilling career in sport.</h2>
         <p class="hero-paragraph">
-            Helping young people discover higher education options in <span style="font-weight: bold; color: #0070C9;">Scotland</span> and career opportunities in the sport, health, and exercise industries.
+            Helping young people discover higher education options in <span style="font-weight: bold; color: #0070C9;">Scotland</span> and career opportunities in the sport industry.
         </p>
         <button class="learn-more-btn" id="learn-more-btn">Learn More</button>
     </div>
@@ -2406,7 +2398,8 @@
             <p>
                 Scotland's 24 colleges, spread across 13 regions, are a great place to start exploring vocational pathways into sport, through qualifications like HNDs and HNCs. The table below links to their websites, so take a look and see what opportunities they offer. Please note, the institutions listed on are not affiliated with or endorsed by Path2Sport. All links are provided for informational purposes only.
             </p>
-            <table class="college-table">
+            <div class="table-responsive">
+                <table class="college-table">
                 <thead>
                     <tr>
                         <th>College</th>
@@ -2877,6 +2870,7 @@
     Many hiring managers advertise vacancies on job search platforms. If you're on the job hunt or want to get a flavour of what the market is like, we recommend researching the following platform types:
 </p>
 <!-- Job Search Platforms Table -->
+<div class="table-responsive">
 <table class="job-platforms-table">
     
     <tbody>
@@ -2894,6 +2888,7 @@
         </tr>
     </tbody>
 </table>
+</div>
 <p>
     Not all hiring managers use job search engines to advertise their roles, so regularly researching direct employer websites and LinkedIn will give you a good idea of the market. From our experience, relying solely on search engines will provide limited insight.
 </p>
@@ -3306,8 +3301,11 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 StudySport. All rights reserved.</p>
-    </footer>
+  <p>
+    &copy; 2024 StudySport. All rights reserved. 
+    | <a href="cookies.html">Cookies Policy</a>
+  </p>
+</footer>
 
     <script>
         const universities = [
