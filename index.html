@@ -2068,47 +2068,294 @@
   text-align: left;
 }
 
+/* Cookies Policy Section Styles */
 .cookies-policy {
-  position: fixed;
-  top: 80px; /* Adjust as needed */
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #fff;
-  padding: 3rem 1rem;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(100%);
-  transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
-  z-index: 1002;
-  overflow-y: auto;
-}
-.cookies-policy.active {
-  transform: translateY(0);
-  opacity: 1;
-  visibility: visible;
+    display: none; /* Hidden by default */
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: fixed; /* Positioned as a modal */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    color: #000;
+    overflow-y: auto;
+    z-index: 1008; /* Above the consent banner */
+    transform: scale(0.95); 
 }
 
+.cookies-policy.active {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Container within the modal for content */
+.cookies-policy .container {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 800px;
+    position: relative;
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.6; /* Improved line height for readability */
+    font-size: 0.95rem; /* Slightly smaller font for better readability */
+    color: #333; /* Darker text for better contrast */
+}
+
+/* Close button styling */
+.close-section {
+    position: absolute;
+    top: 1.5rem; /* Increased top margin for better spacing */
+    right: 1.5rem; /* Increased right margin for better spacing */
+    background: none;
+    border: none;
+    font-size: 2rem; /* Increased font size for better visibility */
+    font-weight: bold; /* Makes the X stand out */
+    cursor: pointer;
+    color: #0070C9; /* Slightly lighter color for close button */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.close-section:hover,
+.close-section:focus {
+    color: #005CAB; /* Darker color on hover/focus for visibility */
+    transform: scale(1.2); /* Slightly enlarges the X on hover/focus */
+}
+
+
+/* Headings Styling */
+.cookies-policy h2,
+.cookies-policy h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem; /* Space below headings */
+    font-family: 'Space Grotesk', sans-serif;
+    color: #0070C9; /* Theme color for headings */
+}
+
+.cookies-policy h2 {
+    font-size: 1.8rem; /* Larger font for main heading */
+}
+
+.cookies-policy h3 {
+    font-size: 1.4rem; /* Slightly smaller for subheadings */
+}
+
+/* Paragraphs Styling */
+.cookies-policy p {
+    margin-bottom: 1rem; /* Space between paragraphs */
+    font-size: 0.95rem; /* Consistent font size */
+    color: #444; /* Darker text for paragraphs */
+}
+
+/* Lists Styling */
+.cookies-policy ul {
+    list-style-type: disc; /* Standard bullet points */
+    padding-left: 1.5rem; /* Proper indentation */
+    margin-bottom: 1rem; /* Space below lists */
+}
+
+.cookies-policy ul ul {
+    list-style-type: circle; /* Nested lists with different bullet */
+    padding-left: 1.5rem; /* Additional indentation for nested lists */
+}
+
+/* Links Styling */
+.cookies-policy a {
+    color: #0070C9; /* Theme color for links */
+    text-decoration: underline; /* Underline for clarity */
+}
+
+.cookies-policy a:hover,
+.cookies-policy a:focus {
+    color: #005fa3; /* Darker shade on hover/focus */
+}
+
+/* Form Elements (if any) Styling */
+.cookies-policy form {
+    margin-top: 1.5rem;
+}
+
+.cookies-policy .preference-item {
+    margin-bottom: 1rem;
+}
+
+.cookies-policy .preference-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.cookies-policy .preference-buttons .cookie-btn {
+    flex: 1;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .cookies-policy .container {
+        padding: 1rem;
+    }
+
+    .cookies-policy h2 {
+        font-size: 1.3rem;
+    }
+
+    .cookies-policy h3 {
+        font-size: 1rem;
+    }
+
+    .cookies-policy p,
+    .cookies-policy ul {
+        font-size: 0.85rem;
+    }
+}
+
+/* Terms & Conditions Section Styles */
 .terms-policy {
-  position: fixed;
-  top: 80px; 
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #fff;
-  padding: 3rem 1rem;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(100%);
-  transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
-  z-index: 1002;
-  overflow-y: auto;
+    display: none; /* Hidden by default */
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: fixed; /* Positioned as a modal */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    color: #000;
+    overflow-y: auto;
+    z-index: 1008; /* Above the consent banner */
+    transform: scale(0.95); /* Slightly scaled down */
 }
+
 .terms-policy.active {
-  transform: translateY(0);
-  opacity: 1;
-  visibility: visible;
+    display: block;
+    opacity: 1;
+    transform: scale(1); /* Scale to normal size when active */
 }
+
+/* Container within the modal for content */
+.terms-policy .container {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 800px;
+    position: relative;
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.6; /* Improved line height for readability */
+    font-size: 0.95rem; /* Slightly smaller font for better readability */
+    color: #333; /* Darker text for better contrast */
+}
+
+/* Close button styling */
+.terms-policy .close-section {
+    position: absolute;
+    top: 1.5rem; /* Increased top margin for better spacing */
+    right: 1.5rem; /* Increased right margin for better spacing */
+    background: none;
+    border: none;
+    font-size: 2rem; /* Increased font size for better visibility */
+    font-weight: bold; /* Makes the X stand out */
+    cursor: pointer;
+    color: #0070C9; /* Slightly lighter color for close button */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.terms-policy .close-section:hover,
+.terms-policy .close-section:focus {
+    color: #005CAB; /* Darker color on hover/focus for visibility */
+    transform: scale(1.2); /* Slightly enlarges the X on hover/focus */
+}
+
+
+/* Headings Styling */
+.terms-policy h2,
+.terms-policy h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem; /* Space below headings */
+    font-family: 'Space Grotesk', sans-serif;
+    color: #0070C9; /* Theme color for headings */
+}
+
+.terms-policy h2 {
+    font-size: 1.8rem; /* Larger font for main heading */
+}
+
+.terms-policy h3 {
+    font-size: 1.4rem; /* Slightly smaller for subheadings */
+}
+
+/* Paragraphs Styling */
+.terms-policy p {
+    margin-bottom: 1rem; /* Space between paragraphs */
+    font-size: 0.95rem; /* Consistent font size */
+    color: #444; /* Darker text for paragraphs */
+}
+
+/* Lists Styling */
+.terms-policy ul {
+    list-style-type: disc; /* Standard bullet points */
+    padding-left: 1.5rem; /* Proper indentation */
+    margin-bottom: 1rem; /* Space below lists */
+}
+
+.terms-policy ul ul {
+    list-style-type: circle; /* Nested lists with different bullet */
+    padding-left: 1.5rem; /* Additional indentation for nested lists */
+}
+
+/* Links Styling */
+.terms-policy a {
+    color: #0070C9; /* Theme color for links */
+    text-decoration: underline; /* Underline for clarity */
+}
+
+.terms-policy a:hover,
+.terms-policy a:focus {
+    color: #005fa3; /* Darker shade on hover/focus */
+}
+
+/* Form Elements (if any) Styling */
+.terms-policy form {
+    margin-top: 1.5rem;
+}
+
+.terms-policy .preference-item {
+    margin-bottom: 1rem;
+}
+
+.terms-policy .preference-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.terms-policy .preference-buttons .cookie-btn {
+    flex: 1;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .terms-policy .container {
+        padding: 1rem;
+    }
+
+    .terms-policy h2 {
+        font-size: 1.3rem;
+    }
+
+    .terms-policy h3 {
+        font-size: 1rem;
+    }
+
+    .terms-policy p,
+    .terms-policy ul {
+        font-size: 0.85rem;
+    }
+}
+
 
 /* Cookie Consent Banner Styles */
 .cookie-consent-banner {
@@ -3581,47 +3828,206 @@
         </div>
     </section>
     
-    <section class="cookies-policy" id="cookies-policy">
-  <button class="close-section" aria-label="Close Section" onclick="hideCookiesPolicy()">&times;</button>
-  <div class="container">
-    <h2>Cookies Policy</h2>
-
-    <h3>What are Cookies?</h3>
-    <p>
-      Cookies are small text files stored on your device when you visit websites. They help us understand your preferences and improve our site.
-    </p>
-    <h3>Types of Cookies We Use</h3>
-    <ul>
-      <li><strong>Essential Cookies:</strong> Necessary for the website to function properly.</li>
-      <li><strong>Performance Cookies:</strong> Help us understand how visitors use our site.</li>
-      <li><strong>Functionality Cookies:</strong> Remember your preferences.</li>
-    </ul>
-    <h3>Your Choices</h3>
-    <p>
-      You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer.
-    </p>
-  </div>
+    <!-- Cookies Policy Section (Modal) -->
+<section class="cookies-policy" id="cookies-policy" role="dialog" aria-labelledby="cookies-policy-title" aria-modal="true">
+    <div class="container">
+        <button class="close-section" aria-label="Close Cookies Policy">&times;</button>
+        <h2 id="cookies-policy-title">Cookies Policy</h2>
+        <p>
+            This Cookies Policy explains how <strong>Path2Sport</strong> ("we", "us", and "our") uses cookies and similar technologies to recognize you when you visit our website at <a href="https://sportstoolkit.github.io/Path2Sport/">https://sportstoolkit.github.io/Path2Sport/</a>. It explains what these technologies are and why we use them, as well as your rights to control our use of them.
+        </p>
+        
+        <h3>1. What are Cookies?</h3>
+        <p>
+            Cookies are small data files that are placed on your computer or mobile device when you visit a website. Cookies are widely used by website owners to make their websites work, or to work more efficiently, as well as to provide reporting information.
+        </p>
+        <p>
+            Cookies set by the website owner (in this case, <strong>Path2Sport</strong>) are called "first-party cookies". Cookies set by parties other than the website owner are called "third-party cookies". Third-party cookies enable third-party features or functionality to be provided on or through the website (e.g., advertising, interactive content, and analytics). The parties that set these third-party cookies can recognize your computer both when it visits the website in question and also when it visits certain other websites.
+        </p>
+        
+        <h3>2. Why Do We Use Cookies?</h3>
+        <p>
+            We use first-party and third-party cookies for several reasons. Some cookies are required for technical reasons in order for our Website to operate, and we refer to these as "essential" or "strictly necessary" cookies. Other cookies also enable us to track and target the interests of our users to enhance the experience on our Online Properties. Third parties serve cookies through our Websites for advertising, analytics, and other purposes. This is described in more detail below.
+        </p>
+        
+        <h3>3. What Types of Cookies Do We Use?</h3>
+        <p>We use the following types of cookies:</p>
+        <ul>
+            <li><strong>Essential Cookies:</strong> These cookies are strictly necessary to provide you with services available through our Websites and to use some of its features, such as access to secure areas.</li>
+            <li><strong>Performance and Functionality Cookies:</strong> These cookies are used to enhance the performance and functionality of our Websites but are non-essential to their use. However, without these cookies, certain functionality may become unavailable.</li>
+            <li><strong>Analytics and Customization Cookies:</strong> These cookies collect information that is used either in aggregate form to help us understand how our Website is being used or how effective our marketing campaigns are, or to help us customize our Website for you.</li>
+            <li><strong>Advertising Cookies:</strong> These cookies are used to make advertising messages more relevant to you. They perform functions like preventing the same ad from continuously reappearing, ensuring that ads are properly displayed for advertisers, and in some cases selecting advertisements that are based on your interests.</li>
+            <li><strong>Social Networking Cookies:</strong> These cookies are used to enable you to share pages and content that you find interesting on our Websites through third-party social networking and other websites.</li>
+        </ul>
+        
+        <h3>4. Types of Cookies We Use</h3>
+        <ul>
+            <li><strong>Essential Cookies:</strong> Necessary for the website to function properly. Examples include:
+                <ul>
+                    <li><em>sessionid:</em> Maintains your session on the website.</li>
+                    <li><em>csrftoken:</em> Protects against Cross-Site Request Forgery attacks.</li>
+                </ul>
+            </li>
+            <li><strong>Performance Cookies:</strong> Help us understand how visitors use our site. Examples include:
+                <ul>
+                    <li><em>_ga:</em> Used by Google Analytics to distinguish users.</li>
+                    <li><em>_gid:</em> Used by Google Analytics to distinguish users.</li>
+                </ul>
+            </li>
+            <li><strong>Functionality Cookies:</strong> Remember your preferences. Examples include:
+                <ul>
+                    <li><em>preferred_language:</em> Stores your preferred language choice.</li>
+                    <li><em>theme:</em> Remembers your selected website theme.</li>
+                </ul>
+            </li>
+            <li><strong>Advertising Cookies:</strong> Used for delivering relevant advertisements. Examples include:
+                <ul>
+                    <li><em>fr:</em> Used by Facebook to deliver advertisements.</li>
+                    <li><em>IDE:</em> Used by Google to track conversions.</li>
+                </ul>
+            </li>
+            <li><strong>Social Networking Cookies:</strong> Enable sharing of content. Examples include:
+                <ul>
+                    <li><em>c_user:</em> Used by Facebook to identify the user.</li>
+                    <li><em>xs:</em> Used by Facebook to identify the user.</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h3>5. Cookie Duration</h3>
+        <p>
+            The duration of cookies varies based on their purpose:
+        </p>
+        <ul>
+            <li><strong>Session Cookies:</strong> Last until you close your browser.</li>
+            <li><strong>Persistent Cookies:</strong> Remain on your device for a specified period or until you delete them. For example, the <em>_ga</em> cookie lasts for 2 years.</li>
+        </ul>
+        
+        <h3>6. How Can I Control Cookies?</h3>
+        <p>
+            You have the right to decide whether to accept or reject cookies. You can exercise your cookie rights by setting your preferences in the Cookie Consent Banner or by modifying your browser settings. Please note that if you choose to reject cookies, you may not be able to use some parts of our Website.
+        </p>
+        <p><strong>Browser Controls:</strong> Most web browsers allow you to control cookies through their settings preferences. However, if you choose to disable cookies, some features of our Websites may not function properly.</p>
+        <p><strong>Cookie Consent Management:</strong> You can change your cookie preferences at any time by clicking on the "Manage Preferences" button in the Cookie Consent Banner.</p>
+        
+        <h3>7. Third-Party Cookies</h3>
+        <p>
+            In addition to our own cookies, we may also use various third-party cookies to report usage statistics of the Website, deliver advertisements on and through the Website, and so on.
+        </p>
+        <p>
+            These third parties may use cookies to collect information about your online activities over time and across different websites when you use our Websites. They may use this information to provide targeted advertisements to you on other websites or mobile applications.
+        </p>
+        <p>
+            Examples of third-party services we use include:
+        </p>
+        <ul>
+            <li><strong>Google Analytics:</strong> For analyzing website traffic and user behavior.</li>
+            <li><strong>Facebook Pixel:</strong> For tracking conversions and optimizing Facebook advertising campaigns.</li>
+        </ul>
+        
+        <h3>8. Changes to This Cookies Policy</h3>
+        <p>
+            We may update our Cookies Policy from time to time. We will notify you of any changes by posting the new Cookies Policy on this page. You are advised to review this Cookies Policy periodically for any changes. Changes to this Cookies Policy are effective when they are posted on this page.
+        </p>
+        
+        <h3>9. Where Can You Get Further Information?</h3>
+        <p>
+            If you have any questions about our use of cookies or other technologies, please email us at <a href="mailto:privacy@path2sport.com">privacy@path2sport.com</a>.
+        </p>
+    </div>
 </section>
 
-<section class="terms-policy" id="terms-policy">
-  <button class="close-section" aria-label="Close Section" onclick="hideTermsPolicy()">&times;</button>
-  <div class="container">
-    <h2>Terms and Conditions</h2>
-    <p>
-      <!-- Insert your Terms and Conditions content here -->
-      Welcome to StudySport. By using our website, you agree to these terms...
-    </p>
-    <!-- Add additional headings, paragraphs, lists as needed -->
-  </div>
-</section>
+
+<!-- Terms & Conditions Section (Modal) -->
+<section class="terms-policy" id="terms-policy" role="dialog" aria-labelledby="terms-policy-title" aria-modal="true">
+    <div class="container">
+        <button class="close-section" aria-label="Close Terms &amp; Conditions">&times;</button>
+        <h2 id="terms-policy-title">Terms &amp; Conditions</h2>
+        <p>
+            Welcome to <strong>Path2Sport</strong>! These terms and conditions outline the rules and regulations for the use of our website.
+        </p>
+        
+        <h3>1. Introduction</h3>
+        <p>
+            By accessing this website we assume you accept these terms and conditions. Do not continue to use Path2Sport if you do not agree to take all of the terms and conditions stated on this page.
+        </p>
+        
+        <h3>2. Intellectual Property Rights</h3>
+        <p>
+            Unless otherwise stated, <strong>Path2Sport</strong> and/or its licensors own the intellectual property rights for all material on Path2Sport. All intellectual property rights are reserved.
+        </p>
+        <p>
+            You may access this from Path2Sport for your own personal use subjected to restrictions set in these terms and conditions.
+        </p>
+        
+        <h3>3. Restrictions</h3>
+        <p>You are specifically restricted from all of the following:</p>
+        <ul>
+            <li>Publishing any website material in any other media.</li>
+            <li>Selling, sublicensing, and/or otherwise commercializing any website material.</li>
+            <li>Using this website in any way that is or may be damaging to this website.</li>
+            <li>Using this website in any way that impacts user access to this website.</li>
+            <li>Engaging in any data mining, data harvesting, data extracting, or any other similar activity in relation to this website.</li>
+            <li>Using this website to engage in any advertising or marketing.</li>
+        </ul>
+        
+        <h3>4. Your Privacy</h3>
+        <p>
+            Please read our <a href="#" onclick="showCookiesPolicy(); return false;">Privacy Policy</a> for information on how we collect, use, and protect your personal data.
+        </p>
+        
+        <h3>5. No Warranties</h3>
+        <p>
+            This website is provided "as is," with all faults, and <strong>Path2Sport</strong> expresses no representations or warranties, of any kind related to this website or the materials contained on this website.
+        </p>
+        
+        <h3>6. Limitation of Liability</h3>
+        <p>
+            In no event shall <strong>Path2Sport</strong>, nor any of its officers, directors, and employees, be liable for anything arising out of or in any way connected with your use of this website.
+        </p>
+        <p>
+            <strong>Path2Sport</strong> shall not be held liable for any indirect, consequential, or special liability arising out of or in any way related to your use of this website.
+        </p>
+        
+        <h3>7. Indemnification</h3>
+        <p>
+            You hereby indemnify to the fullest extent <strong>Path2Sport</strong> from and against any and/or all liabilities, costs, demands, causes of action, damages, and expenses arising in any way related to your breach of any of the provisions of these Terms &amp; Conditions.
+        </p>
+        
+        <h3>8. Severability</h3>
+        <p>
+            If any provision of these Terms &amp; Conditions is found to be invalid under any applicable law, such provisions shall be deleted without affecting the remaining provisions herein.
+        </p>
+        
+        <h3>9. Variation of Terms</h3>
+        <p>
+            <strong>Path2Sport</strong> is permitted to revise these Terms &amp; Conditions at any time as it sees fit, and by using this website you are expected to review these Terms &amp; Conditions on a regular basis.
+        </p>
+        
+        <h3>10. Assignment</h3>
+        <p>
+            <strong>Path2Sport</strong> is allowed to assign, transfer, and subcontract its rights and/or obligations under these Terms &amp; Conditions without any notification. However, you are not allowed to assign, transfer, or subcontract any of your rights and/or obligations under these Terms &amp; Conditions.
+        </p>
+        
+        <h3>11. Entire Agreement</h3>
+        <p>
+            These Terms &amp; Conditions constitute the entire agreement between <strong>Path2Sport</strong> and you in relation to your use of this website, and supersede all prior agreements and understandings.
+        </p>
+        
+        <h3>12. Governing Law &amp; Jurisdiction</h3>
+        <p>
+            These Terms &amp; Conditions will be governed by and interpreted in accordance with the laws of the State of [Your State], and you submit to the non-exclusive jurisdiction of the state and federal courts located in [Your State] for the resolution of any disputes.
+        </p>
+    </section>
 
     <footer>
-  <p>
-    &copy; 2024 StudySport. All rights reserved.
-    | <a href="#" onclick="showCookiesPolicy(); return false;">Cookies Policy</a>
-    | <a href="#" onclick="showTermsPolicy(); return false;">Terms &amp; Conditions</a>
-  </p>
+    <p>
+        &copy; 2025 Sports Toolkit Ltd. All rights reserved.
+        | <a href="#" onclick="showCookiesPolicy(); return false;">Cookies Policy</a>
+        | <a href="#" onclick="showTermsPolicy(); return false;">Terms &amp; Conditions</a>
+    </p>
 </footer>
+
 
     <script>
         const universities = [
@@ -4496,13 +4902,10 @@ window.addEventListener('click', (event) => {
     });
 });
 
+// Function to show the Cookies Policy section
 function showCookiesPolicy() {
-    console.log("Show Cookies Policy function called");
     const policySection = document.getElementById('cookies-policy');
     policySection.classList.add('active');
-    
-    // Scroll to the modal for better visibility
-    policySection.scrollIntoView({ behavior: 'smooth' });
     
     // Prevent background scrolling when modal is open
     document.body.style.overflow = 'hidden';
@@ -4514,22 +4917,69 @@ function showCookiesPolicy() {
     }
 }
 
-
+// Function to hide the Cookies Policy section
 function hideCookiesPolicy() {
-  document.getElementById('cookies-policy').classList.remove('active');
-  // Removed: hideOverlay();
+    const policySection = document.getElementById('cookies-policy');
+    policySection.classList.remove('active');
+    
+    // Restore background scrolling
+    document.body.style.overflow = 'auto';
 }
 
+// Event listener for the close button
+document.querySelectorAll('.close-section').forEach(button => {
+    button.addEventListener('click', hideCookiesPolicy);
+});
+
+// Event listener for clicks outside the container
+document.getElementById('cookies-policy').addEventListener('click', function(event) {
+    // If the user clicks directly on the overlay (not the container or its children)
+    if (event.target === this) {
+        hideCookiesPolicy();
+    }
+});
+
+
+// Function to show the Terms & Conditions section
 function showTermsPolicy() {
-  hideAllSections(); // Hide other sections if necessary
-  document.getElementById('terms-policy').classList.add('active');
-  // No overlay to avoid blur, similar to Cookies Policy adjustments
+    const termsSection = document.getElementById('terms-policy');
+    termsSection.classList.add('active');
+    
+    // Prevent background scrolling when modal is open
+    document.body.style.overflow = 'hidden';
+    
+    // Focus on the close button for accessibility
+    const closeButton = termsSection.querySelector('.close-section');
+    if (closeButton) {
+        closeButton.focus();
+    }
+    
+    // Trap focus within the modal
+    trapFocus(termsSection);
 }
 
+// Function to hide the Terms & Conditions section
 function hideTermsPolicy() {
-  document.getElementById('terms-policy').classList.remove('active');
-  // No overlay adjustments needed
+    const termsSection = document.getElementById('terms-policy');
+    termsSection.classList.remove('active');
+    
+    // Restore background scrolling
+    document.body.style.overflow = 'auto';
 }
+
+// Event listener for the Terms & Conditions close button
+document.querySelectorAll('.terms-policy .close-section').forEach(button => {
+    button.addEventListener('click', hideTermsPolicy);
+});
+
+// Event listener for clicks outside the Terms & Conditions container
+document.getElementById('terms-policy').addEventListener('click', function(event) {
+    // If the user clicks directly on the overlay (not the container or its children)
+    if (event.target === this) {
+        hideTermsPolicy();
+    }
+});
+
 
 function initTimelineAnimations() {
     const timelineItems = document.querySelectorAll('.timeline-item');
