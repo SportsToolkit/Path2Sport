@@ -3114,6 +3114,13 @@ footer {
     .blur-large {
         --modal-blur: 8px;
     }
+    
+    .coming-soon {
+    text-align: center;       /* Centre the text */
+    font-size: 1.5rem;       /* Make the text larger, adjust as you like */
+    font-weight: bold;       /* Optionally make it bold */
+    margin-bottom: 3rem;     /* Add spacing beneath */
+}
 
 
 </style>
@@ -3241,7 +3248,7 @@ footer {
 <section class="news" id="news" aria-labelledby="news-title">
     <div class="news-container">
         <h2 id="news-title" class="visually-hidden">Latest News</h2>
-        <div class="news-articles">
+        <div class="news-articles" style="display: none;">
             <!-- Row 1: Article 1 and Article 2 -->
             <div class="news-row">
                 <article class="news-article">
@@ -3289,6 +3296,7 @@ footer {
             <!-- Divider Between Rows -->
             
         </div>
+        <p class="coming-soon">Coming soon</p>
     </div>
 </section>
 
@@ -3336,13 +3344,22 @@ footer {
     <div class="container">
             <h2>About Path2Sport</h2>
             <p>
-                Path2Sport was launched in January 2025 as a free resource to help the next generation of sports professionals. We bring together information on higher education courses across Scotland and ideas for careers in sport, health, and exercise.
+                Path2Sport was launched in January 2025 as a free resource to help the next
+                generation of sports professionals. We bring together information on
+                higher education courses across Scotland and ideas for careers in sport,
+                health, and exercise.
 </p>
 <p>
-                Why? Because we've been there too - unsure of where to start or what options were out there. That's why we review education and career opportunities each year to ensure you have up-to-date, practical information to guide your decisions.
+                Why? Because we've been there too - unsure of where to start or what
+                options were out there. That's why we review education and career
+                opportunities each year to ensure you have up-to-date, practical
+                information to guide your decisions.
 </p>
 <p>
-                We're not the only resource out there, and we encourage you to do your research. But if you're looking for clear, accessible context to help plan your next steps, we're here to help. Whatever your starting point, we hope to make things a little easier as you begin your journey in sport.
+                We're not the only resource out there, and we encourage you to do your
+                research. But if you're looking for clear, accessible context to help
+                plan your next steps, we're here to help. Whatever your starting point,
+                we hope to make things a little easier as you begin your journey in sport.
             </p>
             <p>
     <em>Path2Sport is an independent, free resource provided by Sports Toolkit Ltd. We share links to external sites, including universities and organisations, for informational purposes only. Users should conduct their own due diligence and verify details directly with the providers. Read our Terms & Conditions for more information.</em>
@@ -3353,7 +3370,7 @@ footer {
   aria-label="Return to Home"
   onclick="showHome()"
 >
-  â†µ
+  ↵
 </button>
     </section>
     
@@ -3453,7 +3470,7 @@ footer {
   aria-label="Return to Home"
   onclick="showHome()"
 >
-  â†µ
+  ↵
 </button>
 </section>
 
@@ -3511,7 +3528,7 @@ footer {
   aria-label="Return to Home"
   onclick="showHome()"
 >
-  â†µ
+  ↵
 </button>
     </section>
     
@@ -3870,7 +3887,7 @@ footer {
   aria-label="Return to Home"
   onclick="showHome()"
 >
-  â†µ
+  ↵
 </button>
     </section>
     
@@ -4256,7 +4273,7 @@ footer {
   aria-label="Return to Home"
   onclick="showHome()"
 >
-  â†µ
+  ↵
 </button>
 </section>
     
@@ -4395,7 +4412,7 @@ footer {
   aria-label="Return to Home"
   onclick="showHome()"
 >
-  â†µ
+  ↵
 </button>
 </section>
 
@@ -4422,9 +4439,9 @@ footer {
                         <a href="#" target="_blank" id="dashboardWebsite"></a>
                     </div>
                 </div>
-                <h3>About:</h3>
+                <h3>Overview:</h3>
                 <p id="dashboardDescription"></p>
-                <h3>Courses:</h3>
+                <h3>Sport-Related Courses:</h3>
                 <ul id="dashboardCourses">
                 </ul>
                 
@@ -4481,7 +4498,7 @@ Thank you for considering supporting Path2Sport. Whether it's a donation, a part
   aria-label="Return to Home"
   onclick="showHome()"
 >
-  â†µ
+  ↵
 </button>
 </section>
     
@@ -4812,7 +4829,7 @@ Thank you for considering supporting Path2Sport. Whether it's a donation, a part
                 yearFounded: 1495,
                 website: "https://www.abdn.ac.uk",
                 description:
-                    "The University of Aberdeen is one of the oldest universities in the UK, offering a range of sports-related courses with a focus on sports science and management. Located in the vibrant city of Aberdeen, it provides excellent facilities and a supportive student community.",
+                    "The University of Aberdeen, founded in 1495, is one of Scotland’s oldest universities, offering a mix of historic charm and modern facilities. With over 15,000 students from around the world, it provides a welcoming and supportive environment. The Old Aberdeen campus is home to stunning medieval buildings alongside state-of-the-art teaching spaces, while the Foresterhill campus is a centre for medical and life sciences research. Known for strong academic programmes and a focus on employability, Aberdeen helps students build careers through placements and industry links. Sports facilities are excellent, with a top-tier sports village, gym, and a wide range of clubs and teams. The city itself is student-friendly, offering a mix of nightlife, culture, and easy access to Scotland’s coastline and mountains, making it a great place to live and study.",
                 courses: [
   { name: "BSc Sports and Exercise Science", url: "https://www.abdn.ac.uk/study/undergraduate/degree-programmes/849/C600/sports-and-exercise-science/" },
   { name: "BSc Exercise and Health Science", url: "https://www.abdn.ac.uk/study/undergraduate/degree-programmes/602/C603/exercise-and-health-science/" },
@@ -4831,7 +4848,7 @@ Thank you for considering supporting Path2Sport. Whether it's a donation, a part
                 yearFounded: 1881,
                 website: "https://www.abertay.ac.uk",
                 description:
-                    "Abertay University is renowned for its innovative courses and strong emphasis on practical skills in the sports industry. Situated in Dundee, it offers cutting-edge facilities and a dynamic environment for aspiring sports professionals.",
+                    "Abertay University is a small, friendly university in the heart of Dundee, known for its welcoming atmosphere and close-knit student community. The campus blends modern study spaces with historic architecture, offering specialist labs and excellent facilities. Courses are flexible, allowing students to tailor their studies to their interests, and many degrees include professional placements or study abroad options. The Students’ Association runs a variety of clubs and societies, including sports teams and activity groups, making it easy to get involved in student life. Dundee itself is a great place to live and study, with a mix of nightlife, cultural attractions like the V&A Dundee, and access to outdoor activities along the coast and in the surrounding countryside. Student accommodation is within walking distance of campus, with a mix of shared and private options, all self-catered. If halls aren’t for you, the university can also help with private rental advice. Dundee is well-connected by rail, road, and air, making travel across Scotland and beyond straightforward. With its strong industry links, focus on employability, and supportive learning environment, Abertay offers a great university experience for students looking to build a career in sport and related fields.",
                 courses: [
   { name: "BSc Sport and Exercise", url: "https://www.abertay.ac.uk/course-search/undergraduate/sport-and-exercise/" },
   { name: "BSc Sport and Exercise Science", url: "https://www.abertay.ac.uk/course-search/undergraduate/sport-and-exercise-science/" },
@@ -4855,9 +4872,9 @@ Thank you for considering supporting Path2Sport. Whether it's a donation, a part
     yearFounded: 1881,
     website: "https://www.dundee.ac.uk",
     description:
-        "The University of Dundee offers a wide range of academic opportunities, preparing students for diverse career paths, including those in the sports industry.",
+        "The University of Dundee is a modern, welcoming university on Scotland’s east coast, with a compact campus in the city’s vibrant West End. Known for its strong sense of community and commitment to innovation and social impact, it offers a flexible range of courses designed to help students shape their future careers. The Students’ Association (DUSA) is the hub of student life, with clubs, societies, and social spaces, while the Sports Centre provides top-class fitness and training facilities. Dundee itself is a great student city, named the best place to live in Scotland (Sunday Times, 2024), with everything from culture and nightlife to green spaces and coastal scenery. With excellent support services and a focus on employability, Dundee provides a great balance of academic challenge, student life, and career preparation.",
     courses: [
-        "The University of Dundee currently does not offer dedicated sports-related degrees. However, this does not mean attending here won't lead to a fulfilling career in sport. Dundee provides a range of subjects that develop transferable skills highly valued in the sports industry. These include, but are not limited to, Business, Community Learning and Development, Psychology, and Health Sciences. Remember, not every person who works in sport studied a dedicated sports degree; thereÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢s no wrong path."
+        "The University of Dundee currently does not offer dedicated sports-related degrees. However, this does not mean attending here won't lead to a fulfilling career in sport. Dundee provides a range of subjects that develop transferable skills highly valued in the sports industry. These include, but are not limited to, Business, Community Learning and Development, Psychology, and Health Sciences. Remember, not every person who works in sport studied a dedicated sports degree; there's no wrong path."
     ],
     sportsClubs: ["Football Club", "Rugby Club", "Basketball Club"],
                 rankings: {
@@ -4872,7 +4889,7 @@ Thank you for considering supporting Path2Sport. Whether it's a donation, a part
                 yearFounded: 1964,
                 website: "https://www.napier.ac.uk",
                 description:
-                    "Edinburgh Napier University provides a variety of sports courses aimed at developing both the academic and practical skills needed in the sports industry. The university's location in Edinburgh offers rich cultural and sporting opportunities.",
+                    "Edinburgh Napier University is a modern, career-focused university in Scotland’s capital, offering students the best of both worlds—great academic opportunities and everything Edinburgh has to offer. With three campuses across the city in Craiglockhart, Merchiston, and Sighthill, students have access to specialist facilities designed to support their studies. The university is known for its strong industry links, providing plenty of opportunities for placements, hands-on learning, and employability support. With over 140 nationalities represented, Napier has a diverse and welcoming student community. Courses are spread across five schools, covering business, applied sciences, arts, computing, engineering, health, and social care. Many degrees offer work placements or study abroad options, giving students practical experience to help them stand out after graduation. Student accommodation is available in four locations across the city, and with Edinburgh’s excellent transport links, getting around is easy.",
                 courses: [
   { name: "BSc Sports Coaching", url: "https://www.napier.ac.uk/courses/bsc-hons-sports-coaching-undergraduate-fulltime" },
   { name: "BSc Sport & Exercise Science", url: "https://www.napier.ac.uk/courses/bsc-hons-sport-and-exercise-science-undergraduate-fulltime" },
@@ -4895,7 +4912,7 @@ Thank you for considering supporting Path2Sport. Whether it's a donation, a part
                 yearFounded: 1583,
                 website: "https://www.ed.ac.uk",
                 description:
-                    "The University of Edinburgh is a prestigious institution known for its research and comprehensive range of sports-related courses. Located in Scotland's capital, it offers excellent facilities and a vibrant student life.",
+                    "The University of Edinburgh is one of the UK’s oldest and most prestigious universities, dating back to 1583. With multiple campuses spread across Scotland’s capital, it offers a world-class education in a city known for its history, culture, and student-friendly atmosphere. Edinburgh consistently ranks as one of the best places to live in the UK, with plenty to do—from exploring historic sites to enjoying the Edinburgh Fringe Festival, the world’s largest arts festival. The university is renowned for its strong academic reputation, offering a wide range of flexible four-year degree programmes that allow students to explore different subjects before specialising. Many courses also offer study abroad opportunities, with over 300 partner institutions worldwide. Student accommodation is available for over 9,000 students, with both catered and self-catered options close to campus. With excellent public transport, green spaces, and a mix of modern and historic university buildings, Edinburgh provides a fantastic setting for students to live, learn, and prepare for their future careers.",
                 courses: [
   { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
   { name: "MSc Sports Management", url: "https://example.com/sports-management" },
@@ -4914,7 +4931,7 @@ Thank you for considering supporting Path2Sport. Whether it's a donation, a part
                 yearFounded: 1993,
                 website: "https://www.gcu.ac.uk",
                 description:
-                    "Glasgow Caledonian University specializes in sports-related courses with a focus on practical skills and industry connections. Situated in Glasgow, it offers modern facilities and numerous opportunities for student involvement in sports.",
+                    "Located in the heart of Glasgow, one of the UK’s most vibrant student cities, Glasgow Caledonian University (GCU) is a modern and career-focused institution with a strong reputation for inclusivity and innovation. Home to over 10,000 undergraduate students, GCU offers more than 100 degree programmes, many of which include opportunities for work placements and study abroad. The campus-based university provides excellent facilities and high-quality support services, contributing to its strong student satisfaction ranking. Glasgow itself is well-connected, with multiple train stations, a metro system, and an extensive bus network, making it easy to get around. On-campus, students can access Caledonian Court, the university’s accommodation village, offering rooms in shared flats. With a focus on employability and practical, industry-linked learning, GCU is a great choice for students looking to gain real-world experience while enjoying everything Glasgow’s lively student scene has to offer.",
                 courses: [
   { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
   { name: "MSc Sports Management", url: "https://example.com/sports-management" },
@@ -4933,7 +4950,7 @@ Thank you for considering supporting Path2Sport. Whether it's a donation, a part
                 yearFounded: 1451,
                 website: "https://www.gla.ac.uk",
                 description:
-                    "The University of Glasgow boasts a strong sports department with a variety of courses aimed at developing both theoretical and practical skills in the sports industry. Its location in Glasgow provides ample opportunities for engagement with professional sports teams.",
+                    "Founded in 1451, the University of Glasgow is one of the UK’s oldest and most prestigious universities, consistently ranked among the world’s top institutions. As a member of the Russell Group, it has a strong reputation for research, teaching excellence, and industry connections. With over 120 undergraduate courses across a wide range of disciplines, students benefit from world-class teaching and opportunities for study abroad. The university’s stunning Gilmorehill Campus, with its iconic neo-Gothic architecture, sits in the vibrant West End of Glasgow, close to cultural venues, shops, and nightlife. The university also has Dumfries and Garscube campuses, with the latter offering excellent sports facilities. Home to students from over 140 countries, Glasgow provides a diverse and inclusive environment, supported by modern accommodation options within walking distance of campus. With a mix of historic charm, modern facilities, and a lively student scene, Glasgow is a fantastic place to study and build a future career.",
                 courses: [
   { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
   { name: "MSc Sports Management", url: "https://example.com/sports-management" },
@@ -4952,7 +4969,7 @@ Thank you for considering supporting Path2Sport. Whether it's a donation, a part
                 yearFounded: 1821,
                 website: "https://www.hw.ac.uk",
                 description:
-                    "Heriot-Watt University offers specialized sports courses with a focus on sports technology and management. Located in Edinburgh, it provides excellent facilities and a strong connection to the sports industry.",
+                    "Located on the outskirts of Edinburgh, Heriot-Watt University is a leading institution with a strong focus on science, technology, engineering, business, and design. Established over 200 years ago, it has a reputation for innovative research and global impact. The main campus offers a peaceful setting with modern facilities, on-campus accommodation, and green spaces, including woodland walks. It is also home to Scotland’s National Sports Performance Centre, making it a great place for students interested in sport and active lifestyles. With excellent transport links, students can easily access Edinburgh’s city centre, which is known for its vibrant culture, nightlife, and outdoor spaces. Heriot-Watt has an international presence, with campuses in Dubai and Malaysia, allowing students to gain global experience through the Go Global programme. The university’s strong industry connections, hands-on learning approach, and supportive student services make it a great choice for those looking for practical, career-focused education in a world-class city.",
                 courses: [
   { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
   { name: "MSc Sports Management", url: "https://example.com/sports-management" },
@@ -4990,7 +5007,7 @@ Thank you for considering supporting Path2Sport. Whether it's a donation, a part
                 yearFounded: 1875,
                 website: "https://www.qmu.ac.uk",
                 description:
-                    "Queen Margaret University offers a range of sports-related courses with a strong focus on health and exercise science. Located in Edinburgh, it provides excellent facilities and opportunities for practical experience.",
+                    "Just a short train journey from Edinburgh, Queen Margaret University (QMU) offers the best of both worlds—easy access to the capital’s vibrant city life while providing a peaceful campus environment. Located in Musselburgh, a historic coastal town known for its golf courses, racecourse, and scenic waterfront, QMU has a close-knit and supportive student community. Originally founded in 1875, the university has evolved into a modern institution with a focus on applied learning, research, and sustainability, earning a rating of ‘Excellent’ for its eco-friendly campus. Students benefit from industry-informed teaching, work placements, and study abroad opportunities, with personal academic tutors on hand for support. On-campus accommodation in the Student Village houses students in ensuite rooms, with shared kitchen and living spaces. With a strong community feel, modern facilities, and a career-focused approach, QMU is an excellent choice for students looking for a practical and supportive university experience.",
                 courses: [
   { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
   { name: "MSc Sports Management", url: "https://example.com/sports-management" },
@@ -5009,7 +5026,7 @@ Thank you for considering supporting Path2Sport. Whether it's a donation, a part
                 yearFounded: 1992,
                 website: "https://www.rgu.ac.uk",
                 description:
-                    "Robert Gordon University offers diverse sports courses with a focus on practical skills and industry partnerships. Situated in Aberdeen, it provides modern facilities and strong career support for students.",
+                    "Located in Aberdeen, Robert Gordon University (RGU) is an industry-focused university known for its applied learning and strong employability record. Home to 16,000 students, it offers over 70 undergraduate courses across subjects such as health and sport sciences, business, law, and design. The Garthdee Campus, set in spacious parkland along the River Dee, has received £120 million in investment, providing modern teaching, study, and social spaces. The RGU:Union is the hub of student life, with over 40 societies and 30 sports clubs, as well as student support services. The city centre is easily accessible by bus, and Aberdeen itself is a student-friendly city, offering a lively nightlife, cultural scene, and access to outdoor activities. RGU provides a range of study options, including placement years, study abroad opportunities, and integrated master’s degrees. Student accommodation is available across four self-catered residences, offering affordable and secure housing. With a practical, career-driven approach and strong industry connections, RGU is a great choice for students looking for a hands-on learning experience in Scotland’s northeast.",
                 courses: [
   { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
   { name: "MSc Sports Management", url: "https://example.com/sports-management" },
@@ -5028,7 +5045,7 @@ Thank you for considering supporting Path2Sport. Whether it's a donation, a part
                 yearFounded: 1413,
                 website: "https://www.st-andrews.ac.uk",
                 description:
-                    "Renowned for its academic excellence, the University of St Andrews offers specialized courses in sports studies. The university's rich history and scenic location provide a unique environment for students pursuing sports careers.",
+                    "Founded in 1413, the University of St Andrews is Scotland’s oldest university and the third oldest in the English-speaking world. Located in the historic town of St Andrews, it is famous not only for its academic excellence but also as the ‘Home of Golf’, with the Old Course sitting alongside the university’s historic buildings. Despite its long history, St Andrews continues to evolve, with a £1bn investment in new facilities, including an Advanced Research Centre. Students benefit from a flexible degree structure, allowing them to explore different subjects before specialising, with joint honours and integrated master’s options available. Many courses also offer the opportunity to study abroad. With a student population of around 10,000, St Andrews provides a close-knit and supportive environment, and first-year undergraduates are guaranteed accommodation if they apply on time. The town itself is compact, picturesque, and packed with history, offering students a unique university experience in one of the most iconic academic settings in the world.",
                 courses: [
   { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
   { name: "MSc Sports Management", url: "https://example.com/sports-management" },
@@ -5047,7 +5064,7 @@ Thank you for considering supporting Path2Sport. Whether it's a donation, a part
                 yearFounded: 1967,
                 website: "https://www.stir.ac.uk",
                 description:
-                    "The University of Stirling is known for its strong sports programs and excellent facilities. Located in Stirling, it offers a vibrant student community and numerous opportunities for practical experience in the sports industry.",
+                    "Set in 330 acres of scenic parkland, the University of Stirling offers a modern campus experience in a historic city. Founded in 1967, it has grown into a well-regarded university with a reputation for flexible learning and strong student support. Located 30 miles from both Glasgow and Edinburgh, Stirling provides easy access to Scotland’s biggest cities while offering a quieter, close-knit student community. The campus has everything students need, including sports facilities, eateries, and an on-campus theatre and cinema. With over 170 undergraduate course combinations, many degrees allow students to explore different subjects before specialising, and some offer placements, study abroad, or integrated master’s options. The university is particularly known for sport, health sciences, and social sciences, with flexible study options available for many courses. Accommodation is modern and single occupancy, with both on- and off-campus options to suit different budgets. With its stunning surroundings, strong academic reputation, and excellent facilities, Stirling provides a great balance of student life, career preparation, and outdoor opportunities.",
                 courses: [
   { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
   { name: "MSc Sports Management", url: "https://example.com/sports-management" },
@@ -5066,7 +5083,7 @@ Thank you for considering supporting Path2Sport. Whether it's a donation, a part
                 yearFounded: 1796,
                 website: "https://www.strath.ac.uk",
                 description:
-                    "The University of Strathclyde offers a range of sports-related courses with a focus on sports technology and management. Situated in Glasgow, it provides excellent facilities and strong industry connections.",
+                    "Located in the heart of Glasgow, the University of Strathclyde is a modern, career-focused university with a strong reputation for industry links and research. Founded in 1796, it offers nearly 250 undergraduate courses across engineering, science, business, humanities, and social sciences. Many degrees include placement years, study abroad opportunities, or integrated master’s options, with flexible study routes allowing students to combine subjects. The city-centre campus has everything students need, from study spaces and sports facilities to a vibrant Students’ Union with over 170 clubs and societies. Glasgow itself is Scotland’s largest city, known for its affordable cost of living, thriving music and arts scene, and world-class sporting culture. The university provides modern, single-occupancy accommodation, with 24/7 support and free access to Strathclyde Sport, featuring a gym, swimming pool, and sports halls. Well-connected by train, bus, and air, Strathclyde offers a engaging university experience in one of the UK’s best student cities.",
                 courses: [
   { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
   { name: "MSc Sports Management", url: "https://example.com/sports-management" },
@@ -5085,7 +5102,7 @@ Thank you for considering supporting Path2Sport. Whether it's a donation, a part
                 yearFounded: 1896,
                 website: "https://www.uws.ac.uk",
                 description:
-                    "The University of the West of Scotland offers comprehensive sports courses with a focus on practical skills and industry engagement. Located in Paisley, it provides modern facilities and strong career support for students.",
+                    "The University of the West of Scotland (UWS) is a modern, career-focused university with five campuses, including four in Scotland—Ayr, Dumfries, Lanarkshire, and Paisley—and one in London’s Docklands. Despite being spread across multiple locations, UWS maintains a strong sense of community, offering plenty of social spaces, a Sports Union with 20 clubs, and free gym access. With a wide range of undergraduate courses in business, computing, engineering, health, and social sciences, students benefit from flexible study options, including full-time, part-time, and online learning. Many degrees offer placements, study abroad opportunities, or integrated master’s years, ensuring graduates leave with real-world experience. Scottish campuses are well connected to Glasgow and Edinburgh, offering easy access to city life, countryside, and the west coast. With industry-focused courses and strong student support, UWS provides a practical and inclusive university experience for students looking to develop their skills and future careers.",
                 courses: [
   { name: "BSc Sport and Exercise Science", url: "https://example.com/sport-exercise-science" },
   { name: "MSc Sports Management", url: "https://example.com/sports-management" },
