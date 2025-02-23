@@ -1424,9 +1424,10 @@ footer {
     }
 }
 .employability-card {
-    width: 100%;
-    min-height: 225px; 
-    perspective: 1000px; 
+    min-height: 225px;
+    height: auto;
+    perspective: 800px;
+    margin-bottom: 1rem;
 }
 .flip-card-inner {
     position: relative;
@@ -1441,19 +1442,6 @@ footer {
 
 .employability-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-}
-
-@media (max-width: 768px) {
-  .flip-card-inner {
-    transform: none !important;
-    transition: none !important;
-  }
-  .flip-card-inner.flipped {
-    transform: none !important;
-  }
-  .flip-card-back {
-    display: none !important;
-  }
 }
 
 .flip-card-front,
