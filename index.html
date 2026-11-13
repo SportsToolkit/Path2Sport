@@ -27,6 +27,7 @@
   --porcelain: #ebebeb;
   --carbon: #17191D;
   --ultra: #244cff;
+  --mint: #7ef4d4; /* Pool Mint: small accents only, never a main colour */
   --white: #ffffff;
   --soft: rgba(23, 25, 29, 0.74);      /* secondary text on porcelain or white */
   --line: rgba(23, 25, 29, 0.16);      /* hairlines */
@@ -236,7 +237,7 @@ a:hover { color: var(--carbon); }
 .pin__label { font-weight: 600; fill: var(--white); paint-order: stroke; stroke: var(--carbon); stroke-width: 5px; stroke-linejoin: round; pointer-events: none; opacity: 0; transition: opacity 0.15s; }
 .pin.is-labelled .pin__label, .pin:hover .pin__label, .pin:focus-visible .pin__label, .pin.is-active .pin__label { opacity: 1; }
 .pin:hover .pin__dot, .pin:focus-visible .pin__dot { transform: scale(1.25); }
-.pin.is-active .pin__dot { fill: var(--white); stroke: var(--white); transform: scale(1.35); }
+.pin.is-active .pin__dot { fill: var(--mint); stroke: var(--mint); transform: scale(1.35); }
 .pin.is-active .pin__count { fill: var(--carbon); }
 .pin.is-dimmed { opacity: 0.25; }
 .pin:focus-visible { outline: none; }
@@ -284,6 +285,7 @@ a:hover { color: var(--carbon); }
 .dirgroup { margin-top: clamp(2.5rem, 5vw, 4rem); }
 .dirgroup__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 2rem; border-top: 1.5px solid var(--carbon); padding-top: 1.1rem; margin-bottom: 0.75rem; }
 .dirgroup__head p { max-width: 44ch; }
+.dircount { font-weight: 700; margin-right: auto; }
 .dir { display: grid; }
 .dirhead { display: none; }
 .emp {
@@ -336,7 +338,7 @@ a:hover { color: var(--carbon); }
 .asks__list { display: grid; counter-reset: ask; }
 @media (min-width: 900px) { .asks__list { grid-template-columns: 1fr 1fr; column-gap: 3rem; } }
 .asks__list li { counter-increment: ask; display: grid; grid-template-columns: 2.25rem minmax(0, 1fr); gap: 0.2rem 0.5rem; padding: 1.25rem 0; border-top: 1px solid rgba(255, 255, 255, 0.25); }
-.asks__list li::before { content: counter(ask); grid-row: 1 / 3; font-weight: 700; opacity: 0.6; padding-top: 0.35rem; }
+.asks__list li::before { content: counter(ask); grid-row: 1 / 3; font-weight: 700; color: var(--mint); padding-top: 0.35rem; }
 .asks__q { font-stretch: 75%; font-weight: 800; font-size: clamp(1.7rem, 2.8vw, 2.5rem); line-height: 1; }
 .asks__list li span:last-child { opacity: 0.85; }
 .takeaway { font-stretch: 75%; font-weight: 800; letter-spacing: -0.015em; line-height: 0.98; font-size: clamp(1.8rem, 6.6vw, 6rem); max-width: none !important; }
@@ -402,6 +404,8 @@ a:hover { color: var(--carbon); }
 .linkchips { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.6rem; }
 .linkchips a, .linkchips button { padding: 0.45rem 0.95rem; border-radius: 999px; border: 1.5px solid var(--ultra); color: var(--ultra); font-weight: 600; font-size: 0.95rem; text-decoration: none; }
 .linkchips a:hover, .linkchips button:hover { background: var(--ultra); color: var(--white); }
+.linkchips span { padding: 0.45rem 0.95rem; border-radius: 999px; background: var(--porcelain); font-weight: 600; font-size: 0.95rem; }
+.fp__none { color: var(--soft); margin: 0.4rem 0 0.6rem; }
 .fp__line { font-size: 1.15rem; margin: 0.6rem 0 0.5rem; }
 .fp__uni { display: block; width: 100%; padding: 0.8rem 0; border-top: 1px solid var(--line); }
 .fp__uni:hover b { color: var(--ultra); }
@@ -417,7 +421,7 @@ a:hover { color: var(--carbon); }
 @media (min-width: 720px) { .foot__cols { grid-template-columns: 1fr 1fr 1fr; } }
 .foot__h { font-weight: 700; margin-bottom: 0.6rem; }
 .foot a { color: var(--white); text-decoration: none; display: block; padding: 0.2rem 0; opacity: 0.85; }
-.foot a:hover { opacity: 1; text-decoration: underline; }
+.foot a:hover { opacity: 1; text-decoration: underline; text-decoration-color: var(--mint); text-decoration-thickness: 2px; text-underline-offset: 0.2em; }
 .foot__base { margin-top: 2.5rem; font-size: 0.9rem; opacity: 0.7; }
 
 .consent {
@@ -435,6 +439,20 @@ a:hover { color: var(--carbon); }
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
 }
+
+/* --- Pool Mint accents ------------------------------------------------------- */
+::selection { background: var(--mint); color: var(--carbon); }
+.hero__lanes .ln.ln--mint { stroke: var(--mint); stroke-width: 4; opacity: 1; }
+.emp:hover .emp__go, .emp:focus-visible .emp__go { color: var(--mint); }
+.board:hover span:first-child::after, .board:focus-visible span:first-child::after { color: var(--mint); }
+
+/* --- Motion: headline rise --------------------------------------- */
+.rise { display: inline-block; }
+.is-rising .rise { animation: rise 0.85s cubic-bezier(0.2, 0.8, 0.2, 1) backwards; }
+@keyframes rise { from { transform: translateY(0.5em); clip-path: inset(0 0 100% 0); } to { transform: none; clip-path: inset(-0.2em -0.1em -0.3em -0.1em); } }
+.is-arriving { animation: arrive 0.7s ease backwards; }
+@keyframes arrive { from { opacity: 0; transform: translateY(0.75rem); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .is-rising .rise, .is-arriving { animation: none; } }
 
 </style>
 </head>
@@ -557,7 +575,7 @@ a:hover { color: var(--carbon); }
 <section data-route="careers" hidden>
   <div class="shell pagehead">
     <h1 class="h1">Careers in sport</h1>
-    <p class="lede">Most jobs in sport are off the pitch. Browse everyone who hires, or narrow it down by the kind of work that interests you.</p>
+    <p class="lede">Most jobs in sport are off the pitch. Browse the employers we list, or narrow them down by the kind of work that interests you.</p>
   </div>
 
   <div class="shell" id="who">
@@ -588,18 +606,19 @@ a:hover { color: var(--carbon); }
     </div>
 
     <div class="dirgroup" id="dir-match" hidden>
-      <div class="dirgroup__head"><h2 class="h2" id="dir-match-h"></h2><button class="textbtn" id="dir-clear">Show everyone</button></div>
+      <div class="dirgroup__head"><h2 class="h2" id="dir-match-h"></h2><span class="dircount" id="dir-match-n"></span><button class="textbtn" id="dir-clear">Clear filters</button></div>
       <div class="dir" id="directory-match"></div>
     </div>
     <div class="dirgroup">
-      <div class="dirgroup__head"><h2 class="h2" id="dir-rest-h">Everyone who hires</h2></div>
+      <div class="dirgroup__head"><h2 class="h2" id="dir-rest-h">Employers</h2><span class="dircount" id="dir-rest-n"></span></div>
       <div class="dir" id="directory"></div>
     </div>
     <div class="dirgroup">
       <div class="dirgroup__head"><h2 class="h2">Job boards</h2><p>These cover every field, so they are worth checking whatever you choose.</p></div>
       <div class="boards" id="boards"></div>
     </div>
-    <p class="small" style="margin-top:1.75rem">Each link opens the organisation's own jobs page. We choose which areas of work to show for each employer, so treat them as a starting point.</p>
+    <p class="small" style="margin-top:1.75rem">This is a selection of employers, not a full list. Each link opens the organisation's own jobs page. We choose which areas of work to show for each employer, so treat them as a starting point.</p>
+    <p class="small">Path2Sport is independent and is not affiliated with the organisations listed. Want a listing changed or removed? Email <a href="mailto:info@sportstoolkit.co.uk">info@sportstoolkit.co.uk</a>.</p>
   </div>
 
   <div class="shell sec">
@@ -616,7 +635,6 @@ a:hover { color: var(--carbon); }
       <h2 class="h2">Check employers directly</h2>
       <div class="stack">
         <p class="lede">Many sport jobs are only advertised on the employer's own site or on LinkedIn. Choose a few employers you like and check their jobs pages every couple of weeks.</p>
-        <p>Hiring? Email <a href="mailto:info@sportstoolkit.co.uk">info@sportstoolkit.co.uk</a> and tell us about the role.</p>
       </div>
     </div>
   </div>
@@ -823,7 +841,7 @@ a:hover { color: var(--carbon); }
       <h3>Accuracy</h3>
       <p>We review course and employer information annually and fix errors when we find them, but institutions change their offer without telling us. Everything here is provided as is. Verify anything that matters, especially entry requirements and application deadlines, directly with the institution. We do not guarantee any outcome, including admission to a course or getting a job.</p>
       <h3>External links</h3>
-      <p>Links to universities, colleges, job boards and employers are a convenience. We do not control or endorse those sites, and no organisation pays to be listed. Follow them at your own risk and read their terms.</p>
+      <p>Links to universities, colleges, job boards and employers are a convenience. We do not control or endorse those sites, and we are not affiliated with the organisations listed. Follow them at your own risk and read their terms.</p>
       <h3>Intellectual property</h3>
       <p>The text, design and code of this site belong to Sports Toolkit Ltd unless stated otherwise. You may use the content for your own personal, non-commercial purposes. Please do not republish, resell or sublicense it without asking.</p>
       <h3>Liability</h3>
@@ -979,8 +997,8 @@ const UNIVERSITIES = [
     website: "https://www.abdn.ac.uk",
     description: "One of Scotland's oldest universities, where sport and exercise science sits alongside medical and life sciences research. Sports facilities include a large sports village, a gym and a wide range of clubs and teams.",
     courses: [
-      { name: "BSc Sports and Exercise Science", url: "https://www.abdn.ac.uk/study/undergraduate/degree-programmes/849/C600/sports-and-exercise-science/", fields: ["performance", "health"] },
-      { name: "MSc Sport, Health and Wellness Management", url: "https://www.abdn.ac.uk/study/postgraduate-taught/degree-programmes/2244/sport-health-and-wellness-management/", fields: ["business", "health"] },
+      { name: "BSc Sports and Exercise Science", url: "https://www.abdn.ac.uk/study/undergraduate/degree-programmes/849/C600/sports-and-exercise-science/", fields: ["performance", "health"], broad: true },
+      { name: "MSc Sport, Health and Wellness Management", url: "https://www.abdn.ac.uk/study/postgraduate-taught/degree-programmes/2244/sport-health-and-wellness-management/", fields: ["business", "health"], broad: true },
       { name: "MSc Sport and Exercise Nutrition", url: "https://www.abdn.ac.uk/study/postgraduate-taught/degree-programmes/2109/sport-and-exercise-nutrition/", fields: ["health"] }
     ]
   },
@@ -994,12 +1012,12 @@ const UNIVERSITIES = [
     website: "https://www.abertay.ac.uk",
     description: "A small university in the centre of Dundee with one of the widest ranges of sport degrees in Scotland, including strength and conditioning and sports development. Many degrees include a professional placement.",
     courses: [
-      { name: "BSc Sport and Exercise", url: "https://www.abertay.ac.uk/course-search/undergraduate/sport-and-exercise/", fields: ["performance", "health"] },
-      { name: "BSc Sport and Exercise Science", url: "https://www.abertay.ac.uk/course-search/undergraduate/sport-and-exercise-science/", fields: ["performance", "health"] },
+      { name: "BSc Sport and Exercise", url: "https://www.abertay.ac.uk/course-search/undergraduate/sport-and-exercise/", fields: ["performance", "health"], broad: true },
+      { name: "BSc Sport and Exercise Science", url: "https://www.abertay.ac.uk/course-search/undergraduate/sport-and-exercise-science/", fields: ["performance", "health"], broad: true },
       { name: "BSc Sports Development and Coaching", url: "https://www.abertay.ac.uk/course-search/undergraduate/sports-development-and-coaching/", fields: ["community", "performance"] },
       { name: "BSc Physical Activity and Health", url: "https://www.abertay.ac.uk/course-search/undergraduate/physical-activity-and-health/", fields: ["health", "community"] },
       { name: "BSc Strength and Conditioning", url: "https://www.abertay.ac.uk/course-search/undergraduate/strength-and-conditioning/", fields: ["performance"] },
-      { name: "BA Sport and Management", url: "https://www.abertay.ac.uk/course-search/undergraduate/sport-and-management/", fields: ["business"] },
+      { name: "BA Sport and Management", url: "https://www.abertay.ac.uk/course-search/undergraduate/sport-and-management/", fields: ["business"], broad: true },
       { name: "MSc by Research, Duty of Care in Sport", url: "https://www.abertay.ac.uk/course-search/postgraduate-research/duty-of-care-in-sport/", fields: ["governance"] },
       { name: "MSc by Research, eSports", url: "https://www.abertay.ac.uk/course-search/postgraduate-research/esports/", fields: ["technology"] }
     ]
@@ -1027,11 +1045,11 @@ const UNIVERSITIES = [
     description: "A career-focused university with strong industry links and plenty of placements. Its football coaching degree is delivered with the Scottish FA, and it is one of the few places in the UK with a masters in sports officiating.",
     courses: [
       { name: "BSc Sports Coaching", url: "https://www.napier.ac.uk/courses/bsc-hons-sports-coaching-undergraduate-fulltime", fields: ["performance"] },
-      { name: "BSc Sport and Exercise Science", url: "https://www.napier.ac.uk/courses/bsc-hons-sport-and-exercise-science-undergraduate-fulltime", fields: ["performance", "health"] },
+      { name: "BSc Sport and Exercise Science", url: "https://www.napier.ac.uk/courses/bsc-hons-sport-and-exercise-science-undergraduate-fulltime", fields: ["performance", "health"], broad: true },
       { name: "BSc Football Coaching, Performance and Development", url: "https://www.napier.ac.uk/courses/bsc-hons-football-coaching-performance-and-development-undergraduate-fulltime", fields: ["performance", "community"] },
       { name: "BSc Physical Activity and Health", url: "https://www.napier.ac.uk/courses/bsc-hons-physical-activity-and-health-undergraduate-fulltime", fields: ["health", "community"] },
       { name: "MSc Clinical Exercise Physiology", url: "https://www.napier.ac.uk/courses/msc-clinical-exercise-physiology-postgraduate-full-time", fields: ["health"] },
-      { name: "MSc Applied Sports Science", url: "https://www.napier.ac.uk/courses/msc-applied-sport-science-postgraduate-full-time", fields: ["performance"] },
+      { name: "MSc Applied Sports Science", url: "https://www.napier.ac.uk/courses/msc-applied-sport-science-postgraduate-full-time", fields: ["performance"], broad: true },
       { name: "MSc Performance Enhancement in Sports Officiating", url: "https://www.napier.ac.uk/courses/msc-performance-enhancement-in-sports-officiating-postgraduate-parttime", fields: ["performance"] },
       { name: "MA Sports Journalism", url: "https://www.napier.ac.uk/courses/ma-sports-journalism-postgraduate-full-time", fields: ["media"] }
     ]
@@ -1046,15 +1064,15 @@ const UNIVERSITIES = [
     website: "https://www.ed.ac.uk",
     description: "One of the UK's oldest and highest-ranked universities. It has the broadest postgraduate sport offer in Scotland, covering coaching, psychology, policy and strength and conditioning.",
     courses: [
-      { name: "BSc Applied Sport Science", url: "https://education-sport.ed.ac.uk/undergraduate/sport-science", fields: ["performance", "health"] },
+      { name: "BSc Applied Sport Science", url: "https://education-sport.ed.ac.uk/undergraduate/sport-science", fields: ["performance", "health"], broad: true },
       { name: "MA Physical Education", url: "https://education-sport.ed.ac.uk/undergraduate/physical-education", fields: ["people"] },
       { name: "BSc Physiology", url: "https://undergraduate.degrees.ed.ac.uk/index.php?action=programme&code=B120", fields: ["health"] },
-      { name: "BSc Sport Management", url: "https://education-sport.ed.ac.uk/undergraduate/sport-management", fields: ["business"] },
+      { name: "BSc Sport Management", url: "https://education-sport.ed.ac.uk/undergraduate/sport-management", fields: ["business"], broad: true },
       { name: "MSc Performance Coaching and Development", url: "https://postgraduate.degrees.ed.ac.uk/index.php?r=site/view&edition=2025&id=1100", fields: ["performance"] },
       { name: "MSc Sport and Performance Psychology", url: "https://education-sport.ed.ac.uk/study/postgraduate-taught-degrees/performance-psychology", fields: ["health", "performance"] },
       { name: "MSc Physical Activity for Health", url: "https://education-sport.ed.ac.uk/study/postgraduate-taught-degrees/physical-activity-health", fields: ["health", "community"] },
-      { name: "MSc Sport Policy, Management and International Development", url: "https://education-sport.ed.ac.uk/study/postgraduate-taught-degrees/sport-policy", fields: ["governance", "business"] },
-      { name: "MScR Sport, Physical Education and Health Sciences", url: "https://study.ed.ac.uk/programmes/postgraduate-research/1051-sport-physical-education-and-health-sciences", fields: ["health", "people"] },
+      { name: "MSc Sport Policy, Management and International Development", url: "https://education-sport.ed.ac.uk/study/postgraduate-taught-degrees/sport-policy", fields: ["governance", "business"], broad: true },
+      { name: "MScR Sport, Physical Education and Health Sciences", url: "https://study.ed.ac.uk/programmes/postgraduate-research/1051-sport-physical-education-and-health-sciences", fields: ["health", "people"], broad: true },
       { name: "MSc Strength and Conditioning", url: "https://education-sport.ed.ac.uk/study/postgraduate-taught-degrees/strength-conditioning", fields: ["performance"] }
     ]
   },
@@ -1086,9 +1104,9 @@ const UNIVERSITIES = [
     website: "https://www.gla.ac.uk",
     description: "A Russell Group university with a strong research reputation. Sport and exercise science is taught alongside physiology and nutrition, and the main sports facilities are at the Garscube campus.",
     courses: [
-      { name: "BSc or MSci Sport and Exercise Science", url: "https://www.gla.ac.uk/undergraduate/degrees/physiologysportsscience/", fields: ["performance", "health"] },
+      { name: "BSc or MSci Sport and Exercise Science", url: "https://www.gla.ac.uk/undergraduate/degrees/physiologysportsscience/", fields: ["performance", "health"], broad: true },
       { name: "MSc Sport and Exercise Science and Medicine", url: "https://www.gla.ac.uk/postgraduate/taught/sport-exercise-science-medicine/", fields: ["health", "performance"] },
-      { name: "PhD or MSc Sport Science", url: "https://www.gla.ac.uk/postgraduate/research/sport-science/", fields: ["performance"] },
+      { name: "PhD or MSc Sport Science", url: "https://www.gla.ac.uk/postgraduate/research/sport-science/", fields: ["performance"], broad: true },
       { name: "BSc or MSci Human Biology and Physiology", url: "https://www.gla.ac.uk/undergraduate/degrees/humanbiology/", fields: ["health"] },
       { name: "BSc or MSci Statistics", url: "https://www.gla.ac.uk/undergraduate/degrees/statistics/", fields: ["technology"] },
       { name: "MSc Human Nutrition", url: "https://www.gla.ac.uk/postgraduate/taught/humannutrition/", fields: ["health"] }
@@ -1104,9 +1122,9 @@ const UNIVERSITIES = [
     website: "https://www.hw.ac.uk",
     description: "A campus on the edge of Edinburgh that is home to Oriam, Scotland's national performance centre for sport. A strong option if you want to train or work around elite sport.",
     courses: [
-      { name: "BSc Sport and Exercise Science", url: "https://www.hw.ac.uk/study/undergraduate/sport-and-exercise-science", fields: ["performance", "health"] },
+      { name: "BSc Sport and Exercise Science", url: "https://www.hw.ac.uk/study/undergraduate/sport-and-exercise-science", fields: ["performance", "health"], broad: true },
       { name: "MSc Sport Psychology", url: "https://www.hw.ac.uk/study/postgraduate/sport-psychology", fields: ["health"] },
-      { name: "MSc International Sport Management", url: "https://www.hw.ac.uk/study/postgraduate/international-sports-management", fields: ["business"] }
+      { name: "MSc International Sport Management", url: "https://www.hw.ac.uk/study/postgraduate/international-sports-management", fields: ["business"], broad: true }
     ]
   },
   {
@@ -1122,8 +1140,8 @@ const UNIVERSITIES = [
       { name: "BSc Adventure Performance and Coaching", url: "https://www.uhi.ac.uk/en/courses/bsc-hons-adventure-performance-and-coaching/", fields: ["outdoors", "performance"] },
       { name: "BA Golf Management", url: "https://www.uhi.ac.uk/en/courses/ba-hons-golf-management/", fields: ["business", "events"] },
       { name: "BA Professional Golf", url: "https://www.uhi.ac.uk/en/courses/ba-hons-professional-golf/", fields: ["performance", "business"] },
-      { name: "BSc Sport and Fitness", url: "https://www.uhi.ac.uk/en/courses/bsc-hons-sport-and-fitness/", fields: ["health", "performance"] },
-      { name: "BA Sports Management", url: "https://www.uhi.ac.uk/en/courses/ba-hons-sports-management/", fields: ["business"] },
+      { name: "BSc Sport and Fitness", url: "https://www.uhi.ac.uk/en/courses/bsc-hons-sport-and-fitness/", fields: ["health", "performance"], broad: true },
+      { name: "BA Sports Management", url: "https://www.uhi.ac.uk/en/courses/ba-hons-sports-management/", fields: ["business"], broad: true },
       { name: "BSc Sports Therapy and Rehabilitation", url: "https://www.uhi.ac.uk/en/courses/bsc-hons-sports-therapy-and-rehabilitation/", fields: ["health"] }
     ]
   },
@@ -1150,7 +1168,7 @@ const UNIVERSITIES = [
     website: "https://www.rgu.ac.uk",
     description: "An industry-focused university in Aberdeen with a strong employability record. Many courses include a placement year, and the students' union runs more than 30 sports clubs.",
     courses: [
-      { name: "BSc Applied Sport and Exercise Science", url: "https://rgu.ac.uk/study/courses/bsc-hons-applied-sport-and-exercise-science", fields: ["performance", "health"] },
+      { name: "BSc Applied Sport and Exercise Science", url: "https://rgu.ac.uk/study/courses/bsc-hons-applied-sport-and-exercise-science", fields: ["performance", "health"], broad: true },
       { name: "BSc Healthcare Practice", url: "https://rgu.ac.uk/study/courses/bsc-healthcare-practice", fields: ["health"] },
       { name: "MPhys Physiotherapy", url: "https://rgu.ac.uk/study/courses/mphys-physiotherapy", fields: ["health"] },
       { name: "BSc Sport Coaching", url: "https://rgu.ac.uk/study/courses/bsc-hons-sport-coaching", fields: ["performance"] }
@@ -1178,16 +1196,16 @@ const UNIVERSITIES = [
     website: "https://www.stir.ac.uk",
     description: "Scotland's University for Sporting Excellence, with the deepest sport offer in the country across science, coaching, business, psychology and nutrition. Facilities include a 50m pool, the national tennis centre and a golf performance centre.",
     courses: [
-      { name: "BSc Sport and Exercise Science", url: "https://www.stir.ac.uk/courses/ug/sport-exercise-science/", fields: ["performance", "health"] },
+      { name: "BSc Sport and Exercise Science", url: "https://www.stir.ac.uk/courses/ug/sport-exercise-science/", fields: ["performance", "health"], broad: true },
       { name: "BA Sport Development and Coaching", url: "https://www.stir.ac.uk/courses/ug/sport-development-coaching/", fields: ["community", "performance"] },
-      { name: "BA Sport Business Management", url: "https://www.stir.ac.uk/courses/ug/sport-business-management/", fields: ["business"] },
+      { name: "BA Sport Business Management", url: "https://www.stir.ac.uk/courses/ug/sport-business-management/", fields: ["business"], broad: true },
       { name: "BSc Psychology of Sport", url: "https://www.stir.ac.uk/courses/ug/sport-psychology/", fields: ["health"] },
-      { name: "BA or BSc Sport combined with another subject", url: "https://www.stir.ac.uk/courses/ug/sport/", fields: ["business", "media", "people"] },
+      { name: "BA or BSc Sport combined with another subject", url: "https://www.stir.ac.uk/courses/ug/sport/", fields: ["business", "media", "people"], broad: true },
       { name: "MSc Sport Business Analytics", url: "https://www.stir.ac.uk/courses/pg-taught/sport-business-analytics/", fields: ["business", "technology"] },
       { name: "MSc Sport and Exercise Medicine", url: "https://www.stir.ac.uk/courses/pg-taught/sport-and-exercise-medicine/", fields: ["health"] },
       { name: "MSc Physiotherapy (pre-registration)", url: "https://www.stir.ac.uk/courses/pg-taught/physiotherapy-pre-registration/", fields: ["health"] },
       { name: "MSc Podiatry (pre-registration)", url: "https://www.stir.ac.uk/courses/pg-taught/podiatry-pre-registration/", fields: ["health"] },
-      { name: "MSc Sport Management", url: "https://www.stir.ac.uk/courses/pg-taught/sport-management/", fields: ["business"] },
+      { name: "MSc Sport Management", url: "https://www.stir.ac.uk/courses/pg-taught/sport-management/", fields: ["business"], broad: true },
       { name: "MSc Psychology of Sport", url: "https://www.stir.ac.uk/courses/pg-taught/psychology-of-sport/", fields: ["health"] },
       { name: "MSc Sport Performance Coaching", url: "https://www.stir.ac.uk/courses/pg-taught/sport-performance-coaching-online/", fields: ["performance"] }
     ]
@@ -1203,7 +1221,7 @@ const UNIVERSITIES = [
     description: "A city centre university in Glasgow with strong industry links. Its sport offer is unusual: data analytics and design engineering as well as sport and physical activity.",
     courses: [
       { name: "MSc Sport Data Analytics", url: "https://www.strath.ac.uk/courses/postgraduatetaught/sportdataanalytics/", fields: ["technology"] },
-      { name: "BSc Sport and Physical Activity", url: "https://www.strath.ac.uk/courses/undergraduate/sportphysicalactivity/", fields: ["community", "health"] },
+      { name: "BSc Sport and Physical Activity", url: "https://www.strath.ac.uk/courses/undergraduate/sportphysicalactivity/", fields: ["community", "health"], broad: true },
       { name: "MEng Sports Design Engineering", url: "https://www.strath.ac.uk/courses/undergraduate/sportsdesignengineeringmeng/", fields: ["technology"] }
     ]
   },
@@ -1217,10 +1235,10 @@ const UNIVERSITIES = [
     website: "https://www.uws.ac.uk",
     description: "Campuses in Paisley, Ayr, Dumfries and Lanarkshire, with practical, industry-focused courses in sport science, coaching and sport development.",
     courses: [
-      { name: "BSc Sport and Exercise Science", url: "https://www.uws.ac.uk/study/undergraduate/undergraduate-course-search/sport-exercise-science-sport-exercise-science-physical-activity-health/", fields: ["performance", "health"] },
+      { name: "BSc Sport and Exercise Science", url: "https://www.uws.ac.uk/study/undergraduate/undergraduate-course-search/sport-exercise-science-sport-exercise-science-physical-activity-health/", fields: ["performance", "health"], broad: true },
       { name: "BSc Sport Coaching", url: "https://www.uws.ac.uk/study/undergraduate/undergraduate-course-search/sport-coaching/", fields: ["performance"] },
       { name: "BSc Sport Coaching and Development", url: "https://www.uws.ac.uk/study/undergraduate/undergraduate-course-search/sport-coaching-development/", fields: ["performance", "community"] },
-      { name: "MSc Sport and Exercise", url: "https://www.uws.ac.uk/study/postgraduate/subject-areas/study-sport-at-uws", fields: ["performance", "health"] },
+      { name: "MSc Sport and Exercise", url: "https://www.uws.ac.uk/study/postgraduate/subject-areas/study-sport-at-uws", fields: ["performance", "health"], broad: true },
       { name: "BSc Sport Development", url: "https://www.uws.ac.uk/study/undergraduate/undergraduate-course-search/sport-development/", fields: ["community"] }
     ]
   }
@@ -1305,7 +1323,7 @@ const JOB_SOURCES = [
   { name: "SportsWork", url: "https://sportswork.co/", type: "board", sector: "commercial" , coverage: "board", areas: ["Sports Development", "Sports Coaching", "Events"] },
 
   { name: "Aquatics GB", url: "https://www.britishswimming.org/members-resources/jobs-board/", type: "employer", sector: "nonprofit" , coverage: "broad", areas: ["Performance Sport", "Sports Coaching", "Sports Development"] },
-  { name: "BBC", url: "https://careers.bbc.co.uk/", type: "employer", sector: "commercial" , coverage: "broad", areas: ["Sports Broadcasting", "Sports Journalism", "Sports Media"] },
+  { name: "BBC", url: "https://careers.bbc.co.uk/", type: "employer", sector: "public" , coverage: "broad", areas: ["Sports Broadcasting", "Sports Journalism", "Sports Media"] },
   { name: "British Cycling", url: "https://www.britishcycling.org.uk/vacancies", type: "employer", sector: "nonprofit" , coverage: "broad", areas: ["Performance Sport", "Sports Coaching", "Sports Development"] },
   { name: "British Olympic Association", url: "https://www.teamgb.com/jobs/14CLYo1Auwq0T54La3XLJ2", type: "employer", sector: "nonprofit" , coverage: "broad", areas: ["Performance Sport", "Major Events", "Sports Governance"] },
   { name: "British Paralympic Association", url: "https://paralympics.org.uk/footer-pages/about-the-bpa", type: "employer", sector: "nonprofit" , coverage: "broad", areas: ["Disability Sport", "Performance Sport", "Major Events"] },
@@ -1336,7 +1354,7 @@ const JOB_SOURCES = [
   { name: "Scottish Rugby", scotland: true, url: "https://scottishrugby.org/about/vacancies/", type: "employer", sector: "nonprofit" , coverage: "broad", areas: ["Performance Sport", "Sports Development", "Events"] },
   { name: "Scottish Sports Futures", scotland: true, url: "https://ssf.org.uk/vacancies/", type: "employer", sector: "nonprofit" , coverage: "broad", areas: ["Sports Development", "Physical Activity", "Volunteer Management"] },
   { name: "Sky Sports", url: "https://careers.sky.com/", type: "employer", sector: "commercial" , coverage: "broad", areas: ["Sports Broadcasting", "Sports Media", "Sports Journalism"] },
-  { name: "Sport Aberdeen", scotland: true, url: "https://www.sportaberdeen.co.uk/work-with-us/current-vacancies", type: "employer", sector: "public" , coverage: "broad", areas: ["Leisure Operations", "Physical Activity", "Health Promotion"] },
+  { name: "Sport Aberdeen", scotland: true, url: "https://www.sportaberdeen.co.uk/work-with-us/current-vacancies/", type: "employer", sector: "public" , coverage: "broad", areas: ["Leisure Operations", "Physical Activity", "Health Promotion"] },
   { name: "Sported", url: "https://sported.org.uk/careers/", type: "employer", sector: "nonprofit" , coverage: "broad", areas: ["Sports Development", "Volunteer Management", "Physical Activity"] },
   { name: "Sporting Insights", url: "https://www.sportinginsights.com/", type: "employer", sector: "commercial" , areas: ["Sports Analytics", "Sports Marketing"] },
   { name: "Sportradar", url: "https://www.sportradar.com/careers/", type: "employer", sector: "commercial" , areas: ["Sports Analytics", "Sports Technology", "Media Rights"] },
@@ -1352,6 +1370,21 @@ const JOB_SOURCES = [
   { name: "The Team", url: "https://www.teamwass.com/about/careers/", type: "employer", sector: "commercial" , coverage: "broad", areas: ["Sports Marketing", "Sports Law", "Sports Media"] },
   { name: "Wimbledon Championships", url: "https://jobs.wimbledon.com/", type: "employer", sector: "commercial" , areas: ["Major Events", "Sports Tourism", "Volunteer Management"] },
   { name: "World Rugby", url: "https://www.world.rugby/organisation/about-us/careers", type: "employer", sector: "nonprofit", coverage: "broad", areas: ["Sports Governance", "Sports Development", "Major Events"] },
+  { name: "Live Borders", scotland: true, url: "https://www.liveborders.org.uk/about-us/jobs/", type: "employer", sector: "public", areas: ["Leisure Operations", "Physical Activity", "Sports Development"] },
+  { name: "Shetland Recreational Trust", scotland: true, url: "https://www.srt.org.uk/jobs", type: "employer", sector: "public", areas: ["Leisure Operations", "Physical Activity", "Exercise and Fitness"] },
+  { name: "Active NL", scotland: true, url: "https://www.activenl.co.uk/current-opportunities", type: "employer", sector: "public", areas: ["Leisure Operations", "Physical Activity", "Sports Development"] },
+  { name: "South Lanarkshire Leisure and Culture", scotland: true, url: "https://slleisureandculture.co.uk/vacancies", type: "employer", sector: "public", areas: ["Leisure Operations", "Physical Activity", "Sports Development"] },
+  { name: "High Life Highland", scotland: true, url: "https://www.highlifehighland.com/about-us/recruitment", type: "employer", sector: "public", areas: ["Leisure Operations", "Physical Activity", "Sports Development"] },
+  { name: "G4S", url: "https://careers.g4s.com/en", type: "employer", sector: "commercial", areas: ["Events", "Major Events"] },
+  { name: "Five Star Enterprise Group", url: "https://www.fseg.com/join-the-team/", type: "employer", sector: "commercial", areas: ["Events", "Major Events"] },
+  { name: "EA Sports", url: "https://www.ea.com/en-gb/ea-studios/ea-sports/job-opportunities", type: "employer", sector: "commercial", areas: ["Sports Technology", "Sports Media"] },
+  { name: "Adidas", url: "https://careers.adidas-group.com/", type: "employer", sector: "commercial", areas: ["Sports Retail and Merchandising", "Sports Marketing", "Sports Engineering"] },
+  { name: "Puma", url: "https://about.puma.com/en/careers/job-openings", type: "employer", sector: "commercial", areas: ["Sports Retail and Merchandising", "Sports Marketing", "Sports Engineering"] },
+  { name: "UEFA", url: "https://www.uefa.com/about/jobs/", type: "employer", sector: "nonprofit", areas: ["Sports Governance", "Major Events", "Media Rights"] },
+  { name: "FIFA", url: "https://jobs.fifa.com/", type: "employer", sector: "nonprofit", areas: ["Sports Governance", "Major Events", "Media Rights"] },
+  { name: "Skydance", url: "https://www.skydance.com/careers", type: "employer", sector: "commercial", areas: ["Sports Media", "Sports Broadcasting"] },
+  { name: "Virgin Active", url: "https://careers.virginactive.co.uk/", type: "employer", sector: "commercial", areas: ["Exercise and Fitness", "Leisure Operations"] },
+  { name: "NFL", url: "https://www.nfl.com/careers/international", type: "employer", sector: "commercial", areas: ["Major Events", "Sports Marketing", "Sports Media"] },
   { name: "Celtic FC", scotland: true, url: "https://www.celticfc.com/club/jobs-at-celtic/", type: "employer", sector: "commercial", areas: ["Performance Sport", "Sports Marketing", "Events"] },
   { name: "Rangers FC", scotland: true, url: "https://rangershr.jobs.people-first.com/jobs/search", type: "employer", sector: "commercial", areas: ["Performance Sport", "Sports Marketing", "Events"] },
   { name: "Netball Scotland", scotland: true, url: "https://www.netballscotland.com/governance/vacancies/", type: "employer", sector: "nonprofit", areas: ["Sports Development", "Sports Coaching", "Sports Governance"] },
@@ -1583,7 +1616,7 @@ function initFields() {
   });
 
   const sync = cur => {
-    $$(".field").forEach(b => b.setAttribute("aria-pressed", String(cur ? b.dataset.field === cur.id : b.dataset.field === "")));
+    $$("#home-fields .field").forEach(b => b.setAttribute("aria-pressed", String(!!cur && b.dataset.field === cur.id)));
     $$("[data-field-select]").forEach(sel => { sel.value = cur ? cur.id : ""; });
   };
   Field.onChange(sync);
@@ -1601,6 +1634,19 @@ function scrollToEl(sel) {
    is filled in Ultramarine and draws itself once, on first load.
    -------------------------------------------------------------------------- */
 let lanesDrawn = false;
+/* The mantra rises in line by line on first load. Screen readers get the plain sentence. */
+function riseHeadline() {
+  const h = $(".hero__h"); if (!h || h.dataset.split) return;
+  const text = h.textContent.trim();
+  h.dataset.split = "1";
+  h.setAttribute("aria-label", text);
+  h.innerHTML = text.split(" ").map(w => `<span class="rise" aria-hidden="true">${esc(w)}</span>`).join(" ");
+  const words = $$(".rise", h), tops = [...new Set(words.map(w => w.offsetTop))].sort((a, b) => a - b);
+  words.forEach(w => { w.style.animationDelay = (0.15 + tops.indexOf(w.offsetTop) * 0.11) + "s"; });
+  h.classList.add("is-rising");
+  const sub = $(".hero__sub"); if (sub) { sub.style.animationDelay = (0.3 + tops.length * 0.11) + "s"; sub.classList.add("is-arriving"); }
+}
+
 function drawLanes() {
   const svg = $("#lanes"); if (!svg) return;
   const hero = svg.parentElement;
@@ -1618,16 +1664,19 @@ function drawLanes() {
     ? `M -20 ${H - pad - (rOut - r)} H ${W + 20}`
     : `M -20 ${cy + r} H ${cx} A ${r} ${r} 0 0 0 ${cx + r} ${cy} V -20`;
   let out = `<path class="mine" pathLength="1" stroke-width="${g}" d="${lane(rIn + 2.5 * g)}"/>`;
-  for (let i = 0; i < n; i++) out += `<path class="ln" d="${lane(rIn + i * g)}"/>`;
+  for (let i = 0; i < n; i++) out += `<path class="ln${i === 4 ? " ln--mint" : ""}"${i === 4 ? ' pathLength="1"' : ""} d="${lane(rIn + i * g)}"/>`;
   svg.innerHTML = out;
 
   if (!lanesDrawn && !reducedMotion) {
-    const mine = $(".mine", svg);
-    mine.style.strokeDasharray = "1"; mine.style.strokeDashoffset = "1";
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      mine.style.transition = "stroke-dashoffset 1.9s cubic-bezier(0.65, 0, 0.2, 1) 0.25s";
-      mine.style.strokeDashoffset = "0";
-    }));
+    // The blue lane runs first, the mint lane a beat behind it.
+    [[$(".mine", svg), 0.25], [$(".ln--mint", svg), 0.7]].forEach(([path, delay]) => {
+      path.style.strokeDasharray = "1"; path.style.strokeDashoffset = "1";
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        path.style.transition = `stroke-dashoffset 1.9s cubic-bezier(0.65, 0, 0.2, 1) ${delay}s`;
+        path.style.strokeDashoffset = "0";
+      }));
+    });
+    riseHeadline();
   }
   lanesDrawn = true;
 }
@@ -1679,15 +1728,13 @@ function institutionHTML(rec) {
     </article>`;
   }
   const has = rec.courses && rec.courses.length;
-  const fieldIds = has ? FIELDS.filter(f => rec.courses.some(c => c.fields.includes(f.id))).map(f => f.id) : [];
   return `<article class="inst">
     <h2 class="h2">${esc(rec.name)}</h2>
     <p class="inst__meta">University, ${esc(rec.location)}. <a href="${esc(rec.website)}" target="_blank" rel="noopener">${esc(site)}</a></p>
     ${has ? `<p>${esc(rec.description)}</p>
       <h4>Sport courses</h4>
       <ul class="courses">${rec.courses.map(c => `<li><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.name)}</a></li>`).join("")}</ul>
-      <h4>Careers these courses lead to</h4>
-      <div class="linkchips">${fieldIds.map(id => `<a href="#/careers&field=${id}" data-close>${esc(fieldById(id).name)} careers</a>`).join("")}</div>`
+      <p style="margin-top:1.25rem"><a href="#/careers" data-close>See employers in sport</a></p>`
     : `<p>${esc(rec.noCoursesNote || "")}</p>`}
   </article>`;
 }
@@ -1698,21 +1745,25 @@ function openPlace(items, label, closeHook) {
 
 function openFieldSheet() {
   const f = Field.get(); if (!f) return;
-  const unis = UNIVERSITIES.map(u => ({ u, list: (u.courses || []).filter(c => c.fields.includes(f.id)) })).filter(x => x.list.length);
+  const pick = test => UNIVERSITIES.map(u => ({ u, list: (u.courses || []).filter(test) })).filter(x => x.list.length);
+  const named = pick(c => c.fields.includes(f.id));
+  const broad = pick(c => c.broad && !c.fields.includes(f.id));
+  const rows = set => set.map(x => `<button class="fp__uni" data-uni="${esc(x.u.name)}"><b>${esc(x.u.name)}</b><span>${x.list.map(c => esc(c.name)).join(", ")}</span></button>`).join("");
   const areas = AREAS.filter(a => AREA_FIELD[a.name] === f.id);
-  const hiring = Careers.areaCounts();
   Sheet.open($("#field-sheet"), `
     <article class="inst">
       <h2 class="h2">${esc(f.name)}</h2>
-      <p class="fp__line">Courses and careers in ${esc(f.name.toLowerCase())}.</p>
-      <h4>Courses</h4>
-      ${unis.map(x => `<button class="fp__uni" data-uni="${esc(x.u.name)}"><b>${esc(x.u.name)}</b><span>${x.list.map(c => esc(c.name)).join(", ")}</span></button>`).join("")}
+      <p class="fp__line">${esc(f.note)}.</p>
+      <h4>Courses named for this field</h4>
+      ${named.length ? rows(named) : `<p class="fp__none">No university course in Scotland is named for this field. Most people reach it through a broad degree.</p>`}
+      <h4>Broad sport degrees</h4>
+      <p class="fp__none">These cover several fields. Check the modules to see how much of this one they include.</p>
+      ${rows(broad)}
       <p class="small" style="margin-top:0.9rem">Colleges also run sport courses. <a href="#/study" data-close>See them on the Study page</a>.</p>
       <h4>Areas of work</h4>
-      <div class="linkchips">${areas.map(a => hiring[a.name]
-        ? `<a href="#/careers&field=${f.id}&area=${encodeURIComponent(a.name)}" data-close>${esc(a.name)}</a>`
-        : `<a href="#/careers&field=${f.id}" data-close>${esc(a.name)}</a>`).join("")}</div>
-      <h4>Next step</h4>
+      <div class="linkchips">${areas.map(a => `<span>${esc(a.name)}</span>`).join("")}</div>
+      <h4>Next steps</h4>
+      <p><a href="#/careers" data-close>See employers in sport</a></p>
       <p><a href="#/getting-hired" data-close>See what gets you hired</a></p>
       <p style="margin-top:2rem"><button class="textbtn" id="fp-clear">Clear selection</button></p>
     </article>`);
@@ -1916,7 +1967,7 @@ const Study = (() => {
 
     const f = state.field;
     $("#study-note").innerHTML = f
-      ? `<div class="listnote"><span>Showing universities with ${esc(f.name.toLowerCase())} courses. Colleges are not sorted by field.</span><button class="textbtn" id="study-clear">Show everything</button></div>`
+      ? `<div class="listnote"><span>Showing universities with a course named for ${esc(f.name.toLowerCase())}. Broad sport degrees elsewhere can lead here too. Colleges are not sorted by field.</span><button class="textbtn" id="study-clear">Show everything</button></div>`
       : "";
     $("#study-clear")?.addEventListener("click", () => setField(null));
 
@@ -2007,7 +2058,9 @@ const Study = (() => {
 const Careers = (() => {
   /* The full list is always on the page. A filter never hides anyone: it brings
      the matches to the top under their own heading and leaves the rest below. */
-  const state = { area: null, sector: "all", query: "" };
+  /* The page keeps its own field choice. A field picked on Home never filters this list. */
+  const state = { field: null, area: null, sector: "all", query: "" };
+  const curField = () => state.field ? fieldById(state.field) : null;
   const sortKey = s => s.name.replace(/^The /, "").toLowerCase();
   const general = JOB_SOURCES.filter(s => s.coverage === "board");
   const employers = JOB_SOURCES.filter(s => s.coverage !== "board").sort((a, b) => sortKey(a).localeCompare(sortKey(b)));
@@ -2032,7 +2085,7 @@ const Careers = (() => {
   const HEAD = `<div class="dirhead" aria-hidden="true"><span>Employer</span><span>Areas of work</span><span>Sector</span></div>`;
 
   function matches(s) {
-    const f = Field.get(), q = state.query.trim().toLowerCase();
+    const f = curField(), q = state.query.trim().toLowerCase();
     return (!f || (s.areas || []).some(a => AREA_FIELD[a] === f.id)) &&
       (!state.area || (s.areas || []).includes(state.area)) &&
       (state.sector === "all" || s.sector === state.sector) &&
@@ -2040,7 +2093,7 @@ const Careers = (() => {
   }
 
   function paint() {
-    const f = Field.get(), q = state.query.trim();
+    const f = curField(), q = state.query.trim();
     const active = !!(f || state.area || state.sector !== "all" || q);
 
     // Area chips appear once a field is chosen.
@@ -2054,6 +2107,7 @@ const Careers = (() => {
       $("#finder-about").textContent = area ? area.desc : f.note + ".";
     }
     $$("[data-sector]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.sector === state.sector)));
+    $$("#careers-fields .field").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.field === (state.field || ""))));
 
     const hit = active ? employers.filter(matches) : [];
     const rest = active ? employers.filter(s => !matches(s)) : employers;
@@ -2063,9 +2117,11 @@ const Careers = (() => {
       $("#dir-match-h").textContent = label;
       const area = AREAS.find(a => a.name === state.area);
       $("#directory-match").innerHTML = hit.length ? HEAD + hit.map(entryHTML).join("")
-        : `<p class="empty">No employers listed for this yet. ${esc((area && area.route) || "Try a wider choice, or browse everyone below.")}</p>`;
+        : `<p class="empty">No employers listed for this yet. ${esc((area && area.route) || "Try a wider choice, or browse the other employers below.")}</p>`;
     }
-    $("#dir-rest-h").textContent = active ? "Everyone else" : "Everyone who hires";
+    $("#dir-rest-h").textContent = active ? "Other employers" : "Employers";
+    $("#dir-rest-n").textContent = active ? `${rest.length} listed` : `${employers.length} listed`;
+    $("#dir-match-n").textContent = `${hit.length} of ${employers.length}`;
     $("#directory").classList.toggle("is-rest", active);
     $("#directory").innerHTML = HEAD + rest.map(entryHTML).join("");
   }
@@ -2076,13 +2132,23 @@ const Careers = (() => {
   }
 
   function setArea(name) { state.area = name || null; repaint(); }
+  function setField(id) {
+    state.field = id || null;
+    if (state.area && AREA_FIELD[state.area] !== state.field) state.area = null;
+    repaint();
+  }
+  /* Used by links that name a field or area, and to clear everything on a plain visit. */
+  function show(fieldId, area) {
+    state.field = fieldId || (area ? AREA_FIELD[area] : null) || null;
+    state.area = area || null; state.sector = "all"; state.query = ""; $("#emp-search").value = "";
+    paint();
+  }
 
   function init() {
     $("#careers-fields").innerHTML = `<button class="field" data-field="" aria-pressed="true"><span>All fields</span></button>` + fieldButtonsHTML(false);
     $("#careers-fields").addEventListener("click", e => {
       const b = e.target.closest(".field"); if (!b) return;
-      const same = Field.get() && Field.get().id === b.dataset.field;
-      if (!b.dataset.field || same) Field.clear(); else Field.set(b.dataset.field);
+      setField(b.dataset.field === state.field ? null : b.dataset.field);
     });
     $("#area-chips").addEventListener("click", e => {
       const b = e.target.closest(".chip"); if (!b) return;
@@ -2091,18 +2157,14 @@ const Careers = (() => {
     $$("[data-sector]").forEach(b => b.addEventListener("click", () => { state.sector = b.dataset.sector; repaint(); }));
     $("#emp-search").addEventListener("input", e => { state.query = e.target.value; paint(); });
     $("#dir-clear").addEventListener("click", () => {
-      state.area = null; state.sector = "all"; state.query = ""; $("#emp-search").value = "";
-      if (Field.get()) Field.clear(); else repaint();
+      state.field = null; state.area = null; state.sector = "all"; state.query = ""; $("#emp-search").value = "";
+      repaint();
     });
     $("#boards").innerHTML = general.map(s => `<a class="board" href="${esc(s.url)}" target="_blank" rel="noopener"><span>${esc(s.name)}</span><span class="board__m">Roles across most fields</span></a>`).join("");
-    Field.onChange(f => {
-      if (state.area && (!f || AREA_FIELD[state.area] !== f.id)) state.area = null;
-      if (activeRoute === "careers") repaint(); else paint();
-    });
     paint();
   }
 
-  return { init, setArea, areaCounts };
+  return { init, setArea, show, areaCounts };
 })();
 
 /* --------------------------------------------------------------------------
@@ -2181,7 +2243,7 @@ function initTool() {
 
   function render() {
     if (!chosen) { out.hidden = true; prompt.hidden = false; return; }
-    const d = DONE.find(x => x.id === chosen), hiring = Careers.areaCounts();
+    const d = DONE.find(x => x.id === chosen);
     const say = esc(d.say).replace(/\[(.+?)\]/g, '<span class="blank">$1</span>');
     out.innerHTML = `
       <div class="worth" aria-live="polite">
@@ -2196,7 +2258,8 @@ function initTool() {
         </div>
         <div>
           <h3 class="h3">Where it could lead</h3>
-          <div class="linkchips">${d.leads.map(a => `<a href="#/careers&field=${AREA_FIELD[a]}${hiring[a] ? "&area=" + encodeURIComponent(a) : ""}">${esc(a)}</a>`).join("")}</div>
+          <div class="linkchips">${d.leads.map(a => `<span>${esc(a)}</span>`).join("")}</div>
+          <p class="small"><a href="#/careers">See employers in sport</a></p>
           <p class="small">Also valued in ${esc(d.outside)}.</p>
         </div>
       </div>
@@ -2256,9 +2319,8 @@ function applyRoute() {
       if (params.place) Study.openPlaceByName(params.place);
     }
     if (route === "careers") {
-      if (params.field) Field.set(params.field);
-      if (params.area) Careers.setArea(params.area);
-      if (params.area || params.field) scrollToEl("#who");
+      // The list always opens unfiltered. Only the controls on the page filter it.
+      if (changed) Careers.show();
     }
     if (route === "legal" && params.section) scrollToEl("#" + params.section);
   };
